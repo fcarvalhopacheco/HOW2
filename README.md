@@ -1,4 +1,4 @@
-# Learning-Linux-Python
+# Learning Linux, Python
 
 ==============
 
