@@ -1,5 +1,5 @@
 # macOS Catalina 10.15.1
-My configuration and set up for macOS Catalina
+This is my configuration and set up for macOS Catalina
 
 - **Homebrew**
    * Free open-source package managements system that simplifies the installation of software on macOS and Linux
