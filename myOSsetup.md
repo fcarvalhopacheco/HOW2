@@ -34,37 +34,38 @@ This is my configuration and set up for macOS Catalina
       ```
   ### ITERM2
   1. On terminal, type:
-   ```sh
-   brew cask install iterm2
-   ``` 
+      ```sh
+      brew cask install iterm2
+      ``` 
   2. Download ITERM2 color themes by clicking on:
-   [iterm2colorschemes](https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master)
+      [iterm2colorschemes](https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master)
 
   3. Configure the new color. Open Iterm2, click on Preferences -> Click on Profiles -> Click on Colors -> Click Colors preset -> Scroll down and click on Import -> Navigate to the place you just downloaded the themes -> Click on Scheme -> Select all files -> Click Ok -> Choose one that you like! =)
 
   ### ZSH
   1. If you dont have **Z shell** already. On terminal, type:
-   ```sh
-   brew install zsh
-   ``` 
+      ```sh
+      brew install zsh
+      ``` 
   ### Oh My ZSH
-   ```sh
-   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-   ```
-   or
-   ```sh
-   sh -c "$(wget -O https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-   ```
+  1. Manage the ZSH
+      ```sh
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      ```
+      or
+      ```sh
+      sh -c "$(wget -O https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      ```
    1. Edit the file ~/.zshrc. On terminal, type:
-   ```sh
-   cd
-   vi .zshrc
-   ```
-   - Navigate to ~line 11, and change ZSH_THEME to ZSH_THEME="agnoster", then exit the file.
-   ```sh
-   i ZSH_THEME="agnoster"
-   :wq
-   ```
+      ```sh
+      cd
+      vi .zshrc
+      ```
+      - Navigate to ~line 11, and change ZSH_THEME to ZSH_THEME="agnoster", then exit the file.
+      ```sh
+      i ZSH_THEME="agnoster"
+      :wq
+      ```
 
 
   
