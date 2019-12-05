@@ -1,17 +1,17 @@
 # macOS Catalina 10.15.1
 My configuration and set up for macOS Catalina
 
-- Homebrew
+- **Homebrew**
    * Free open-source package managements system that simplifies the installation of software on macOS and Linux
    * Similar to apt-get from Ubuntu
-- CASK
+- **CASK**
   * It is an extension to brew to install GUI applications (eg. Google Chrome, dropbox ....)
   * It is your `one-way` shopping to download/install programs...
-- ITERM2 
+- **ITERM2** 
   * It has better color themes than the built in Terminal.
-- ITERM2 color schemes
+- **ITERM2 color schemes**
   * [Check this out](http://iterm2colorschemes.com/)
-- ZSH
+- **ZSH**
   >*Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is a extended Bourne shell with many improvements.* [source](https://en.wikipedia.org/wiki/Z_shell)
   * ZSH is now the default on macOS Catalina [source](https://support.apple.com/en-us/HT208050)
 
