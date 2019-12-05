@@ -1,7 +1,7 @@
 # macOS Catalina 10.15.1
 This is my configuration and set up for macOS Catalina
 
-- **Homebrew**
+- [**Homebrew**](#Step 1: Download and install Homebrew)
    * Free open-source package managements system that simplifies the installation of software on macOS and Linux
    * Similar to apt-get from Ubuntu
 - **CASK**
