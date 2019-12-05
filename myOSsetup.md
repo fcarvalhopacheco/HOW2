@@ -23,15 +23,15 @@ This is my configuration and set up for macOS Catalina
 
 ## Step 1: Downloading and installing
   ### Homebrew
-      1. On terminal, type:
+  1. On terminal, type:
       ```sh
       /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
       ```
   ### CASK
   1. On terminal, type:
-   ```sh
-   brew install cask 
-   ````
+      ```sh
+      brew install cask 
+      ```
   ### ITERM2
   1. On terminal, type:
    ```sh
