@@ -48,7 +48,7 @@ This is my configuration and set up for macOS Catalina
       brew install zsh
       ``` 
   ### Oh My ZSH
-  1. Manage the ZSH
+  1. On terminal, type:
       ```sh
       sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       ```
@@ -56,7 +56,7 @@ This is my configuration and set up for macOS Catalina
       ```sh
       sh -c "$(wget -O https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       ```
-   1. Edit the file ~/.zshrc. On terminal, type:
+   2. Edit the file ~/.zshrc. On terminal, type:
       ```sh
       cd
       vi .zshrc
