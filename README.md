@@ -4,4 +4,5 @@
 
 
 ## 1. Setting up a new computer?:
-  [My MAC setup](https://github.com/fcarvalhopacheco/learning/blob/master/myOSsetup.md)
+   
+   * [My MAC setup](https://github.com/fcarvalhopacheco/learning/blob/master/myOSsetup.md)
