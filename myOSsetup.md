@@ -11,10 +11,9 @@ My configuration and set up for macOS Catalina
   * It has better color themes than the built in Terminal.
 - ITERM2 color schemes
   * [Check this out](http://iterm2colorschemes.com/)
-  
--ZSH
-  *  "Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is an extended Bourne shell with many improvements"[source])(https://en.wikipedia.org/wiki/Z_shell)
-  * ZSH is now the default on macOS Catalina.[source](https://support.apple.com/en-us/HT208050)
+- ZSH
+  *  >Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is an extended Bourne shell with many improvements [source](https://en.wikipedia.org/wiki/Z_shell)
+  * ZSH is now the default on macOS Catalina [source](https://support.apple.com/en-us/HT208050)
 
 
 ## Step 1: Download and install Homebrew
