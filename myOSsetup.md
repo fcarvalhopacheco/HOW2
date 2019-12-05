@@ -21,15 +21,15 @@ This is my configuration and set up for macOS Catalina
 
 -----------------------------------------------------------------------------------
 
-## Step 1: Download and install
-  ### Homebrew
+## Step 1: Downloading and installing
+  ### 1.Homebrew
   1. On terminal, type:
     
   ```sh
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   ```
 
-  ### CASK
+  ### 2.CASK
   1. On terminal, type:
   ```sh
   brew install cask 
