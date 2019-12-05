@@ -12,7 +12,7 @@ This is my configuration and set up for macOS Catalina
     * It has better color themes than the built in Terminal.
     1. [ITERM2COLORS](http://iterm2colorschemes.com/)
 4. [ZSH](#zsh)
-    >*Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is a extended Bourne shell with many improvements. [source](https://en.wikipedia.org/wiki/Z_shell)
+    >*Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is a extended Bourne shell with many improvements.* [source](https://en.wikipedia.org/wiki/Z_shell)
     * ZSH is now the default on macOS Catalina. [source](https://support.apple.com/en-us/HT208050)
 5. [Oh my ZSH](#oh-my-zsh)
     * Open source, community-driven framework for managing your zsh configuration. [source](https://github.com/ohmyzsh/ohmyzsh)
