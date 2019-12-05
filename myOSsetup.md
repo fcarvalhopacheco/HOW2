@@ -14,6 +14,9 @@ My configuration and set up for macOS Catalina
 - **ZSH** - Z shell
   >*Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is a extended Bourne shell with many improvements.* [source](https://en.wikipedia.org/wiki/Z_shell)
   * ZSH is now the default on macOS Catalina. [source](https://support.apple.com/en-us/HT208050)
+- **Oh my ZSH**
+  * Open source, community-driven framework for managing your zsh configuration. [source](https://github.com/ohmyzsh/ohmyzsh
+
 
 
 -----------------------------------------------------------------------------------
@@ -50,13 +53,13 @@ My configuration and set up for macOS Catalina
 
 ## Step 4: Download and install ZSH and Oh My Zsh
     
-1. If you dont have Z shell already, On terminal, type:
+1. If you dont have **Z shell** already, On terminal, type:
    
    ```sh
    brew install zsh
    ``` 
    
-2. Download Oh My Zsh, On terminal, type:
+2. Download **Oh My Zsh**, On terminal, type:
 
     ```sh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
