@@ -52,13 +52,13 @@ This is my configuration and set up for macOS Catalina
 
 ## Step 4: Download and install ZSH and Oh My Zsh
     
-1. If you dont have **Z shell** already, On terminal, type:
+1. If you dont have **Z shell** already. On terminal, type:
    
    ```sh
    brew install zsh
    ``` 
    
-2. Download **Oh My Zsh**, On terminal, type:
+2. Download **Oh My Zsh**. On terminal, type:
 
     ```sh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -67,6 +67,17 @@ This is my configuration and set up for macOS Catalina
     ```sh
     sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ```
-   
+3. Edit the file ~/.zshrc. On terminal, type:
+    ```sh
+    cd
+    vi .zshrc
+    ```
+    - Navigate to ~line 11, and change ZSH_THEME to ZSH_THEME="agnoster", then exit the file.
+    ```sh
+    i ZSH_THEME="agnoster"
+    :wq
+    ```
+
+
   
     
