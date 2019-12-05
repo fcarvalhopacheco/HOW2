@@ -5,6 +5,6 @@
 * Honestly? I always forget the way I do my stuff. This will be my one-stop place to remember things.
 
 
-## 1. Setting up a new computer?
+## 1. Setting up a new mac?
    
    * [My MAC setup](https://github.com/fcarvalhopacheco/learning/blob/master/myOSsetup.md)
