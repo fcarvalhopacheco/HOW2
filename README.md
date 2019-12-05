@@ -1,4 +1,4 @@
-# My HOW2 
+# My TIPS & TRICKS ON HOW2  
 
 * This repository was created to guide me through my learning experience with Linux, Python, Ethical hacking, Softaware developement and more... Please feel free to help!
 * Also. We always forget the way we did something, write? So i wanna be able to have a one-stop place to remember how to do things...
