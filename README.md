@@ -2,7 +2,7 @@
 
 * This repository was created to guide me through my learning experience with Linux, Python, Ethical hacking, Software developement and more... Please feel free to help!
 
-* Also. We always forget the way we did something, write? So i wanna be able to have a one-stop place to remember how to do things...
+* Honestly? I always forget the way I fixed or solved a problem. So, I wanna be able to have my one-stop place to remember how to do things. Here we are!
 
 
 ## 1. Setting up a new computer?
