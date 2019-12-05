@@ -61,7 +61,7 @@ This is my configuration and set up for macOS Catalina
       cd
       vi .zshrc
       ```
-      - Navigate to ~line 11, and change ZSH_THEME to ZSH_THEME="agnoster", then exit the file.
+   3. Navigate to ~line 11, and change ZSH_THEME to ZSH_THEME="agnoster", then exit the file.
       ```sh
       i ZSH_THEME="agnoster"
       :wq
