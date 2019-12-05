@@ -3,7 +3,7 @@ This is my configuration and set up for macOS Catalina
 
 ## Table of Contents
 
-1. [Homebrew](#step-1:-download-and-install-homebrew)
+1. [Step 1: Download and install Homebrew](#step-1:-download-and-install-homebrew)
    * Free open-source package managements system that simplifies the installation of software on macOS and Linux
    * Similar to apt-get from Ubuntu
 2. **CASK**
