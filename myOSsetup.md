@@ -6,9 +6,9 @@ This is my configuration and set up for macOS Catalina
 1. [Homebrew](#homebrew)
    * Free open-source package managements system that simplifies the installation of software on macOS and Linux
    * Similar to apt-get from Ubuntu
-2. **CASK**
+2. [CASK](#cask)
   * It is an extension to brew to install GUI applications (eg. Google Chrome, dropbox ...
-3. **ITERM2** 
+3. [ITERM2](#iterm2) 
   * It has better color themes than the built in Terminal.
   1. **ITERM2 color schemes**
     * [Check this out](http://iterm2colorschemes.com/)
