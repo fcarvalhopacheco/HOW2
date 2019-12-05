@@ -41,7 +41,7 @@ This is my configuration and set up for macOS Catalina
   brew cask install iterm2
   ``` 
   2. Download ITERM2 color themes by clicking on:
-    * [iterm2colorschemes](https://github.com/mbadolato/iTerm2-ColorSchemes/zipball/master)
+    * [iterm2colorschemes](https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master)
 
   3. Configure the new color. Open Iterm2, click on Preferences -> Click on Profiles -> Click on Colors -> Click Colors preset -> Scroll down and click on Import -> Navigate to the place you just downloaded the themes -> Click on Scheme -> Select all files -> Click Ok -> Choose one that you like! =)
 
