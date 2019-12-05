@@ -3,7 +3,7 @@ This is my configuration and set up for macOS Catalina
 
 ## Table of Contents
 
-1. [Step 1: Download and install Homebrew](#step-1:-download-and-install-Homebrew)
+1. [Homebrew](#step-1:-download-and-install-Homebrew)
    * Free open-source package managements system that simplifies the installation of software on macOS and Linux
    * Similar to apt-get from Ubuntu
 2. **CASK**
@@ -23,12 +23,12 @@ This is my configuration and set up for macOS Catalina
 -----------------------------------------------------------------------------------
 
 ## Step 1: Download and install Homebrew
+  ### Homebrew
+  1. On terminal, type:
 
-1. On terminal, type:
-
-   ```sh
-   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-   ```
+     ```sh
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ```
 
 ## Step 2: Download and install CASK
 
