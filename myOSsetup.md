@@ -5,8 +5,7 @@ This is my configuration and set up for macOS Catalina
    * Free open-source package managements system that simplifies the installation of software on macOS and Linux
    * Similar to apt-get from Ubuntu
 - **CASK**
-  * It is an extension to brew to install GUI applications (eg. Google Chrome, dropbox ....)
-  * It is your `one-way` shopping to download/install programs...
+  * It is an extension to brew to install GUI applications (eg. Google Chrome, dropbox ...
 - **ITERM2** 
   * It has better color themes than the built in Terminal.
 - **ITERM2 color schemes**
