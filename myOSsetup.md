@@ -3,7 +3,7 @@ This is my configuration and set up for macOS Catalina
 
 ## Table of Contents
 
-1. [Homebrew](#step-1:-download-and-install-Homebrew)
+1. [Homebrew](#homebrew)
    * Free open-source package managements system that simplifies the installation of software on macOS and Linux
    * Similar to apt-get from Ubuntu
 2. **CASK**
@@ -22,29 +22,27 @@ This is my configuration and set up for macOS Catalina
 
 -----------------------------------------------------------------------------------
 
-## Step 1: Download and install Homebrew
+## Step 1: Download and install
   ### Homebrew
   1. On terminal, type:
-
-     ```sh
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    ```
-
-## Step 2: Download and install CASK
-
-1. On terminal, type:
-
-    ```sh
-    brew install cask 
-    ````
     
-## Step 3: Download and install ITERM2
+  ```sh
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ```
+
+  ### CASK
+  1. On terminal, type:
+  ```sh
+  brew install cask 
+  ````
     
-1. On terminal, type:
-   
-   ```sh
-   brew cask install iterm2
-   ``` 
+  ### ITERM2
+  1. On terminal, type:
+  ```sh
+  brew cask install iterm2
+  ``` 
+
+
 2. Download ITERM2 color themes by clicking on:
     * [iterm2colorschemes](https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master)
 
