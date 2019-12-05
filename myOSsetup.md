@@ -16,6 +16,8 @@ My configuration and set up for macOS Catalina
   * ZSH is now the default on macOS Catalina. [source](https://support.apple.com/en-us/HT208050)
 
 
+-----------------------------------------------------------------------------------
+
 ## Step 1: Download and install Homebrew
 
 1. On terminal, type:
