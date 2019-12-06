@@ -2,7 +2,7 @@
 This is my configuration and set up for macOS Catalina
 
 ## Table of Contents
-1. [Homebrew](#1)homebrew)
+1. [Homebrew](#1-homebrew)
     * Free open-source package managements system that simplifies the installation of software on macOS and Linux
     * Similar to apt-get from Ubuntu
 1. [CASK](#cask)
@@ -21,7 +21,7 @@ This is my configuration and set up for macOS Catalina
 
 -----------------------------------------------------------------------------------
 
-  ## 1)Homebrew
+  ## 1 - Homebrew
    1. On terminal, type:
       ```sh
       /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
