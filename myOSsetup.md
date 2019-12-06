@@ -2,38 +2,35 @@
 This is my configuration and set up for macOS Catalina
 
 ## Table of Contents
-1. [Step1 - Download and Install](#step-1-download-and-install)
-    1. [Homebrew](#homebrew)
-        * Free open-source package managements system that simplifies the installation of software on macOS and Linux
-        * Similar to apt-get from Ubuntu
-    1. [CASK](#cask)
-        * It is an extension to brew to install GUI applications (eg. Google Chrome, dropbox ...
-    1. [ITERM2](#iterm2) 
-        * It has better color themes than the built in Terminal.
-        1. [ITERM2COLORS](http://iterm2colorschemes.com/)
-    1. [ZSH](#zsh)
-        * >*Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is a  extended Bourne shell with many improvements.* [source](https://en.wikipedia.org/wiki/Z_shell)
-        * ZSH is now the default on macOS Catalina. [source](https://support.apple.com/en-us/HT208050)
-    1. [Oh my ZSH](#oh-my-zsh)
-        * Open source, community-driven framework for managing your zsh configuration. [source](https://github.com/ohmyzsh/ohmyzsh)
-    1. [Powerlevel10k](#powerlevel10k)
-       * Nice theme! [source](https://github.com/romkatv/powerlevel10k/blob/master/README.md#recommended-meslo-nerd-font-patched-for-powerlevel10k)
-
+1. [Homebrew](#homebrew)
+    * Free open-source package managements system that simplifies the installation of software on macOS and Linux
+    * Similar to apt-get from Ubuntu
+1. [CASK](#cask)
+    * It is an extension to brew to install GUI applications (eg. Google Chrome, dropbox ...
+1. [ITERM2](#iterm2) 
+    * It has better color themes than the built in Terminal.
+    1. [ITERM2COLORS](http://iterm2colorschemes.com/)
+1. [ZSH](#zsh)
+    * >*Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is a  extended Bourne shell with many improvements.* [source](https://en.wikipedia.org/wiki/Z_shell)
+    * ZSH is now the default on macOS Catalina. [source](https://support.apple.com/en-us/HT208050)
+1. [Oh my ZSH](#oh-my-zsh)
+    * Open source, community-driven framework for managing your zsh configuration. [source](https://github.com/ohmyzsh/ohmyzsh)
+1. [Powerlevel10k](#powerlevel10k)
+    * Nice theme! [source](https://github.com/romkatv/powerlevel10k/blob/master/README.md#recommended-meslo-nerd-font-patched-for-powerlevel10k)
 
 -----------------------------------------------------------------------------------
 
-## Step 1-Download and Install
-  ### Homebrew
+  ## Homebrew
   1. On terminal, type:
       ```sh
       /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
       ```
-  ### CASK
+  ## CASK
   1. On terminal, type:
       ```sh
       brew install cask 
       ```
-  ### ITERM2
+  ## ITERM2
   1. On terminal, type:
       ```sh
       brew cask install iterm2
@@ -41,12 +38,12 @@ This is my configuration and set up for macOS Catalina
   2. Download ITERM2 color themes by clicking on:
       [iterm2colorschemes](https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master)
 
-  ### ZSH
+  ## ZSH
   1. If you dont have **Z shell** already. On terminal, type:
       ```sh
       brew install zsh
       ``` 
-  ### Oh My ZSH
+  ## Oh My ZSH
   1. On terminal, type:
       ```sh
       sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -56,7 +53,7 @@ This is my configuration and set up for macOS Catalina
       sh -c "$(wget -O https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       ```
       
-   ### Powerlevel10k
+   ## Powerlevel10k
    1. On terminal, type:
       ```sh
       git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
