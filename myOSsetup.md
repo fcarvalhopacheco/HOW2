@@ -21,7 +21,7 @@ This is my configuration and set up for macOS Catalina
 -----------------------------------------------------------------------------------
 
   ## 1. Homebrew
-  1. On terminal, type:
+  * On terminal, type:
       ```sh
       /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
       ```
