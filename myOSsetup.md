@@ -21,21 +21,21 @@ This is my configuration and set up for macOS Catalina
 -----------------------------------------------------------------------------------
 
   ## 1. Homebrew
-  * On terminal, type:
+   + On terminal, type:
       ```sh
       /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
       ```
   ## 2. CASK
-  1. On terminal, type:
+   2.1. On terminal, type:
       ```sh
       brew install cask 
       ```
   ## 3. ITERM2
-  1. On terminal, type:
+   + On terminal, type:
       ```sh
       brew cask install iterm2
       ``` 
-  2. Download ITERM2 color themes by clicking on:
+   + Download ITERM2 color themes by clicking on:
       [iterm2colorschemes](https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master)
 
   ## 4. ZSH
