@@ -18,22 +18,26 @@ This is my configuration and set up for macOS Catalina
 1. [Powerlevel10k](#6---powerlevel10k)
     * Nice theme! [source](https://github.com/romkatv/powerlevel10k/blob/master/README.md#recommended-meslo-nerd-font-patched-for-powerlevel10k)
 1. [Fonts](#7---patched-font)
+   * Multiple fonts for your terminal
 
 -----------------------------------------------------------------------------------
 
   ## 1 - Homebrew
    1. On terminal, type:
       ```sh
+      # Download
       /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
       ```
   ## 2 - CASK
    1. On terminal, type:
       ```sh
+      #Install
       brew install cask 
       ```
   ## 3 - ITERM2
    1. On terminal, type:
       ```sh
+      # Install
       brew cask install iterm2
       ``` 
    2. Download ITERM2 color themes by clicking on:
@@ -42,11 +46,13 @@ This is my configuration and set up for macOS Catalina
   ## 4 - ZSH
    1. If you dont have **Z shell** already. On terminal, type:
       ```sh
+      #Install
       brew install zsh
       ``` 
   ## 5 - Oh My ZSH
    1. On terminal, type:
       ```sh
+      #Download
       sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       ```
       or
@@ -57,17 +63,22 @@ This is my configuration and set up for macOS Catalina
   ## 6 - Powerlevel10k
    1. On terminal, type:
       ```sh
+      # Clone powerlevel10k
       git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
       ```
       
    2. Edit the file ~/.zshrc. On terminal, type:
       ```sh
+      # Navigate to home
       cd
+      # Open the file
       vi .zshrc
       ```
    3. Navigate to ~line 11, and change ZSH_THEME, then exit the file.
       ```sh
+      # Insert the text
       i ZSH_THEME="powerlevel10k/powerlevel10k"
+      # Get out of vim
       esc
       :wq
       ```
@@ -75,6 +86,24 @@ This is my configuration and set up for macOS Catalina
    1. Click on [Source code pro for powerline](https://github.com/powerline/fonts/blob/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf), then click on   ***Download*** 
    2. Navigate to your Download folder and open  the ***Source Code Pro for Powerline.otf*** file
    3. Click on ***Install Font***
+   4. More fonts? On terminal, type:
+      ```sh
+      # Navigate to downloads
+      cd ~/Downloads
+      
+      # Clone the following repository
+      git clone https://github.com/powerline/fonts.git --depth=1
+      
+      # Navigate to fonts
+      cd fonts
+      
+      # Install 
+      ./install.sh
+      
+      # Clean the folder
+      cd ..
+      rm -rf fonts
+      ```
 
 
       
