@@ -4,7 +4,7 @@ This is my configuration and set up for macOS Catalina
 ## Table of Contents
 
 1. [Homebrew](#homebrew)
-    * I Free open-source package managements system that simplifies the installation of software on macOS and Linux
+    * Free open-source package managements system that simplifies the installation of software on macOS and Linux
     * Similar to apt-get from Ubuntu
 2. [CASK](#cask)
     * It is an extension to brew to install GUI applications (eg. Google Chrome, dropbox ...
