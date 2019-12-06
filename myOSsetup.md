@@ -2,7 +2,7 @@
 This is my configuration and set up for macOS Catalina
 
 ## Table of Contents
-1.[Step1](#step-1)
+1.[Step1 - Download and Install](#step-1)
    1. [Homebrew](#homebrew)
        * Free open-source package managements system that simplifies the installation of software on macOS and Linux
        * Similar to apt-get from Ubuntu
