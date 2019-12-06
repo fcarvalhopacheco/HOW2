@@ -3,7 +3,7 @@ This is my configuration and set up for macOS Catalina
 
 ## Table of Contents
 
-1. [Homebrew](#homebrew)
+1. [Homebrew](#1.homebrew)
     * I Free open-source package managements system that simplifies the installation of software on macOS and Linux
     * Similar to apt-get from Ubuntu
 2. [CASK](#cask)
@@ -17,12 +17,13 @@ This is my configuration and set up for macOS Catalina
 5. [Oh my ZSH](#oh-my-zsh)
     * Open source, community-driven framework for managing your zsh configuration. [source](https://github.com/ohmyzsh/ohmyzsh)
 6. [Powerlevel10k](#powerlevel10k)
+   * Nice theme! [source](https://github.com/romkatv/powerlevel10k/blob/master/README.md#recommended-meslo-nerd-font-patched-for-powerlevel10k)
 
 
 -----------------------------------------------------------------------------------
 
 ## Step 1: Downloading and installing
-  ### Homebrew
+  ### 1.Homebrew
   1. On terminal, type:
       ```sh
       /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
