@@ -21,30 +21,30 @@ This is my configuration and set up for macOS Catalina
 -----------------------------------------------------------------------------------
 
   ## 1. Homebrew
-   + On terminal, type:
+   1.On terminal, type:
       ```sh
       /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
       ```
   ## 2. CASK
-   2.1. On terminal, type:
+   1. On terminal, type:
       ```sh
       brew install cask 
       ```
   ## 3. ITERM2
-   + On terminal, type:
+   1. On terminal, type:
       ```sh
       brew cask install iterm2
       ``` 
-   + Download ITERM2 color themes by clicking on:
+   2. Download ITERM2 color themes by clicking on:
       [iterm2colorschemes](https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master)
 
   ## 4. ZSH
-  1. If you dont have **Z shell** already. On terminal, type:
+   1. If you dont have **Z shell** already. On terminal, type:
       ```sh
       brew install zsh
       ``` 
   ## 5. Oh My ZSH
-  1. On terminal, type:
+   1. On terminal, type:
       ```sh
       sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       ```
@@ -53,7 +53,7 @@ This is my configuration and set up for macOS Catalina
       sh -c "$(wget -O https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       ```
       
-   ## 6. Powerlevel10k
+  ## 6. Powerlevel10k
    1. On terminal, type:
       ```sh
       git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
