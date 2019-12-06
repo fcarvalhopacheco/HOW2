@@ -1,5 +1,5 @@
 # macOS Catalina 10.15.1
-This is my configuration and set up for macOS Catalina
+This is my configuration and set up for macOS Catalina system 
 
 ## Table of Contents
 1. [Homebrew](#1---homebrew)
