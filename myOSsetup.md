@@ -104,6 +104,7 @@ This is my configuration and set up for macOS Catalina system
       cd ..
       rm -rf fonts
       ```
+   5. Set this font in iTerm2 (iTerm → Preferences → Profiles → Text → Change Font), best to do this for "Font" and for "Non-ASCII Font". Restart iTerm2 for all changes to take effect.
 
 
       
