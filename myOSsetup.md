@@ -22,7 +22,7 @@ This is my configuration and set up for macOS Catalina
 
 -----------------------------------------------------------------------------------
 
-## Step 1 Download and Install
+## Step 1-Download and Install
   ### Homebrew
   1. On terminal, type:
       ```sh
