@@ -17,6 +17,7 @@ This is my configuration and set up for macOS Catalina
     * Open source, community-driven framework for managing your zsh configuration. [source](https://github.com/ohmyzsh/ohmyzsh)
 1. [Powerlevel10k](#powerlevel10k)
     * Nice theme! [source](https://github.com/romkatv/powerlevel10k/blob/master/README.md#recommended-meslo-nerd-font-patched-for-powerlevel10k)
+1. [Fonts](#patched-font)
 
 -----------------------------------------------------------------------------------
 
