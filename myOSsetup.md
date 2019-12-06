@@ -70,6 +70,10 @@ This is my configuration and set up for macOS Catalina
       esc
       :wq
       ```
+  ## 7. Patched font
+   1. Click on [Source code pro for powerline](https://github.com/powerline/fonts/blob/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf), then click on *Download 
+   2. Navigate to your Download folder and open  the *Source Code Pro for Powerline.otf* file
+   3. Click on *Install Font*
 
 
       
