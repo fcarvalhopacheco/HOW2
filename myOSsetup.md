@@ -19,6 +19,7 @@ This is my configuration and set up for macOS Catalina system
     * Nice theme! [source](https://github.com/romkatv/powerlevel10k/blob/master/README.md#recommended-meslo-nerd-font-patched-for-powerlevel10k)
 1. [Fonts](#7---patched-font)
    * Multiple fonts for your terminal
+1. [Configuration](#8---configuration)
 
 -----------------------------------------------------------------------------------
 
@@ -105,6 +106,17 @@ This is my configuration and set up for macOS Catalina system
       rm -rf fonts
       ```
    5. Set this font in iTerm2 (iTerm → Preferences → Profiles → Text → Change Font), best to do this for "Font" and for "Non-ASCII Font". Restart iTerm2 for all changes to take effect.
+   
+  ## 8 - Configuration
+   1. Customize your terminal the way you like. For new users. On terminal, type:
+      ```sh
+         p10k configure
+      ```
+      
+
+
+   
+   
 
 
       
