@@ -16,7 +16,7 @@ This is my configuration and set up for macOS Catalina
     * ZSH is now the default on macOS Catalina. [source](https://support.apple.com/en-us/HT208050)
 5. [Oh my ZSH](#oh-my-zsh)
     * Open source, community-driven framework for managing your zsh configuration. [source](https://github.com/ohmyzsh/ohmyzsh)
-
+6. [Powerlevel10k](#powerlevel10k)
 
 
 -----------------------------------------------------------------------------------
@@ -40,8 +40,6 @@ This is my configuration and set up for macOS Catalina
   2. Download ITERM2 color themes by clicking on:
       [iterm2colorschemes](https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master)
 
-  3. Configure the new color. Open Iterm2, click on Preferences -> Click on Profiles -> Click on Colors -> Click Colors preset -> Scroll down and click on Import -> Navigate to the place you just downloaded the themes -> Click on Scheme -> Select all files -> Click Ok -> Choose one that you like! =)
-
   ### ZSH
   1. If you dont have **Z shell** already. On terminal, type:
       ```sh
@@ -56,16 +54,27 @@ This is my configuration and set up for macOS Catalina
       ```sh
       sh -c "$(wget -O https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       ```
+      
+   ### Powerlevel10k
+   1. On terminal, type:
+      ```sh
+      git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+      ```
+      
    2. Edit the file ~/.zshrc. On terminal, type:
       ```sh
       cd
       vi .zshrc
       ```
-   3. Navigate to ~line 11, and change ZSH_THEME to ZSH_THEME="agnoster", then exit the file.
+   3. Navigate to ~line 11, and change ZSH_THEME, then exit the file.
       ```sh
-      i ZSH_THEME="agnoster"
+      i ZSH_THEME="powerlevel10k/powerlevel10k"
+      esc
       :wq
       ```
+
+
+      
 
 
   
