@@ -112,7 +112,7 @@ This is my configuration and set up for macOS Catalina system
          # Remove the # behind context to activate username@hostname 
          
          typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-               status                  # exit code of the last command
+         status                  # exit code of the last command
          command_execution_time  # duration of the last command
          background_jobs         # presence of background jobs
          direnv                  # direnv status (https://direnv.net/)
