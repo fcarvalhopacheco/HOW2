@@ -23,7 +23,7 @@ This is my guide to configure a macOS Catalina system.
     * Nice theme! [source](https://github.com/romkatv/powerlevel10k/blob/master/README.md#recommended-meslo-nerd-font-patched-for-powerlevel10k)
 1. [Fonts](#7---patched-font)
    * Multiple fonts for your terminal
-1. [Configuration](#8---configuration)
+1. [Theme and Font configuration](#8---theme-configuration)
 
 -----------------------------------------------------------------------------------
 
@@ -99,7 +99,7 @@ This is my guide to configure a macOS Catalina system.
       
    
    
-  ## 8 - Configuration
+  ## 8 - Theme Configuration
    1. Customize your terminal the way you like. For new users. On terminal, type:
       ```sh
          p10k configure
