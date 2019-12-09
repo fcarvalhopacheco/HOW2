@@ -1,7 +1,7 @@
 # macOS Catalina 10.15.1
 This is my configuration and set up for macOS Catalina system 
 
-![Image description](/Users/fcp/Documents/1.git/1.macos_catalina_setup/Screen Shot 2019-12-08 at 22.15.12.png)
+
 
 ## Table of Contents
 1. [Homebrew](#1---homebrew)
