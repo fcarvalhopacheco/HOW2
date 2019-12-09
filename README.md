@@ -1,4 +1,4 @@
-# TIPS & TRICKS ON HOW2  
+# MY TIPS AND TRICKS ON HOW2 ... 
 
 * This repository was created to guide me through my learning experience with Linux, Python, Ethical hacking, Software development, and more. Please feel free to help!
 
