@@ -101,6 +101,78 @@ This is my configuration and set up for macOS Catalina system
       ```sh
          p10k configure
       ```
+   2. How do I add username and/or hostname to the left sife of the prompt? [source](https://awesomeopensource.com/project/romkatv/powerlevel10k#how-do-i-add-username-andor-hostname-to-prompt)
+      ```sh
+         # open the following file
+         vi ~/.p10k.zsh
+         
+         # Remove the # behind context to activate username@hostname 
+         
+         typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+               status                  # exit code of the last command
+         command_execution_time  # duration of the last command
+         background_jobs         # presence of background jobs
+         direnv                  # direnv status (https://direnv.net/)
+         virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
+         anaconda                # conda environment (https://conda.io/)
+         pyenv                   # python environment (https://github.com/pyenv/pyenv)
+         goenv                   # go environment (https://github.com/syndbg/goenv)
+         nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
+         nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
+         nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
+         # node_version          # node.js version
+         # go_version            # go version (https://golang.org)
+         # rust_version          # rustc version (https://www.rust-lang.org)
+         # dotnet_version        # .NET version (https://dotnet.microsoft.com)
+         rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
+         rvm                     # ruby version from rvm (https://rvm.io)
+         fvm                     # flutter version management (https://github.com/leoafarias/fvm)
+         kubecontext             # current kubernetes context (https://kubernetes.io/)
+         terraform               # terraform workspace (https://www.terraform.io)
+         aws                     # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
+         # aws_eb_env            # aws elastic beanstalk environment (https://aws.amazon.com/elasticbeanstalk/)
+         # azure                 # azure account name (https://docs.microsoft.com/en-us/cli/azure)
+         # gcloud                # google cloud acccount and project (https://cloud.google.com/)
+         
+         context                 # user@hostname
+         
+         nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
+         ranger                  # ranger shell (https://github.com/ranger/ranger)
+         vim_shell               # vim shell indicator (:sh)
+         # midnight_commander    # midnight commander shell (https://midnight-commander.org/)
+         vi_mode                 # vi mode (you don't need this if you've enabled prompt_char)
+         # vpn_ip                # virtual private network indicator
+         # ram                   # free RAM
+         # load                  # CPU load
+         time                    # current time
+         # public_ip             # public IP address
+         # proxy                 # system-wide http/https/ftp proxy
+         # battery               # internal battery
+         # example               # example user-defined segment (see prompt_example function below)
+         )
+         
+         # ADD a # behind the the following text
+         #typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=
+            
+         # ADD context on the list below to show username@hostname on the left lide
+         # The list of segments shown on the left. Fill it with the most important segments.
+         typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+              context
+              os_icon                 # os identifier
+              dir                     # current directory
+              vcs                     # git status
+              # prompt_char           # prompt symbol
+          )
+          
+          # ADD the # behind context on the list below to stop showing the username@hostname on the right side 
+          typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+               ...
+               #context
+               ...
+          )
+          
+
+
       
 
 
