@@ -1,6 +1,7 @@
 # macOS Catalina 10.15.1
 This is my guide to configure a macOS Catalina system.  
 
+## My Iterm2 
 ![my iterm2](https://github.com/fcarvalhopacheco/HOW2/blob/master/my_iterm2.png)
 
 
