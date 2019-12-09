@@ -1,7 +1,7 @@
 # macOS Catalina 10.15.1
 This is my configuration and set up for macOS Catalina system 
-![my iterm2](https://github.com/fcarvalhopacheco/HOW2/blob/master/my_iterm2.png)
 
+![my iterm2](https://github.com/fcarvalhopacheco/HOW2/blob/master/my_iterm2.png)
 
 
 ## Table of Contents
