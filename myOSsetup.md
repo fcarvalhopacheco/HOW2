@@ -172,18 +172,4 @@ This is my configuration and set up for macOS Catalina system
                #context
                ...
           )
-          
-
-
-      
-
-
-   
-   
-
-
-      
-
-
-  
-    
+          ```
