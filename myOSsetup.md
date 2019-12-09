@@ -96,7 +96,6 @@ This is my configuration and set up for macOS Catalina system
       
    3. Double-click on each file and press "Install". This will make MesloLGS NF font available to all applications on your system. Configure your terminal to use this font:
       
-   4. Set this font in iTerm2 (iTerm → Preferences → Profiles → Text → Change Font), best to do this for "Font" and for "Non-ASCII Font". Restart iTerm2 for all changes to take effect.
    
    
   ## 8 - Configuration
