@@ -2,7 +2,7 @@
 This is my guide to configure a macOS Catalina system.  
 
 ## My Iterm2 
-![my iterm2](https://github.com/fcarvalhopacheco/HOW2/blob/master/my_iterm2.png)
+![my iterm2](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos_catalina_setup/my_iterm2.png)
 
 
 ## Table of Contents
