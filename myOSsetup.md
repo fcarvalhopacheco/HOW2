@@ -176,7 +176,7 @@ This is my guide to configure a macOS Catalina system.
                ...
           )
       ```
-  ## 9 - Auto Suggestions
+  ## 9 - Auto Suggestion
    1. [Source](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
       ```sh
       # On terminal, clone the following repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
