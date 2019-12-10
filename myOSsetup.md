@@ -26,6 +26,7 @@ This is my guide to configure a macOS Catalina system.
 1. [Theme and Font configuration](#8---theme-configuration)
 
 1. [Auto Suggestion](#9---auto-suggestion)
+   * Did you forget how to type a command ? try to use this auto suggestion...
 
 -----------------------------------------------------------------------------------
 
