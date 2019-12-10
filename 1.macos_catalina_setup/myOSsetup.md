@@ -198,4 +198,4 @@ This is my guide to configure a macOS Catalina system.
       
   ## 10 - Git Github
    1. I already have git on my ubuntu machine and a github account. So I need to link two git computers to the same github account.
-   3.
+   2. Following instructions from [here](https://help.github.com/en/github)
