@@ -174,3 +174,21 @@ This is my guide to configure a macOS Catalina system.
                ...
           )
       ```
+  ## 9 - Extra Configuration
+   1. Auto suggestions [source](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
+      ```sh
+      # On terminal, clone the following repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
+      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+      # Open ~/.zshrc, by typing:
+      vi ~/.zshrc
+      
+      # Find the line that starts with plugin, and add zsh-autosuggestions inside the parenthesis
+      plugins=(git zsh-autosuggestions)
+      
+      # Save and close the file
+      esc
+      :wq!
+      
+      # Open a new terminal to see the changes
+      ```
