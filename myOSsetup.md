@@ -25,7 +25,7 @@ This is my guide to configure a macOS Catalina system.
    * Multiple fonts for your terminal
 1. [Theme and Font configuration](#8---theme-configuration)
 
-1. [Extra Configurations](#9---extra-configuration
+1. [Extra Configurations](#9---extra-configuration)
 
 -----------------------------------------------------------------------------------
 
