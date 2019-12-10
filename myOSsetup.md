@@ -25,7 +25,7 @@ This is my guide to configure a macOS Catalina system.
    * Multiple fonts for your terminal
 1. [Theme and Font configuration](#8---theme-configuration)
 
-1. [Extra Configurations](#9---extra-configuration)
+1. [Auto Suggestion](#9---auto-suggestion)
 
 -----------------------------------------------------------------------------------
 
@@ -176,8 +176,8 @@ This is my guide to configure a macOS Catalina system.
                ...
           )
       ```
-  ## 9 - Extra Configuration
-   1. Auto suggestions - [source](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
+  ## 9 - Auto Suggestions
+   1. [Source](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
       ```sh
       # On terminal, clone the following repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
       git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
