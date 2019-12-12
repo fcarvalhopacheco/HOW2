@@ -40,13 +40,13 @@ This is my guide to configure a macOS Catalina system.
    1. On terminal, type:
       ```sh
       #Install
-      brew install cask 
+      $brew install cask 
       ```
   ## 3 - ITERM2
    1. On terminal, type:
       ```sh
       # Install
-      brew cask install iterm2
+      $brew cask install iterm2
       ``` 
    2. Download ITERM2 color themes by clicking on:
       [iterm2colorschemes](https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master)
@@ -55,32 +55,32 @@ This is my guide to configure a macOS Catalina system.
    1. If you dont have **Z shell** already. On terminal, type:
       ```sh
       #Install
-      brew install zsh
+      $brew install zsh
       ``` 
   ## 5 - Oh My ZSH
    1. On terminal, type:
       ```sh
       #Download
-      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      $sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       ```
       or
       ```sh
-      sh -c "$(wget -O https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      $sh -c "$(wget -O https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       ```
       
   ## 6 - Powerlevel10k
    1. On terminal, type:
       ```sh
       # Clone powerlevel10k
-      git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+      $git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
       ```
       
    2. Edit the file ~/.zshrc. On terminal, type:
       ```sh
       # Navigate to home
-      cd
+      $cd
       # Open the file
-      vi .zshrc
+      $vi .zshrc
       ```
    3. Navigate to ~line 11, and change ZSH_THEME, then exit the file.
       ```sh
@@ -105,12 +105,12 @@ This is my guide to configure a macOS Catalina system.
   ## 8 - Theme Configuration
    1. Customize your terminal the way you like. For new users. On terminal, type:
       ```sh
-         p10k configure
+      $p10k configure
       ```
    2. How do I add username and/or hostname to the left sife of the prompt? [source](https://awesomeopensource.com/project/romkatv/powerlevel10k#how-do-i-add-username-andor-hostname-to-prompt)
       ```sh
          # open the following file
-         vi ~/.p10k.zsh
+         $vi ~/.p10k.zsh
          
          # Remove the # behind context to activate username@hostname 
          
@@ -181,10 +181,10 @@ This is my guide to configure a macOS Catalina system.
    1. [Source](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
       ```sh
       # On terminal, clone the following repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
-      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+      $git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
       # Open ~/.zshrc, by typing:
-      vi ~/.zshrc
+      $vi ~/.zshrc
       
       # Find the line that starts with plugin, and add zsh-autosuggestions inside the parenthesis
       plugins=(git zsh-autosuggestions)
@@ -205,25 +205,43 @@ This is my guide to configure a macOS Catalina system.
       ```sh
       # Download the latest version of GIT
       # If you have followed me. you should have git already install at this moment but if not, type:
-      brew install git
+      $brew install git
       
       # or Update it
-      brew upgrade git
+      $brew upgrade git
       ```
       
       - Set an username [source](https://help.github.com/en/github/using-git/setting-your-username-in-git)
       ```sh
-      # This config set up is useful to track your git commits! Your name will be visible in future commits you push to GitHub from the command line. By the way, if you already have an username in other machine, dont worry. It looks like that using git config here will only affect future commits and will not change anything from past commits.
+      # This config set up is useful to track your git commits!
+      # Your name will be visible in future commits you push 
+      # to GitHub from the command line. By the way, if you 
+      # already have an username in other machine, dont worry.
+      # It looks like that using git config here will only affect 
+      # future commits and will not change anything from past commits.
       
       # USERNAME FOR EVERY REPOSITORY YOU CREATE!
       # On Terminal, type:
-      git config --global user.name "YOUR NAME OR NICKNAME HERE"
+      $git config --global user.name "YOUR NAME OR NICKNAME HERE-GLOBAL"
        
       # Check if it is correct by typing:
-      git config --global user.name
+      $git config --global user.name
       
       # you should see
-      >YOUR NAME OR NICKNAME HERE
+      >YOUR NAME OR NICKNAME HERE-GLOBAL
+      
+      # USERNAME FOR A SINGLE REPOSITORY
+      # Change the current working directory to the local repository 
+      # where you want to configure the name that is associated with your Git commits.
+         
+      # On Terminal, type:
+      $ git config user.name "YOUR NAME OR NICKNAME HERE-LOCAL"
+      
+      # Check if it is correct by typing:
+      $git config user.name
+      
+      # you should see
+      >YOUR NAME OR NICKNAME HERE-LOCAL
       ```
       
    
