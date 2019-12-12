@@ -196,6 +196,12 @@ This is my guide to configure a macOS Catalina system.
       # Open a new terminal to see the changes
       ```
       
-  ## 10 - Git Github
-   1. I already have git on my ubuntu machine and a github account. So I need to link two git computers to the same github account.
-   2. Following instructions from [here](https://help.github.com/en/github)
+  ## 10 - Git
+   1. I already have git on my ubuntu machine and a github account. So I need to link both computers to the same github account
+   2. I will be following instructions from [here](https://help.github.com/en/github)
+   3. * >*At the heart of GitHub is an open source version control system (VCS) called Git. Git is responsible for everything GitHub-related that happens locally on your computer..* [source](https://help.github.com/en/github/getting-started-with-github/set-up-git)
+   
+   
+   
+   
+   
