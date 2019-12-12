@@ -244,6 +244,14 @@ This is my guide to configure a macOS Catalina system.
       >YOUR NAME OR NICKNAME HERE-LOCAL
       ```
       
+      
+   - Set your commit email [source](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
+      ```sh
+      
+      
+      
+      ```
+      
    
    
    
