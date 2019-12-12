@@ -1,4 +1,4 @@
-# macOS Catalina 10.15.1
+# macOS Catalina 10.15.2
 This is my guide to configure a macOS Catalina system.  
 
 ## My Iterm2 
