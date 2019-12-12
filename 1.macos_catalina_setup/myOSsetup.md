@@ -203,12 +203,27 @@ This is my guide to configure a macOS Catalina system.
    4. Setting up GIT
       - Download it!
       ```sh
-      # Download and install the latest version of GIT
+      # Download the latest version of GIT
       # If you have followed me. you should have git already install at this moment but if not, type:
       brew install git
       
       # or Update it
       brew upgrade git
+      ```
+      
+      - Set an username [source](https://help.github.com/en/github/using-git/setting-your-username-in-git)
+      ```sh
+      # This config set up is useful to track your git commits! Your name will be visible in future commits you push to GitHub from the command line. By the way, if you already have an username in other machine, dont worry. It looks like that using git config here will only affect future commits and will not change anything from past commits.
+      
+      # USERNAME FOR EVERY REPOSITORY YOU CREATE!
+      # On Terminal, type:
+      git config --global user.name "YOUR NAME OR NICKNAME HERE"
+       
+      # Check if it is correct by typing:
+      git config --global user.name
+      
+      # you should see
+      >YOUR NAME OR NICKNAME HERE
       ```
       
    
