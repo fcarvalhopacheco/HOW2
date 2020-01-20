@@ -246,10 +246,16 @@ This is my guide to configure a macOS Catalina system.
       
       
       - Set your commit email [source](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
+      
+      - Setting your commit email address in Git
       ```sh
-      
-      
-      
+      # On Terminal,
+      $git config --global user.email "youremailhere@test.com"
+
+      # Check if your emails is correct
+      $	git config --global user.email
+
+      > youremailhere@test.com
       ```
       
    
