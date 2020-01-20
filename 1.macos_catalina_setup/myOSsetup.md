@@ -250,10 +250,10 @@ This is my guide to configure a macOS Catalina system.
       - Setting your commit email address in Git
       ```sh
       # On Terminal,
-      $git config --global user.email "youremailhere@test.com"
+      $ git config --global user.email "youremailhere@test.com"
 
       # Check if your emails is correct
-      $	git config --global user.email
+      $ git config --global user.email
 
       > youremailhere@test.com
       ```
