@@ -257,8 +257,23 @@ This is my guide to configure a macOS Catalina system.
 
       > youremailhere@test.com
       ```
-      
-   
+   ## 11 - VirtualBOX	
+    1. I currently use virtual box to process Shipboard ADCP data, but I will also install some ubuntu version to do all Linux learning that i am planning
+      - Download the VirtualBOX by,
+      ```sh
+      # On Terminal, type:
+      $brew cask install virtualbox
+
+      # Check the version:
+      $brew cask info virtualbox
+
+      #Clen any old version installed on computer
+      $brew clean up
+
+      #Open VirtualBox:
+      $virtualbox 
+
+      ```  
    
    
    
