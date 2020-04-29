@@ -260,7 +260,7 @@ This is my guide to configure a macOS Catalina system.
    
   ## 11 - VirtualBOX	
    
-   1. I currently use virtual box to process Shipboard ADCP data, but I will also install some ubuntu version to do all Linux learning that i am planning
+   1. I currently use virtual box to process Shipboard ADCP data, but I will soon start playing with LINUX practices and want to have a dedicated computer for it. 
   
       - Download the VirtualBOX by,
       ```sh
