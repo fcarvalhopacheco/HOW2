@@ -260,8 +260,7 @@ This is my guide to configure a macOS Catalina system.
       > youremailhere@test.com
       ```
    
-  ## 11 - VirtualBOX	
-   
+  ## 11 - Virtualbox	
    1. I currently use virtual box to process Shipboard ADCP data, but I will soon start playing with LINUX practices and want to have a dedicated computer for it. 
   
       - Download the VirtualBOX by,
