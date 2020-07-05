@@ -28,7 +28,8 @@ This is my guide to configure a macOS Catalina system.
 9. [Auto Suggestion](#9---auto-suggestion)
    * Did you forget how to type a command ? try to use this auto suggestion...
 10. [GIT](#10---git)
-11. [VirtualBox](#11---virtual-box)
+
+11. [VirtualBOX](#11---virtualbox)
 -----------------------------------------------------------------------------------
 
   ## 1 - Homebrew
