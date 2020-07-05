@@ -9,23 +9,23 @@ This is my guide to configure a macOS Catalina system.
 1. [Homebrew](#1---homebrew)
     * Free open-source package managements system that simplifies the installation of software on macOS and Linux
     * Similar to apt-get from Ubuntu
-1. [CASK](#2---cask)
+2. [CASK](#2---cask)
     * It is an extension to brew to install GUI applications (eg. Google Chrome, dropbox ...
-1. [ITERM2](#3---iterm2) 
+3. [ITERM2](#3---iterm2) 
     * It has better color themes than the built in Terminal.
     1. [ITERM2COLORS](http://iterm2colorschemes.com/)
-1. [ZSH](#4---zsh)
+4. [ZSH](#4---zsh)
     * >*Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is a  extended Bourne shell with many improvements.* [source](https://en.wikipedia.org/wiki/Z_shell)
     * ZSH is now the default on macOS Catalina. [source](https://support.apple.com/en-us/HT208050)
-1. [Oh my ZSH](#5---oh-my-zsh)
+5. [Oh my ZSH](#5---oh-my-zsh)
     * Open source, community-driven framework for managing your zsh configuration. [source](https://github.com/ohmyzsh/ohmyzsh)
-1. [Powerlevel10k](#6---powerlevel10k)
+6. [Powerlevel10k](#6---powerlevel10k)
     * Nice theme! [source](https://github.com/romkatv/powerlevel10k/blob/master/README.md#recommended-meslo-nerd-font-patched-for-powerlevel10k)
-1. [Fonts](#7---patched-font)
+7. [Fonts](#7---patched-font)
    * Multiple fonts for your terminal
-1. [Theme and Font configuration](#8---theme-configuration)
+8. [Theme and Font configuration](#8---theme-configuration)
 
-1. [Auto Suggestion](#9---auto-suggestion)
+9. [Auto Suggestion](#9---auto-suggestion)
    * Did you forget how to type a command ? try to use this auto suggestion...
 
 -----------------------------------------------------------------------------------
