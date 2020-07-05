@@ -31,13 +31,13 @@ This is my guide to configure a macOS Catalina system.
 -----------------------------------------------------------------------------------
 
   ## 1 - Homebrew
-   1.1 On terminal, type:
+   1.1. On terminal, type:
       ```sh
       # Download
       /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
       ```
   ## 2 - CASK
-   2.1 On terminal, type:
+   2.1. On terminal, type:
       ```sh
       #Install
       $brew install cask 
