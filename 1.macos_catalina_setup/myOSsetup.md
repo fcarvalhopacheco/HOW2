@@ -27,17 +27,18 @@ This is my guide to configure a macOS Catalina system.
 
 9. [Auto Suggestion](#9---auto-suggestion)
    * Did you forget how to type a command ? try to use this auto suggestion...
-
+10. [GIT](#10---git)
+11. [VirtualBox](#11---virtual-box)
 -----------------------------------------------------------------------------------
 
   ## 1 - Homebrew
-   1.1. On terminal, type:
+   1. On terminal, type:
       ```sh
       # Download
       /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
       ```
   ## 2 - CASK
-   2.1. On terminal, type:
+   1. On terminal, type:
       ```sh
       #Install
       $brew install cask 
