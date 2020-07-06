@@ -281,7 +281,8 @@ This is my guide to configure a macOS Catalina system.
 
       ```  
    
-  ## 12 - Python Enviroment (Miniconda)	
+  ## 12 - Python-Enviroment(Miniconda)
+	
    1. There are many ways to install/create Python working Enviroments. However, I will be using conda package manager with miniconda and the conda-forge package collection, which provides platform-independent packaage management for Python and other softwares in self-contained user-specific enviroments. 
 
    2. Why this way? It seems the science community has adopted Anaconda (conda) distribution to create and manage python project enviroments. Please check [Introduction to Conda for (Data) Scientists](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/setup/) to learn more about it. Ps. miniconda is the small version of anaconda.  
