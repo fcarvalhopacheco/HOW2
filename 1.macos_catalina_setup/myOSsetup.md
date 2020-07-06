@@ -9,29 +9,38 @@ This is my guide to configure a macOS Catalina system.
 1. [Homebrew](#1---homebrew)
     * Free open-source package managements system that simplifies the installation of software on macOS and Linux
     * Similar to apt-get from Ubuntu
+
 2. [CASK](#2---cask)
     * It is an extension to brew to install GUI applications (eg. Google Chrome, dropbox ...
+
 3. [ITERM2](#3---iterm2) 
     * It has better color themes than the built in Terminal.
     1. [ITERM2COLORS](http://iterm2colorschemes.com/)
+
 4. [ZSH](#4---zsh)
     * >*Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is a  extended Bourne shell with many improvements.* [source](https://en.wikipedia.org/wiki/Z_shell)
     * ZSH is now the default on macOS Catalina. [source](https://support.apple.com/en-us/HT208050)
+
 5. [Oh my ZSH](#5---oh-my-zsh)
     * Open source, community-driven framework for managing your zsh configuration. [source](https://github.com/ohmyzsh/ohmyzsh)
+
 6. [Powerlevel10k](#6---powerlevel10k)
     * Nice theme! [source](https://github.com/romkatv/powerlevel10k/blob/master/README.md#recommended-meslo-nerd-font-patched-for-powerlevel10k)
+
 7. [Fonts](#7---patched-font)
    * Multiple fonts for your terminal
+
 8. [Theme and Font configuration](#8---theme-configuration)
 
 9. [Auto Suggestion](#9---auto-suggestion)
    * Did you forget how to type a command ? try to use this auto suggestion...
+
 10. [GIT](#10---git)
 
 11. [VirtualBOX](#11---virtualbox)
 
-12. [Python Enviroment](#12---python-env)
+12. [Python Enviroment](#12---python-enviroment)
+
 -----------------------------------------------------------------------------------
 
   ## 1 - Homebrew
@@ -281,16 +290,14 @@ This is my guide to configure a macOS Catalina system.
 
       ```  
    
-  ## 12 - Python Envoriment
+  ## 12 - Python Enviroment
    1. There are many ways to install/create Python working Enviroments. However, I will be using conda package manager with miniconda and the conda-forge package collection, which provides platform-independent packaage management for Python and other softwares in self-contained user-specific enviroments. 
 
    2. Why this way? It seems the science community has adopted Anaconda (conda) distribution to create and manage python project enviroments. Please check [Introduction to Conda for (Data) Scientists](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/setup/) to learn more about it. Ps. miniconda is the small version of anaconda.  
 
    3. Other ways? Please check [The definitive guide to setup my Python workspace](https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14), by Henrique Bastos. Its a great tutorial to config your machine with pyenv, virtualenv ... 
 
-
-      
-- Install Python3 version of Miniconda  by,
+      - Install Python3 version of Miniconda  by,
       ```sh
       # On Terminal, type:
       $brew cask install virtualbox
