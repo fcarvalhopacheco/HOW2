@@ -30,6 +30,8 @@ This is my guide to configure a macOS Catalina system.
 10. [GIT](#10---git)
 
 11. [VirtualBOX](#11---virtualbox)
+
+11. [Python Enviroment](#12---python-enviroment)
 -----------------------------------------------------------------------------------
 
   ## 1 - Homebrew
@@ -279,6 +281,30 @@ This is my guide to configure a macOS Catalina system.
 
       ```  
    
+  ## 12 - Python Enviroment (Miniconda)	
+   1. There are many ways to install/create Python working Enviroments. However, I will be using conda package manager with miniconda and the conda-forge package collection, which provides platform-independent packaage management for Python and other softwares in self-contained user-specific enviroments. 
+
+   2. Why this way? It seems the science community has adopted Anaconda (conda) distribution to create and manage python project enviroments. Please check [Introduction to Conda for (Data) Scientists](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/setup/) to learn more about it. Ps. miniconda is the small version of anaconda.  
+
+   3. Other ways? Please check [The definitive guide to setup my Python workspace](https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14), by Henrique Bastos. Its a great tutorial to config your machine with pyenv, virtualenv ... 
+
+
+      
+- Install Python3 version of Miniconda  by,
+      ```sh
+      # On Terminal, type:
+      $brew cask install virtualbox
+
+      # Check the version:
+      $brew cask info virtualbox
+
+      #Clen any old version installed on computer
+      $brew clean up
+
+      #Open VirtualBox:
+      $virtualbox 
+
+      ```  
    
    
    
