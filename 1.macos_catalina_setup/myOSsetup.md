@@ -31,7 +31,7 @@ This is my guide to configure a macOS Catalina system.
 
 11. [VirtualBOX](#11---virtualbox)
 
-11. [Python-Enviroment](#12---python-enviroment)
+12. [Python-Enviroment](#12---python-enviroment)
 -----------------------------------------------------------------------------------
 
   ## 1 - Homebrew
