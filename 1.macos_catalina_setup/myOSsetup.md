@@ -308,6 +308,8 @@ This is my guide to configure a macOS Catalina system.
       $zsh Miniconda3-latest-Linux-x86_64.sh  	
 
       # Follow the instructions on terminal. 
+      # If you forget to press NO to auto_activate miniconda every time you open a new sessiong type:
+      # conda config --set auto_activate_base false	 
 
       # Once the install script completes, you can remove it 
       $ rm -rf Miniconda3-latest-MacOSX-x86_64.sh
