@@ -291,25 +291,40 @@ This is my guide to configure a macOS Catalina system.
       ```  
    
   ## 12 - Python Enviroment
-   1. There are many ways to install/create Python working Enviroments. However, I will be using conda package manager with miniconda and the conda-forge package collection, which provides platform-independent packaage management for Python and other softwares in self-contained user-specific enviroments. 
+   1. There are many ways to install/create Python working Enviroments. However, I will be using conda package manager with miniconda and the conda-forge package collection, which provides platform-independent package management for Python and other softwares in self-contained user-specific enviroments. 
 
    2. Why this way? It seems the science community has adopted Anaconda (conda) distribution to create and manage python project enviroments. Please check [Introduction to Conda for (Data) Scientists](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/setup/) to learn more about it. Ps. miniconda is the small version of anaconda.  
 
    3. Other ways? Please check [The definitive guide to setup my Python workspace](https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14), by Henrique Bastos. Its a great tutorial to config your machine with pyenv, virtualenv ... 
 
-      - Install Python3 version of Miniconda  by,
+      - Download the Miniconda installer,
+      [Miniconda](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh)
+      
       ```sh
-      # On Terminal, type:
-      $brew cask install virtualbox
+      # On Terminal, navigate to:
+      $cd Downloads
 
-      # Check the version:
-      $brew cask info virtualbox
+      # Install Miniconda by typing:
+      $zsh Miniconda3-latest-Linux-x86_64.sh  	
 
-      #Clen any old version installed on computer
-      $brew clean up
+      # Follow the instructions on terminal. 
 
-      #Open VirtualBox:
-      $virtualbox 
+      # Once the install script completes, you can remove it 
+      $ rm -rf Miniconda3-latest-MacOSX-x86_64.sh
+	
+      # Verify your Conda installation:
+      $conda help
+      $conda -V
+
+      # Check the path by typing:
+      $whence -p conda #or 
+      $type conda  # For bash terminal, type: which conda -> The equivalent to zsh's which in bash is type. 
+      
+      # Make sure you have the most recent version
+      $conda update --name base --channel defaults --yes conda
+
+      # Initialize your shell for Conda
+      $conda init zsh
 
       ```  
    
