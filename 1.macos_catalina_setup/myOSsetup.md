@@ -43,27 +43,35 @@ This is my guide to configure a macOS Catalina system.
 
 -----------------------------------------------------------------------------------
 
-## 1 - Homebrew [](#){name=homebrew}
-
-   1. On terminal, type:
-      ```sh
-      # Download
+## 1.Homebrew [](#){name=homebrew}
+    
+* On terminal, type:
+    
+    ```sh
+    # Download
       /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
-      ```
+    ```
+
 ## 2 - CASK
-   1. On terminal, type:
-      ```sh
-      #Install
-      $brew install cask 
-      ```
+   
+* On terminal, type:
+      
+    ```sh
+    #Install
+    $brew install cask 
+    ```
+
 ## 3 - ITERM2
-   1. On terminal, type:
-      ```sh
-      # Install
-      $brew cask install iterm2
-      ``` 
-   2. Download ITERM2 color themes by clicking on:
-      [iterm2colorschemes](https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master)
+
+* On terminal, type:
+   
+    ```sh
+    # Install
+    $brew cask install iterm2
+    ``` 
+
+* Download ITERM2 color themes by clicking on:
+    + [iterm2colorschemes](https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master)
 
 ## 4 - ZSH
    1. If you dont have **Z shell** already. On terminal, type:
@@ -104,13 +112,14 @@ This is my guide to configure a macOS Catalina system.
       esc
       :wq
       ```
-## 7 - Fonts:
-   1. Recommended: Meslo Nerd Font patched for Powerlevel10k. [source](https://awesomeopensource.com/project/romkatv/powerlevel10k)
-   2. Download the following four files.
-      * [MesloLGS NF Regular.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf)
-      * [MesloLGS NF Bold.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold.ttf)
-      * [MesloLGS NF Italic.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Italic.ttf)
-      * [MesloLGS NF Bold Italic.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold%20Italic.ttf)
+## 7 - Fonts
+
+* Recommended: Meslo Nerd Font patched for Powerlevel10k. [source](https://awesomeopensource.com/project/romkatv/powerlevel10k)
+* Download the following four files.
+    + [MesloLGS NF Regular.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf)
+    + [MesloLGS NF Bold.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold.ttf)
+    + [MesloLGS NF Italic.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Italic.ttf)
+    + [MesloLGS NF Bold Italic.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold%20Italic.ttf)
       
    3. Double-click on each file and press "Install". This will make MesloLGS NF font available to all applications on your system. Configure your terminal to use this font:
       
