@@ -54,7 +54,7 @@ This is my guide to configure a macOS Catalina system.
 
 -----------------------------------------------------------------------------------
 
-## 1 - Homerbrew
+## 1 - Homebrew
 
     
 * Download homebrew.  
