@@ -45,28 +45,28 @@ This is my guide to configure a macOS Catalina system.
 
 ## 1.Homebrew [](#){name=homebrew}
     
-* On terminal, type:
+* Download homebrew.  
     
     ```sh
-    # Download
-      /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    # On terminal, type:
+    $/usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ```
 
 ## 2 - CASK
    
-* On terminal, type:
-      
+* Download cask.  
+
     ```sh
-    #Install
+    # On terminal, type:
     $brew install cask 
     ```
 
 ## 3 - ITERM2
 
-* On terminal, type:
+* Download ITERM2  
    
-    ```sh
-    # Install
+    ```yaml
+    # On terminal, type:
     $brew cask install iterm2
     ``` 
 
