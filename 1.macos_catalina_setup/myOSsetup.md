@@ -7,54 +7,54 @@ This is my guide to configure a macOS Catalina system.
 
 ## Table of Contents
 
-1. [Homebrew](#1--homebrew)
+1. [Homebrew](#1---homebrew)
 
     * Free open-source package managements system that simplifies the installation of software on macOS and Linux
     
     * Similar to apt-get from Ubuntu
 
-2. [CASK](#2--cask)
+2. [CASK](#2---cask)
    
      * It is an extension to brew to install GUI applications (eg. Google Chrome, dropbox ...
 
-3. [ITERM2](#3--iterm2) 
+3. [ITERM2](#3---iterm2) 
     
     * It has better color themes than the built in Terminal.
     * [ITERM2COLORS](http://iterm2colorschemes.com/)
 
-4. [ZSH](#4--zsh)
+4. [ZSH](#4---zsh)
 
     * > *Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is a  extended Bourne shell with many improvements* [source](https://en.wikipedia.org/wiki/Z_shell)
     
     * ZSH is now the default on macOS Catalina. [source](https://support.apple.com/en-us/HT208050)
 
-5. [Oh my ZSH](#5--oh-my-zsh)
+5. [Oh my ZSH](#5---oh-my-zsh)
 
     * Open source, community-driven framework for managing your zsh configuration. [source](https://github.com/ohmyzsh/ohmyzsh)
 
-6. [Powerlevel10k](#6--powerlevel10k)
+6. [Powerlevel10k](#6---powerlevel10k)
     
     * Nice theme! [source](https://github.com/romkatv/powerlevel10k/blob/master/README.md#recommended-meslo-nerd-font-patched-for-powerlevel10k)
 
-7. [Fonts](#7--patched-font)
+7. [Fonts](#7---patched-font)
    
     * Multiple fonts for your terminal
 
-8. [Theme and Font configuration](#8--theme-configuration)
+8. [Theme and Font configuration](#8---theme-configuration)
 
-9. [Auto Suggestion](#9--auto-suggestion)
+9. [Auto Suggestion](#9---auto-suggestion)
     
     * Did you forget how to type a command ? try to use this auto suggestion...
     
-10. [GIT](#10--git)
+10. [GIT](#10---git)
 
-11. [VirtualBOX](#11--virtualbox)
+11. [VirtualBOX](#11---virtualbox)
 
-12. [Python Enviroment](#12--python-enviroment)
+12. [Python Enviroment](#12---python-enviroment)
 
 -----------------------------------------------------------------------------------
 
-## [Homebrew]
+## 1 - Homerbrew
 
     
 * Download homebrew.  
@@ -258,9 +258,8 @@ This is my guide to configure a macOS Catalina system.
 
 * >*At the heart of GitHub is an open source version control system (VCS) called Git. Git is responsible for everything GitHub-related that happens locally on your computer..* [source](https://help.github.com/en/github/getting-started-with-github/set-up-git)
 
-* Setting up GIT
     
-    + Download it!
+* Download it!
     
     ```sh
     # Download the latest version of GIT
@@ -271,7 +270,7 @@ This is my guide to configure a macOS Catalina system.
     $ brew upgrade git
     ```
     
-    + Set an username [source](https://help.github.com/en/github/using-git/setting-your-username-in-git)
+* Set an username [source](https://help.github.com/en/github/using-git/setting-your-username-in-git)
       
     ```sh
     # This config set up is useful to track your git commits!
@@ -305,9 +304,9 @@ This is my guide to configure a macOS Catalina system.
     >YOUR NAME OR NICKNAME HERE-LOCAL
     ```
 
-    + Set your commit email [source](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
+* Set your commit email [source](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
       
-    + Setting your commit email address in Git
+* Setting your commit email address in Git
     
     ```sh
     # On Terminal,
@@ -347,8 +346,7 @@ This is my guide to configure a macOS Catalina system.
 
 * Other ways? Please check [The definitive guide to setup my Python workspace](https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14), by Henrique Bastos. Its a great tutorial to config your machine with pyenv, virtualenv ... 
 
-* Download the Miniconda installer,
-      [Miniconda](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh)
+* Download the Miniconda installer,[Miniconda](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh)
       
     ```sh
     # On Terminal, navigate to:
