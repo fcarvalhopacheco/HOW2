@@ -48,8 +48,10 @@ This is my guide to configure a macOS Catalina system.
 * Download homebrew.  
     
     ```sh
+
     # On terminal, type:
-    $/usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    $ /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
     ```
 
 ## 2 - CASK
@@ -58,16 +60,16 @@ This is my guide to configure a macOS Catalina system.
 
     ```sh
     # On terminal, type:
-    $brew install cask 
+    $ brew install cask 
     ```
 
 ## 3 - ITERM2
 
 * Download ITERM2  
    
-    ```yaml
+    ```sh
     # On terminal, type:
-    $brew cask install iterm2
+    $ brew cask install iterm2
     ``` 
 
 * Download ITERM2 color themes by clicking on:
