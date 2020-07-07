@@ -43,15 +43,14 @@ This is my guide to configure a macOS Catalina system.
 
 -----------------------------------------------------------------------------------
 
-## 1.Homebrew [](#){name=homebrew}
+## Homebrew {#homebrew-1}
+
     
 * Download homebrew.  
     
-    ```sh
-
+    ```zsh
     # On terminal, type:
     $ /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
     ```
 
 ## 2 - CASK
