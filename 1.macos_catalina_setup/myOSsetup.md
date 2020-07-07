@@ -6,7 +6,7 @@ This is my guide to configure a macOS Catalina system.
 
 
 ## Table of Contents
-1. [Homebrew](#1---homebrew)
+1. [Homebrew](#homebrew)
     * Free open-source package managements system that simplifies the installation of software on macOS and Linux
     * Similar to apt-get from Ubuntu
 
@@ -34,7 +34,7 @@ This is my guide to configure a macOS Catalina system.
 
 9. [Auto Suggestion](#9---auto-suggestion)
    * Did you forget how to type a command ? try to use this auto suggestion...
-
+    
 10. [GIT](#10---git)
 
 11. [VirtualBOX](#11---virtualbox)
@@ -43,19 +43,20 @@ This is my guide to configure a macOS Catalina system.
 
 -----------------------------------------------------------------------------------
 
-  ## 1 - Homebrew
+## 1 - Homebrew [](#){name=homebrew}
+
    1. On terminal, type:
       ```sh
       # Download
       /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
       ```
-  ## 2 - CASK
+## 2 - CASK
    1. On terminal, type:
       ```sh
       #Install
       $brew install cask 
       ```
-  ## 3 - ITERM2
+## 3 - ITERM2
    1. On terminal, type:
       ```sh
       # Install
@@ -64,13 +65,13 @@ This is my guide to configure a macOS Catalina system.
    2. Download ITERM2 color themes by clicking on:
       [iterm2colorschemes](https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master)
 
-  ## 4 - ZSH
+## 4 - ZSH
    1. If you dont have **Z shell** already. On terminal, type:
       ```sh
       #Install
       $brew install zsh
       ``` 
-  ## 5 - Oh My ZSH
+## 5 - Oh My ZSH
    1. On terminal, type:
       ```sh
       #Download
@@ -81,7 +82,7 @@ This is my guide to configure a macOS Catalina system.
       $sh -c "$(wget -O https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       ```
       
-  ## 6 - Powerlevel10k
+## 6 - Powerlevel10k
    1. On terminal, type:
       ```sh
       # Clone powerlevel10k
@@ -103,7 +104,7 @@ This is my guide to configure a macOS Catalina system.
       esc
       :wq
       ```
-  ## 7 - Fonts:
+## 7 - Fonts:
    1. Recommended: Meslo Nerd Font patched for Powerlevel10k. [source](https://awesomeopensource.com/project/romkatv/powerlevel10k)
    2. Download the following four files.
       * [MesloLGS NF Regular.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf)
@@ -115,7 +116,7 @@ This is my guide to configure a macOS Catalina system.
       
    
    
-  ## 8 - Theme Configuration
+## 8 - Theme Configuration
    1. Customize your terminal the way you like. For new users. On terminal, type:
       ```sh
       $p10k configure
@@ -209,7 +210,7 @@ This is my guide to configure a macOS Catalina system.
       # Open a new terminal to see the changes
       ```
       
-  ## 10 - Git
+## 10 - Git
    1. I already have git on my ubuntu machine and a github account. So I need to link both computers to the same github account
    2. I will be following instructions from [here](https://help.github.com/en/github)
    3. * >*At the heart of GitHub is an open source version control system (VCS) called Git. Git is responsible for everything GitHub-related that happens locally on your computer..* [source](https://help.github.com/en/github/getting-started-with-github/set-up-git)
