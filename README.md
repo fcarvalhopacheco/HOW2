@@ -9,4 +9,4 @@
       -  Brew, cask, iterm2, zsh, oh my ZSH, powerlevel10k, fonts, themes, git, github, VirtualBox, Python environment 
 
 ## 2. Miniconda Help Guide
-
+> *coming soon*
