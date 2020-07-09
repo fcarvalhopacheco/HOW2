@@ -60,7 +60,6 @@ This is my guide to configure a macOS Catalina system.
 * Download homebrew.  
     
     ```zsh
-    # On terminal, type:
     $ /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ```
 
@@ -69,7 +68,6 @@ This is my guide to configure a macOS Catalina system.
 * Download cask.  
 
     ```sh
-    # On terminal, type:
     $ brew install cask 
     ```
 
@@ -78,7 +76,6 @@ This is my guide to configure a macOS Catalina system.
 * Download ITERM2.  
    
     ```sh
-    # On terminal, type:
     $ brew cask install iterm2
     ``` 
 
