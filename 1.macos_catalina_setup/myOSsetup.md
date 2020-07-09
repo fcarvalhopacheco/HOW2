@@ -317,7 +317,8 @@ This is my guide to configure a macOS Catalina system.
 * Set a global ignore file 
     
     ```sh
-    $ cd*
+    # navigate to home directory
+    $ cd
     $ vi .gitignore_global
     ```
 > Please visit [github/gitignore](https://github.com/github/gitignore/find/master) to see all examples
