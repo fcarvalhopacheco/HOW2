@@ -314,6 +314,14 @@ This is my guide to configure a macOS Catalina system.
 
     > youremailhere@test.com
     ```
+* Set a global ignore file 
+    
+    ```sh
+    $ cd*
+    $ vi .gitignore_global
+    ```
+> Please visit [github/gitignore](https://github.com/github/gitignore/find/master) to see all examples
+> I am using macOS, so i will be adding [macOS.gitignore](https://github.com/github/gitignore/blob/master/Global/macOS.gitignore) on my .gitignore_global
    
 ## 11 - Virtualbox	
 
