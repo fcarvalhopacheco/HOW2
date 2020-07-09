@@ -9,7 +9,7 @@
 
 ### 2. Install Miniconda
 
-> **coming soon**
++ [Python Environment Roadmap](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos_catalina_setup/python_env.pdf)
 
 
 ### 3. Make your data FAIR
