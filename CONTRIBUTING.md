@@ -1,7 +1,7 @@
 # Contributing Guidelines
 :tada: **First off, congrats for considering contributing to any project!** :tada:
 
-It took me forever to overcome my fear for contributing to any project for many reasons. 
+It took me forever to overcome my fear to contribute to any project for many reasons. 
 So, I hope this can help you as well :)
 
 
