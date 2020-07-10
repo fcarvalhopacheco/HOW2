@@ -268,8 +268,8 @@ This is my guide to configure a macOS Catalina system.
     ```
     
 * Set an username [source](https://help.github.com/en/github/using-git/setting-your-username-in-git)
-      
-    ```sh
+    
+    ```ssh
     # This config set up is useful to track your git commits!
     # Your name will be visible in future commits you push 
     # to GitHub from the command line. By the way, if you 
@@ -300,10 +300,8 @@ This is my guide to configure a macOS Catalina system.
     # you should see
     >YOUR NAME OR NICKNAME HERE-LOCAL
     ```
-
-* Set your commit email [source](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
       
-* Setting your commit email address in Git
+* Setting your commit email address in Git [source](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
     
     ```sh
     # On Terminal,
@@ -314,6 +312,7 @@ This is my guide to configure a macOS Catalina system.
 
     > youremailhere@test.com
     ```
+
 * Set a global ignore file 
     
     ```sh
@@ -324,6 +323,7 @@ This is my guide to configure a macOS Catalina system.
 > 	Please visit [github/gitignore](https://github.com/github/gitignore/find/master) to see all examples
 >	I am using macOS, so i will be adding [macOS.gitignore](https://github.com/github/gitignore/blob/master/Global/macOS.gitignore) on my .gitignore_global
    
+
 ## 11 - Virtualbox	
 
 * I currently use virtual box to process Shipboard ADCP data, but I will soon start playing with LINUX practices and want to have a dedicated computer for it. 
