@@ -301,16 +301,16 @@ This is my guide to configure a macOS Catalina system.
     >YOUR NAME OR NICKNAME HERE-LOCAL
     ```
       
-* Setting your commit email address in Git [source](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
+* Setting your commit  address in Git [source](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
     
     ```sh
     # On Terminal,
-    $ git config --global user.email "youremailhere@test.com"
+    $ git config --global user. "youremailhere@test.com"
 
-    # Check if your emails is correct
-    $ git config --global user.email
+    # Check if your s is correct
+    $ git config --global user.
 
-    > youremailhere@test.com
+    > yourhere@test.com
     ```
 
 * Set a global ignore file 
@@ -323,6 +323,69 @@ This is my guide to configure a macOS Catalina system.
 > 	Please visit [github/gitignore](https://github.com/github/gitignore/find/master) to see all examples
 >	I am using macOS, so i will be adding [macOS.gitignore](https://github.com/github/gitignore/blob/master/Global/macOS.gitignore) on my .gitignore_global
    
+
+* How to Contribute to a Project? 
+    + [Source](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project)
+    + [Source 2](https://egghead.io/lessons/javascript-how-to-fork-and-clone-a-github-repository)
+
++ Fork it! On GitHub, navigate to the project you like, then click on fork button at the top-right of the page
+    
++ On your forked repository, copy the SSH link (something like git@github.com:yourgithubaccout/....). ps. you need to first generate your SSH key if havent done yet [CHECK HERE](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+    ```sh
+    # On terminal, type `git clone` + the ssh link u just copied above:
+    $ git clone git@github.com:yourgithubaccount/forked_repository.git
+
+    # Navigate to the forked repository
+    $ cd forked_repository/
+    ```
+
++ Keep your forked repository up-to-date with the up-stream MAIN repository. On Github, navigate back to the main repository project menu. Make a copy of the original SSH link (something like git@github.com:main_repository_that_your_forked_from/forked_repository.git). Go back to terminal and type the following
+
+    ```ssh
+    # Make sure you are on ~/path/to/your/forked_reposiroty(master) folder
+    $ git remote add upstream git@github.com:main_repository_that_your_forked_from/forked_repository.git 
+
+    # Tell your local git repository to get information from the up-stream remote repository
+    $ git fetch upstream
+
+    # Currently, your local copy of the master branch is pointing to your personal remote forked repository. Your repository is called origin. You want your local copy of master to point up-stream (=to the person's repository not yours), so whatever you pull changes into master, it will get the latest changes from the up-stream repository .
+    $ git branch --set-upstream-to=upstream/master master
+
+    # Now, your branch called master is tracking the up-stream master. So all the updates we want to get from the original repository can be done by pulling it.
+    ```
++ Check if the original repository that you forked from has a file CONTRIBUTION.md. This contains intructions to help one making contributions to the project.
+
++ Create a new branch
+    
+    ```sh
+    # Make sure you are on ~/path/to/your/forked_reposiroty(master)
+    # Call your branch something useful and related to the contribution you are making to
+    $ git checkout -b 'fix/someissue'
+    
+    # You will be automatically switched to that branch (fix/someissue). your current directory will be something like: ~/path/to/your/forked_reposiroty(fix/someissue)
+    ```
+ 
++ Make your changes, add + commit and push it 
+
+    ```sh
+    # add the file you just changed
+    $ git add 
+
+    # commit on it
+    $ git commit -am ' xxx xxx xxx xxx xxx '
+
+    # Push the changes to your forked remote repository by typing:
+    $ git push origin fix/someissue
+    
+    # Remember: origin = your forked repository; upstream = the main project; master = your local main branch; fix/someissue = branch of your local master. 	
+    # If you want to automatize that push, you can type:
+    $ git push --set-upstream origin fix/someissue  #This means that, from now on, everytime you type git push on your terminal branch, git will send the changes from your local branch called fix/someissue to your remote repository called origin. 
+    ```
+
++ Send a pull request. On Github repository, you will see that gihub will tell you that about the changes. Now, you can click on the green button (Compare & pull request), telling the moderator about all changes...  
+
+
 
 ## 11 - Virtualbox	
 
