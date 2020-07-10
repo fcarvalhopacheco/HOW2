@@ -20,5 +20,6 @@
 + [Packing Python Projects](https://packaging.python.org/tutorials/packaging-projects/) 
 + [Organize and distribute a Python package](https://nordicesmhub.github.io/deep_python/17-distribute/index.html)
 + [Write documentations](https://coderefinery.github.io/documentation/)
++ [From Zero to Binder in Python](https://github.com/alan-turing-institute/the-turing-way/blob/master/workshops/boost-research-reproducibility-binder/workshop-presentations/zero-to-binder-python.md)
 
 
