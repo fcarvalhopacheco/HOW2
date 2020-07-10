@@ -17,6 +17,7 @@
 + [Open Science - Software Carpentry](https://swcarpentry.github.io/git-novice/10-open/index.html)
 + [Reproducible Research with Interactive Jupyter Dashboards](https://annefou.github.io/jupyter_dashboards/)
 + [Working with Spatio-temporal data in Python](https://annefou.github.io/metos_python/)
-+ [Packing Python Projects](https://packaging.python.org/tutorials/packaging-projects/)
++ [Packing Python Projects](https://packaging.python.org/tutorials/packaging-projects/) 
++ [Organize and distribute a Python package](https://nordicesmhub.github.io/deep_python/17-distribute/index.html)
 
 
