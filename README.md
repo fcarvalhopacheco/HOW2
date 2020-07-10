@@ -10,8 +10,10 @@
 ### 2. Install Miniconda
 
 + [Python Environment Roadmap](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos_catalina_setup/python_env.pdf)
-
+> ***example coming soon***
 
 ### 3. Make your data FAIR
 
 + [Open Science - Software Carpentry](https://swcarpentry.github.io/git-novice/10-open/index.html)
+
+## 4. Contribute to an Open Source Project
