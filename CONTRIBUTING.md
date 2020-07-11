@@ -26,12 +26,12 @@ tab in the repository) or contact us at one of the other channels mentioned belo
 > **comming soon**
 
 
-## 3. Make sure you ... 
+## 3. Some tips before you contribute ... 
 
-### 3.1 Set up your Python environment
+### Set up your Python environment
 > **comming soon** # add my roadmap + intructions to miniconda
 
-### 3.2  Set up your Git environment ( Plese, read [Source 1](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project), and watch [Source 2](https://egghead.io/lessons/javascript-how-to-fork-and-clone-a-github-repository), they are very useful!!)
+### Set up your Git environment ( Plese, read [Source 1](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project), and watch [Source 2](https://egghead.io/lessons/javascript-how-to-fork-and-clone-a-github-repository), they are very useful!!)
 
 1. **ADD LINK TO MY GITCONFIG HOW2** [Check other git configurations](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
 
