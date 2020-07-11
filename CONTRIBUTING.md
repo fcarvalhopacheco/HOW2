@@ -34,18 +34,37 @@ tab in the repository) or contact us at one of the other channels mentioned belo
 ### Set up your Git environment 
 > Please, read [Source 1](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project), and watch [Source 2](https://egghead.io/lessons/javascript-how-to-fork-and-clone-a-github-repository), they are very useful!!)
 
-1. **ADD LINK TO MY GITCONFIG HOW2** [Check other git configurations](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
+1. **ADD LINK TO MY GITCONFIG HOW2**. See also -> [Check other git configurations](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
 
-2. On GitHub website, navigate to the project you like, then click on fork button at the top-right of the page [Please check this images](https://www.asmeurer.com/git-workflow/)
+2. On GitHub website, navigate to the project you like, then click on fork button at the top-right of the page. [Please check these images](https://www.asmeurer.com/git-workflow/)
 
-3. On your forked repository, copy the SSH link (something like git@github.com:yourgithubaccout/....). **ps. Have you generated your SSH key? If not, please  [CHECK HERE](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) before moving on**
+3. On **YOUR FORKED REPOSITORY** , copy the SSH link (something like git@github.com:yourgithubaccout/....). **ps. Have you generated your SSH key? If not, please  [CHECK HERE](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) before moving on**
 
+    + On terminal, type `git clone` + the ssh link u just copied above:
+    
     ```sh
-    # On terminal, type `git clone` + the ssh link u just copied above:
     $ git clone git@github.com:yourgithubaccount/forked_repository.git
+    ```
 
-    # Navigate to the forked repository
+    + Navigate to the forked repository
+    ```sh
     $ cd forked_repository/
+    ```
+    
+    + Check all the remote repositories that you have
+    ```sh
+    $ git remote -v 
+    ```
+    
+    + If, for some reason, you made a mistaken with the remote URL (copying HTTP instead of SSH) 
+>   I did it :(
+    ```sh
+    $ git remote set-url upstream (write the new link here)
+    ```
+    
+    + Verify that the remote URL has changed
+    ```SH
+    $ git remote -v
     ```
 
 4. Keep your forked repository up-to-date with the up-stream MAIN repository. On Github, navigate back to the main repository project menu. Make a copy of the original SSH link (something like git@github.com:main_repository_that_your_forked_from/forked_repository.git). Go back to terminal and type the following
