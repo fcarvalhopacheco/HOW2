@@ -29,9 +29,11 @@ tab in the repository) or contact us at one of the other channels mentioned belo
 ## 3. Some tips before you contribute ... 
 
 ### Set up your Python environment
+
 > **comming soon** # add my roadmap + intructions to miniconda
 
 ### Set up your Git environment 
+
 > Please, read [Source 1](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project), and watch [Source 2](https://egghead.io/lessons/javascript-how-to-fork-and-clone-a-github-repository), they are very useful!!)
 
 1. **ADD LINK TO MY GITCONFIG HOW2**. See also -> [Check other git configurations](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
@@ -39,9 +41,10 @@ tab in the repository) or contact us at one of the other channels mentioned belo
 2. On GitHub website, navigate to the project you like, then click on fork button at the top-right of the page. [Please check these images](https://www.asmeurer.com/git-workflow/)
 
 3. On **YOUR FORKED REPOSITORY** , copy the SSH link (git@github.com:yourgithubaccout/....) 
-> *ps*. Have you generated your SSH key? If not, please  [CHECK HERE](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) before moving on
 
-    + On terminal, type `git clone` + the ssh link you just copied above:
+> *ps* Have you generated your SSH key? If not, please  [CHECK HERE](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) before moving on
+
+    + On terminal, type `git clone` + the ssh link you just copied above
     
     ```sh
     $ git clone git@github.com:yourgithubaccount/forked_repository.git
