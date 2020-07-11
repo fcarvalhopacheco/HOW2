@@ -33,11 +33,11 @@ tab in the repository) or contact us at one of the other channels mentioned belo
 
 ### 3.2  Set up your Git environment ( Plese, read [Source 1](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project), and watch [Source 2](https://egghead.io/lessons/javascript-how-to-fork-and-clone-a-github-repository), they are very useful!!)
 
-    1. **ADD LINK TO MY GITCONFIG HOW2** [Check other git configurations](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
+1. **ADD LINK TO MY GITCONFIG HOW2** [Check other git configurations](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
 
-    2. On GitHub website, navigate to the project you like, then click on fork button at the top-right of the page [Please check this images](https://www.asmeurer.com/git-workflow/)
+2. On GitHub website, navigate to the project you like, then click on fork button at the top-right of the page [Please check this images](https://www.asmeurer.com/git-workflow/)
 
-    3. On your forked repository, copy the SSH link (something like git@github.com:yourgithubaccout/....). **ps. Have you generated your SSH key? If not, please  [CHECK HERE](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) before moving on**
+3. On your forked repository, copy the SSH link (something like git@github.com:yourgithubaccout/....). **ps. Have you generated your SSH key? If not, please  [CHECK HERE](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) before moving on**
 
     ```sh
     # On terminal, type `git clone` + the ssh link u just copied above:
@@ -47,7 +47,7 @@ tab in the repository) or contact us at one of the other channels mentioned belo
     $ cd forked_repository/
     ```
 
-    4. Keep your forked repository up-to-date with the up-stream MAIN repository. On Github, navigate back to the main repository project menu. Make a copy of the original SSH link (something like git@github.com:main_repository_that_your_forked_from/forked_repository.git). Go back to terminal and type the following
+4. Keep your forked repository up-to-date with the up-stream MAIN repository. On Github, navigate back to the main repository project menu. Make a copy of the original SSH link (something like git@github.com:main_repository_that_your_forked_from/forked_repository.git). Go back to terminal and type the following
 
     ```ssh
     # Make sure you are on ~/path/to/your/forked_reposiroty(master) folder
@@ -62,9 +62,9 @@ tab in the repository) or contact us at one of the other channels mentioned belo
     # Now, your branch called master is tracking the up-stream master. So all the updates we want to get from the original repository can be done by pulling it.
     ```
 
-    5. Check if the original repository that you forked from has a file CONTRIBUTION.md. This contains intructions to help one making contributions to the project.
+5. Check if the original repository that you forked from has a file CONTRIBUTION.md. This contains intructions to help one making contributions to the project.
 
-    6. Create a new branch
+6. Create a new branch
     
     ```sh
     # Make sure you are on ~/path/to/your/forked_reposiroty(master)
@@ -74,7 +74,7 @@ tab in the repository) or contact us at one of the other channels mentioned belo
     # You will be automatically switched to that branch (fix/someissue). your current directory will be something like: ~/path/to/your/forked_reposiroty(fix/someissue)
     ```
  
-    7. Make your changes, add + commit and push it 
+7. Make your changes, add + commit and push it 
 
     ```sh
     # add the file you just changed
@@ -83,5 +83,4 @@ tab in the repository) or contact us at one of the other channels mentioned belo
     # commit on it
     $ git commit -am ' xxx xxx xxx xxx xxx '
     ```
-
 
