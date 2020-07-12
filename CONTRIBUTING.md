@@ -61,7 +61,15 @@ tab in the repository) or contact us at one of the other channels mentioned belo
     ```sh
     $ git remote -v 
     ```
+
+4. Keep your forked repository up-to-date with the up-stream MAIN repository. On Github, navigate back to the main repository project menu. Copy the original SSH link (something like git@github.com:main_repository_that_your_forked_from/forked_repository.git). Go back to terminal and type the following:
+
++  Make sure you are on `~/path/to/your/forked_reposiroty(master)` folder
     
+    ```ssh
+    $ git remote add upstream git@github.com:main_repository_that_your_forked_from/forked_repository.git 
+    ```
+
 + If, for some reason, you made a mistake  with the remote URL (copying HTTP instead of SSH) *I did it :(*
     
     ```sh
@@ -73,15 +81,6 @@ tab in the repository) or contact us at one of the other channels mentioned belo
     ```sh
     $ git remote -v
     ```
-
-4. Keep your forked repository up-to-date with the up-stream MAIN repository. On Github, navigate back to the main repository project menu. Copy the original SSH link (something like git@github.com:main_repository_that_your_forked_from/forked_repository.git). Go back to terminal and type the following:
-
-+  Make sure you are on `~/path/to/your/forked_reposiroty(master)` folder
-    
-    ```ssh
-    $ git remote add upstream git@github.com:main_repository_that_your_forked_from/forked_repository.git 
-    ```
-
 + Tell *your local* git repository to get information from the *up-stream remote repository* (from the person's owner of the repository)
     
     ```sh
