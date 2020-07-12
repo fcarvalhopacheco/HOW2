@@ -42,7 +42,7 @@ tab in the repository) or contact us at one of the other channels mentioned belo
 
 3. On **YOUR FORKED REPOSITORY** , copy the SSH link (git@github.com:yourgithubaccout/....) 
 
-> *ps* Have you generated your SSH key? If not, please  [CHECK HERE](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) before moving on
+> >  *ps* Have you generated your SSH key? If not, please  [CHECK HERE](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) before moving on
 
 + On terminal, type `git clone` + the ssh link you just copied above
     
@@ -51,39 +51,49 @@ tab in the repository) or contact us at one of the other channels mentioned belo
     ```
 
 + Navigate to the forked repository
+    
     ```sh
     $ cd forked_repository/
     ```
     
 + Check all the remote repositories that you have
+    
     ```sh
     $ git remote -v 
     ```
     
 + If, for some reason, you made a mistake  with the remote URL (copying HTTP instead of SSH) *I did it :(*
+    
     ```sh
     $ git remote set-url upstream (write the new link here)
     ```
     
 + Verify that the remote URL has changed
+    
     ```sh
     $ git remote -v
     ```
 
-4. Keep your forked repository up-to-date with the up-stream MAIN repository. On Github, navigate back to the main repository project menu. Make a copy of the original SSH link (something like git@github.com:main_repository_that_your_forked_from/forked_repository.git). Go back to terminal and type the following
+4. Keep your forked repository up-to-date with the up-stream MAIN repository. On Github, navigate back to the main repository project menu. Copy the original SSH link (something like git@github.com:main_repository_that_your_forked_from/forked_repository.git). Go back to terminal and type the following:
 
++  Make sure you are on `~/path/to/your/forked_reposiroty(master)` folder
+    
     ```ssh
-    # Make sure you are on ~/path/to/your/forked_reposiroty(master) folder
     $ git remote add upstream git@github.com:main_repository_that_your_forked_from/forked_repository.git 
-
-    # Tell your local git repository to get information from the up-stream remote repository
-    $ git fetch upstream
-
-    # Currently, your local copy of the master branch is pointing to your personal remote forked repository. Your repository is called origin. You want your local copy of master to point up-stream (=to the person's repository not yours), so whatever you pull changes into master, it will get the latest changes from the up-stream repository .
-    $ git branch --set-upstream-to=upstream/master master
-
-    # Now, your branch called master is tracking the up-stream master. So all the updates we want to get from the original repository can be done by pulling it.
     ```
+
++ Tell your local git repository to get information from the up-stream remote repository
+    
+    ```sh
+    $ git fetch upstream
+    ```
+
++ Currently, your local copy of the master branch is pointing to your personal remote forked repository. Your remote repository is called *origin*. You want your local copy of master to point up-stream (=to the person's repository not yours), so whatever you pull changes into master, it will get the latest changes from the up-stream repository .
+    
+    ```sh
+    $ git branch --set-upstream-to=upstream/master master
+    ```
+> Now, your local branch called *master* is tracking the up-stream master. So all the updates we want to get from the original repository can be done by pulling it.
 
 5. Check if the original repository that you forked from has a file CONTRIBUTION.md. This contains intructions to help one making contributions to the project.
 
