@@ -104,12 +104,12 @@ tab in the repository) or contact us at one of the other channels mentioned belo
     pwd
     ```
     
-+ Call your branch something useful,like `'(r)epository_(i)nicial/fixbugX'`
++ Call your branch something useful,like `'(r)epository_(i)nicial/fix-bug-x'`. You should make a branch name that is short, descriptive, and unique. Some examples of good branch names are fix-install, docs-cleanup, and add-travis-ci. Some examples of bad branch names are feature, fix, and patch.
   
     ```sh
-    $ git checkout -b 'ri/fixbugX'
+    $ git checkout -b 'ri/fix-bug-x'
     ```
-> You will be automatically switched to that branch (ri/fixbuX). your current directory will be something like: ~/path/to/your/forked_reposiroty(ri/fixbugX)
+> You will be automatically switched to that branch (ri/fix-bug-x). your current directory will be something like: ~/path/to/your/forked_reposiroty(ri/fix-bug-x)
  
 7. Make your changes in the the file 
 
