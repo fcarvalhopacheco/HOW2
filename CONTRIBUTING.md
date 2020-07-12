@@ -44,28 +44,28 @@ tab in the repository) or contact us at one of the other channels mentioned belo
 
 > *ps* Have you generated your SSH key? If not, please  [CHECK HERE](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) before moving on
 
-    + On terminal, type `git clone` + the ssh link you just copied above
++ On terminal, type `git clone` + the ssh link you just copied above
     
     ```sh
     $ git clone git@github.com:yourgithubaccount/forked_repository.git
     ```
 
-    + Navigate to the forked repository
++ Navigate to the forked repository
     ```sh
     $ cd forked_repository/
     ```
     
-    + Check all the remote repositories that you have
++ Check all the remote repositories that you have
     ```sh
     $ git remote -v 
     ```
     
-    + If, for some reason, you made a mistake  with the remote URL (copying HTTP instead of SSH) *I did it :(*
++ If, for some reason, you made a mistake  with the remote URL (copying HTTP instead of SSH) *I did it :(*
     ```sh
     $ git remote set-url upstream (write the new link here)
     ```
     
-    + Verify that the remote URL has changed
++ Verify that the remote URL has changed
     ```sh
     $ git remote -v
     ```
