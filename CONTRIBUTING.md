@@ -44,7 +44,7 @@ tab in the repository) or contact us at one of the other channels mentioned belo
 
 > *ps* Have you generated your SSH key? If not, please  [CHECK HERE](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) before moving on
 
-    + On terminal, type `git clone` + the ssh link you just copied above
++ On terminal, type `git clone` + the ssh link you just copied above
     
     ```sh
     $ git clone git@github.com:yourgithubaccount/forked_repository.git
