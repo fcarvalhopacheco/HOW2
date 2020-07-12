@@ -101,7 +101,7 @@ tab in the repository) or contact us at one of the other channels mentioned belo
 + Make sure you are on `~/path/to/your/forked_reposiroty(master)`
     
     ```sh
-    pwd
+    $ pwd
     ```
     
 + Call your branch something useful,like `'(r)epository_(i)nicial/fix-bug-x'`. You should make a branch name that is short, descriptive, and unique. Some examples of good branch names are fix-install, docs-cleanup, and add-travis-ci. Some examples of bad branch names are feature, fix, and patch.
@@ -113,9 +113,19 @@ tab in the repository) or contact us at one of the other channels mentioned belo
  
 7. Make your changes in the the file 
 
+8. Added the changes to git 
     ```sh
     $ git add 
+    ```
+
+9. Commit on your file.  Remember to never commit to master. The command git status will tell you what branch you are on. I recommend putting the git branch in your command prompt, so that you will always know what branch you are on. So make sure your are on the correct branch
+
+    ```sh
     $ git commit -am ' xxx xxx xxx xxx xxx '
-    $ git push
+    ```
+8. Push your changes to **YOUR** remote forked repository 
+
+    ```sh
+    $ git push origin ri/fix-bug-x
     ```
 
