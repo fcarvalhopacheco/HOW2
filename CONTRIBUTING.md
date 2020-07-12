@@ -32,7 +32,7 @@ tab in the repository) or contact us at one of the other channels mentioned belo
 
 > **comming soon** # add my roadmap + intructions to miniconda
 
-### Set up your Git environment 
+### Set up your Git environment + Examples
 
 > Please, read [Source 1](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project), and watch [Source 2](https://egghead.io/lessons/javascript-how-to-fork-and-clone-a-github-repository), they are very useful!!)
 
@@ -109,23 +109,27 @@ tab in the repository) or contact us at one of the other channels mentioned belo
     ```sh
     $ git checkout -b 'ri/fix-bug-x'
     ```
+
 > You will be automatically switched to that branch (ri/fix-bug-x). your current directory will be something like: ~/path/to/your/forked_reposiroty(ri/fix-bug-x)
  
 7. Make your changes in the the file 
 
 8. Added the changes to git 
+    
     ```sh
     $ git add 
     ```
 
-9. Commit on your file.  Remember to never commit to master. The command git status will tell you what branch you are on. I recommend putting the git branch in your command prompt, so that you will always know what branch you are on. So make sure your are on the correct branch
+9. Commit on your file.  Remember to never commit to **master**. The command git status will tell you what branch you are on. I recommend putting the git branch in your command prompt, so that you will always know what branch you are on. So make sure your are on the correct branch
 
     ```sh
     $ git commit -am ' xxx xxx xxx xxx xxx '
     ```
-8. Push your changes to **YOUR** remote forked repository 
+
+10. Push your changes to **YOUR** remote forked repository 
 
     ```sh
     $ git push origin ri/fix-bug-x
     ```
 
+11. Make a pull request. Please watch [How to create a pull request on Github](https://egghead.io/lessons/javascript-how-to-create-a-pull-request-on-github) and [How to Collaborate on a Pull Request on GitHub](https://egghead.io/lessons/javascript-how-to-collaborate-on-a-pull-request-on-github)
