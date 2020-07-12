@@ -133,3 +133,19 @@ tab in the repository) or contact us at one of the other channels mentioned belo
     ```
 
 11. Make a pull request. Please watch [How to create a pull request on Github](https://egghead.io/lessons/javascript-how-to-create-a-pull-request-on-github) and [How to Collaborate on a Pull Request on GitHub](https://egghead.io/lessons/javascript-how-to-collaborate-on-a-pull-request-on-github)
+
+12. Rebase a git Pull Request branch. Sometimes, the original repository has updates, so our branch falls behind. This can cause merge conflicts. So we need to make sure we update the lastest changes.
+
++ Start with fetching.
+    
+    ```sh
+    $ git fetch upstream 	# remember that we already set the upstream before. 
+				# If you didn't fork any project, just do `git fetch`
+    ```
++ Replay our commits on top of whatever exist on the `master` upstream remote. This means that we are starting from a brand new fresh copy of master and then applying the commits on to the new copy of the master
+
+    ```sh
+    $ git rebase upstream/master	# if you are just working on your own original 
+					# remote repository just type `git rebase origin/aster
+    ```
+
