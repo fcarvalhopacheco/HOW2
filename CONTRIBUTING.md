@@ -42,7 +42,7 @@ tab in the repository) or contact us at one of the other channels mentioned belo
 
 3. On **YOUR FORKED REPOSITORY** , copy the SSH link (git@github.com:yourgithubaccout/....) 
 
-> >  *ps* Have you generated your SSH key? If not, please  [CHECK HERE](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) before moving on
+> *ps*: Have you generated your SSH key? If not, please  [CHECK HERE](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) before moving on
 
 + On terminal, type `git clone` + the ssh link you just copied above
     
@@ -82,7 +82,7 @@ tab in the repository) or contact us at one of the other channels mentioned belo
     $ git remote add upstream git@github.com:main_repository_that_your_forked_from/forked_repository.git 
     ```
 
-+ Tell your local git repository to get information from the up-stream remote repository
++ Tell *your local* git repository to get information from the *up-stream remote repository* (from the person's owner of the repository)
     
     ```sh
     $ git fetch upstream
@@ -99,21 +99,24 @@ tab in the repository) or contact us at one of the other channels mentioned belo
 
 6. Create a new branch
     
-    ```sh
-    # Make sure you are on ~/path/to/your/forked_reposiroty(master)
-    # Call your branch something useful and related to the contribution you are making to
-    $ git checkout -b 'fix/someissue'
++ Make sure you are on `~/path/to/your/forked_reposiroty(master)`
     
-    # You will be automatically switched to that branch (fix/someissue). your current directory will be something like: ~/path/to/your/forked_reposiroty(fix/someissue)
+    ```sh
+    pwd
     ```
+    
++ Call your branch something useful,like `'(r)epository_(i)nicial/fixbugX'`
+  
+    ```sh
+    $ git checkout -b 'ri/fixbugX'
+    ```
+> You will be automatically switched to that branch (ri/fixbuX). your current directory will be something like: ~/path/to/your/forked_reposiroty(ri/fixbugX)
  
-7. Make your changes, add + commit and push it 
+7. Make your changes in the the file 
 
     ```sh
-    # add the file you just changed
     $ git add 
-
-    # commit on it
     $ git commit -am ' xxx xxx xxx xxx xxx '
+    $ git push
     ```
 
