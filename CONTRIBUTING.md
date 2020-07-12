@@ -109,20 +109,23 @@ tab in the repository) or contact us at one of the other channels mentioned belo
     ```sh
     $ git checkout -b 'ri/fix-bug-x'
     ```
+
 > You will be automatically switched to that branch (ri/fix-bug-x). your current directory will be something like: ~/path/to/your/forked_reposiroty(ri/fix-bug-x)
  
 7. Make your changes in the the file 
 
 8. Added the changes to git 
+    
     ```sh
     $ git add 
     ```
 
-9. Commit on your file.  Remember to never commit to master. The command git status will tell you what branch you are on. I recommend putting the git branch in your command prompt, so that you will always know what branch you are on. So make sure your are on the correct branch
+9. Commit on your file.  Remember to never commit to **master**. The command git status will tell you what branch you are on. I recommend putting the git branch in your command prompt, so that you will always know what branch you are on. So make sure your are on the correct branch
 
     ```sh
     $ git commit -am ' xxx xxx xxx xxx xxx '
     ```
+
 8. Push your changes to **YOUR** remote forked repository 
 
     ```sh
