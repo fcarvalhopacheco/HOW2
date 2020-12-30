@@ -382,4 +382,4 @@ This is my guide to configure a macOS Catalina system.
     # Initialize your shell for Conda
     $ conda init zsh
     ```  
-   
+ 
