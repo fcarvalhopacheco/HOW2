@@ -324,6 +324,9 @@ This is my guide to configure a macOS Catalina system.
 >	I am using macOS, so i will be adding [macOS.gitignore](https://github.com/github/gitignore/blob/master/Global/macOS.gitignore) on my .gitignore_global
   
 
+* How to create a repository ? [Please see instructions here][https://docs.github.com/en/get-started/quickstart/create-a-repo]
+
+
 ## 11 - Virtualbox	
 
 * I currently use virtual box to process Shipboard ADCP data, but I will soon start playing with LINUX practices and want to have a dedicated computer for it. 
