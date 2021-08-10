@@ -7,11 +7,11 @@
 
 + Brew, cask, iterm2, zsh, oh my ZSH, powerlevel10k, fonts, themes, git, github, VirtualBox, Python environment
 
-### 2. Install Miniconda
+### 2. Python Enviroment Roadmap
 
 + [Python Environment Roadmap](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos_catalina_setup/python_env.pdf)
 > ***example coming soon***
-
+> [include this](https://currents.soest.hawaii.edu/ocn_data_analysis/installation.html)
 ### 3. Make your data FAIR
 
 + [Open Science - Software Carpentry](https://swcarpentry.github.io/git-novice/10-open/index.html)
