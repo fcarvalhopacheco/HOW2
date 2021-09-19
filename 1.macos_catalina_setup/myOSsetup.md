@@ -305,10 +305,10 @@ This is my guide to configure a macOS Catalina system.
     
     ```sh
     # On Terminal,
-    $ git config --global user. "youremailhere@test.com"
+    $ git config --global user.email "email@example.com"
 
     # Check if your s is correct
-    $ git config --global user.
+    $ git config --global user.email
 
     > yourhere@test.com
     ```
