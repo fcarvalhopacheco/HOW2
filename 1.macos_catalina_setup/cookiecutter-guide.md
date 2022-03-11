@@ -107,7 +107,7 @@
     > the code typed before is stored here ~/.cookiecutter_replay/cookiecutter-bottle.json
 
 
-### 4. Creating your own templates
+### 5. Creating your own templates
 
 + Decrease friction on projects you often use
 + Empower your team and assist new developers
