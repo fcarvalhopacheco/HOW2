@@ -52,7 +52,7 @@ This is my guide to configure a macOS Catalina system.
 
 12. [Python Enviroment](#12---python-enviroment)
 
-13. [Cookiecutter-tutorial](#13---cookiecutter)
+13. [Cookiecutter](#13---cookiecutter)
 -----------------------------------------------------------------------------------
 
 ## 1 - Homebrew
@@ -349,7 +349,7 @@ This is my guide to configure a macOS Catalina system.
     $virtualbox 
     ```   
    
-## 12 - Python Enviroment
+## 12 - Python Environment
 
 * There are many ways to install/create Python working Enviroments. However, I will be using conda package manager with miniconda and the conda-forge package collection, which provides platform-independent package management for Python and other softwares in self-contained user-specific enviroments. 
 
@@ -387,7 +387,7 @@ This is my guide to configure a macOS Catalina system.
     # Initialize your shell for Conda
     $ conda init zsh
     ```  
-## 13 - Cookiecutter-guide
+## 13 - Cookiecutter
 
 > A cross-platform command-line utility that creates projects from cookiecutters (project templates), e.g. 
 > Python package projects, C projects.
