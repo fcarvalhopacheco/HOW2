@@ -1,6 +1,6 @@
 # Cookiecutter Training
 
-* This repository was created to guide me through my learning experience with Cookiecutter
+* Created to guide me through my learning experience with Cookiecutter
 
 ------------------------------------------------------
 
