@@ -379,11 +379,8 @@ This is my guide to configure a macOS Catalina system.
 
 ## 14 - Vim-commands 
 
-> Cool extra commands =) 
-
 
     ```sh
-
     # General navigation
     <shift> + O = insert mode above
     <shift> + P = paste above
@@ -432,4 +429,5 @@ This is my guide to configure a macOS Catalina system.
     :e + <path> = open a new file
     ctrl + ^ = move between 2 files 
     :Ex = explore folders/files    
-    ```
+    
+    ``` 
