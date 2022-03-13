@@ -381,53 +381,51 @@ This is my guide to configure a macOS Catalina system.
 
 ## 14 - Vim-commands 
 
-```
-# General navigation
-<shift> + O = insert mode above
-<shift> + P = paste above
-<shift> + I = insert mode start at the beginning of the line 
-<shift> + A = insert mode start at the end of the line  
-? =  Search mode 
-    - Press `n` to look for the next result 
-    - Press <shift> + N to jump reverse through results
-    - Press * to jump to the next occurence of whatever is underneath your cursor
-    - Press # to jump backwards 
+1. General navigation
+    <shift> + O = insert mode above
+    <shift> + P = paste above
+    <shift> + I = insert mode start at the beginning of the line 
+    <shift> + A = insert mode start at the end of the line  
+    ? =  Search mode 
+        - Press `n` to look for the next result 
+        - Press <shift> + N to jump reverse through results
+        - Press * to jump to the next occurence of whatever is underneath your cursor
+        - Press # to jump backwards 
 
 
-# Horizontal speed
-f* = jumps to character
-t* = jumps to behind character
-F* and T* = jump backwards through results
-; = to jump forward
-, = to jump backwards through results
-x = to delete a character
-s = to delete a character and enter insert mode
-dt) = delete up to the character closing 
-cw = delete a word and enter insert mode
-D = delete rest of line
-C = delete rest of line and enter insert mode
+2. Horizontal speed
+    f* = jumps to character
+    t* = jumps to behind character
+    F* and T* = jump backwards through results
+    ; = to jump forward
+    , = to jump backwards through results
+    x = to delete a character
+    s = to delete a character and enter insert mode
+    dt) = delete up to the character closing 
+    cw = delete a word and enter insert mode
+    D = delete rest of line
+    C = delete rest of line and enter insert mode
 
-# Vertical speed
-G = jumps to the bottom
-gg = jumps to the begninning 
-:100 or 100G  = goes to line 100 
-relative numbers = * you need to 'set number relativenumber' on .vimrc 
-    12k = up 12 lines
-    12j = down 12 lines
+3. Vertical speed
+    G = jumps to the bottom
+    gg = jumps to the begninning 
+    :100 or 100G  = goes to line 100 
+    relative numbers = * you need to 'set number relativenumber' on .vimrc 
+        12k = up 12 lines
+        12j = down 12 lines
 
-ctrl+u = goes up by a half page
-ctrl+d = goes down by a half page
-{ = goes up by empty lines
-} = goes down by empty lines
-ci} = delete everything inside { } and start insert mode
-di} = delete everything inside { }
-di) = delete everything inside ( ) 
-vi] = select everything inside [ ]  
-diw = delete the surrounding letter of the current word 
+    ctrl+u = goes up by a half page
+    ctrl+d = goes down by a half page
+    { = goes up by empty lines
+    } = goes down by empty lines
+    ci} = delete everything inside { } and start insert mode
+    di} = delete everything inside { }
+    di) = delete everything inside ( ) 
+    vi] = select everything inside [ ]  
+    diw = delete the surrounding letter of the current word 
 
 
-# Full vim movements 
-:e + <path> = open a new file
-ctrl + ^ = move between 2 files 
-:Ex = explore folders/files    
-``` 
+4. Full vim movements 
+    :e + <path> = open a new file
+    ctrl + ^ = move between 2 files 
+    :Ex = explore folders/files    
