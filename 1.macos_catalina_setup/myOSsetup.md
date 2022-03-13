@@ -438,4 +438,20 @@ This is my guide to configure a macOS Catalina system.
     :e + <path> = open a new file
     ctrl + ^ = move between 2 files 
     :Ex = explore folders/files    
+    ctrl + w = window control 
+    ctrl + w + v = split vertically
+    ctrl + w + s = splot horizontally
+    ctrl + w + o = close all but your current buffer
+    :resize 10 = resize horizontally
+    :vertical resize 20 = resize vertically 
+    ctrl + w += =  resize evenly spread
+    ctrl + w + l = goes to the right window
+    ctrl + w + h = goes to the left window
+    
+    #Say you want a file tree + another tab, follow this
+    vi
+    ctrl + w + v 
+    :Ex
+    :vertical resize 20
+
     ```
