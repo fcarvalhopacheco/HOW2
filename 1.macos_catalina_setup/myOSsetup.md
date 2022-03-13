@@ -382,6 +382,8 @@ This is my guide to configure a macOS Catalina system.
 ## 14 - Vim-commands 
 
 1. General navigation
+    
+    ```
     <shift> + O = insert mode above
     <shift> + P = paste above
     <shift> + I = insert mode start at the beginning of the line 
@@ -391,9 +393,11 @@ This is my guide to configure a macOS Catalina system.
         - Press <shift> + N to jump reverse through results
         - Press * to jump to the next occurence of whatever is underneath your cursor
         - Press # to jump backwards 
-
+    ```
 
 2. Horizontal speed
+   
+    ```
     f* = jumps to character
     t* = jumps to behind character
     F* and T* = jump backwards through results
@@ -405,8 +409,11 @@ This is my guide to configure a macOS Catalina system.
     cw = delete a word and enter insert mode
     D = delete rest of line
     C = delete rest of line and enter insert mode
+    ``` 
 
 3. Vertical speed
+   
+    ```
     G = jumps to the bottom
     gg = jumps to the begninning 
     :100 or 100G  = goes to line 100 
@@ -423,9 +430,12 @@ This is my guide to configure a macOS Catalina system.
     di) = delete everything inside ( ) 
     vi] = select everything inside [ ]  
     diw = delete the surrounding letter of the current word 
-
+    ```
 
 4. Full vim movements 
+   
+    ```
     :e + <path> = open a new file
     ctrl + ^ = move between 2 files 
     :Ex = explore folders/files    
+    ```
