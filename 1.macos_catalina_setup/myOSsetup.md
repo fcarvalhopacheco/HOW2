@@ -369,6 +369,7 @@ This is my guide to configure a macOS Catalina system.
     # Initialize your shell for Conda
     $ conda init zsh
     ```  
+
 ## 13 - Cookiecutter
 
 > A cross-platform command-line utility that creates projects from cookiecutters (project templates), e.g. 
@@ -377,10 +378,11 @@ This is my guide to configure a macOS Catalina system.
 * Original project: [https://github.com/cookiecutter/cookiecutter](https://github.com/cookiecutter/cookiecutter)
 * [Check my quick tutorial here](https://github.com/fcarvalhopacheco/HOW2/blob/6269bee581763cc760bf6ce778f8d7136350ee26/1.macos_catalina_setup/cookiecutter-guide.md) 
 
+
 ## 14 - Vim-commands 
 
 
-    ```sh
+    ```
     # General navigation
     <shift> + O = insert mode above
     <shift> + P = paste above
@@ -429,5 +431,4 @@ This is my guide to configure a macOS Catalina system.
     :e + <path> = open a new file
     ctrl + ^ = move between 2 files 
     :Ex = explore folders/files    
-    
     ``` 
