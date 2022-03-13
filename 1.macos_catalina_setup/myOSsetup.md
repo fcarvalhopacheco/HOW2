@@ -9,42 +9,21 @@ This is my guide to configure a macOS Catalina system.
 
 1. [Homebrew](#1---homebrew)
 
-    * Free open-source package managements system that simplifies the installation of software on macOS and Linux
-    
-    * Similar to apt-get from Ubuntu
-
 2. [CASK](#2---cask)
    
-     * It is an extension to brew to install GUI applications (eg. Google Chrome, dropbox ...
-
 3. [ITERM2](#3---iterm2) 
     
-    * It has better color themes than the built in Terminal.
-    * [ITERM2COLORS](http://iterm2colorschemes.com/)
-
 4. [ZSH](#4---zsh)
-
-    * > *Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is a  extended Bourne shell with many improvements* [source](https://en.wikipedia.org/wiki/Z_shell)
-    
-    * ZSH is now the default on macOS Catalina. [source](https://support.apple.com/en-us/HT208050)
 
 5. [Oh my ZSH](#5---oh-my-zsh)
 
-    * Open source, community-driven framework for managing your zsh configuration. [source](https://github.com/ohmyzsh/ohmyzsh)
-
 6. [Powerlevel10k](#6---powerlevel10k)
     
-    * Nice theme! [source](https://github.com/romkatv/powerlevel10k/blob/master/README.md#recommended-meslo-nerd-font-patched-for-powerlevel10k)
-
 7. [Fonts](#7---patched-font)
    
-    * Multiple fonts for your terminal
-
 8. [Theme and Font configuration](#8---theme-configuration)
 
 9. [Auto Suggestion](#9---auto-suggestion)
-    
-    * Did you forget how to type a command ? try to use this auto suggestion...
     
 10. [GIT](#10---git)
 
@@ -53,6 +32,9 @@ This is my guide to configure a macOS Catalina system.
 12. [Python Enviroment](#12---python-enviroment)
 
 13. [Cookiecutter](#13---cookiecutter)
+
+14. [Vim-commandsl](#14---vim-commands)
+
 -----------------------------------------------------------------------------------
 
 ## 1 - Homebrew
@@ -394,3 +376,63 @@ This is my guide to configure a macOS Catalina system.
    
 * Original project: [https://github.com/cookiecutter/cookiecutter](https://github.com/cookiecutter/cookiecutter)
 * [Check my quick tutorial here](https://github.com/fcarvalhopacheco/HOW2/blob/6269bee581763cc760bf6ce778f8d7136350ee26/1.macos_catalina_setup/cookiecutter-guide.md) 
+
+## 14 - Vim-commands 
+
+> Cool extra commands =) 
+
+    ```sh
+    # General navigation
+    <shift> + O = insert mode above
+    <shift> + P = paste above
+    <shift> + I = insert mode start at the beginning of the line 
+    <shift> + A = insert mode start at the end of the line  
+    ? =  Search mode 
+        - Press `n` to look for the next result 
+        - Press <shift> + N to jump reverse through results
+        - Press * to jump to the next occurence of whatever is underneath your cursor
+        - Press # to jump backwards 
+
+    
+    # Horizontal speed
+    f* = jumps to character
+    t* = jumps to behind character
+    F* and T* = jump backwards through results
+    ; = to jump forward
+    , = to jump backwards through results
+    x = to delete a character
+    s = to delete a character and enter insert mode
+    dt) = delete up to the character closing 
+    cw = delete a word and enter insert mode
+    D = delete rest of line
+    C = delete rest of line and enter insert mode
+
+    # Vertical speed
+    G = jumps to the bottom
+    gg = jumps to the begninning 
+    :100 or 100G  = goes to line 100 
+    relative numbers = * you need to 'set number relativenumber' on .vimrc 
+        12k = up 12 lines
+        12j = down 12 lines
+
+    ctrl+u = goes up by a half page
+    ctrl+d = goes down by a half page
+    { = goes up by empty lines
+    } = goes down by empty lines
+    ci} = delete everything inside { } and start insert mode
+    di} = delete everything inside { }
+    di) = delete everything inside ( ) 
+    vi] = select everything inside [ ]  
+    diw = delete the surrounding letter of the current word 
+
+
+    # Full vim movements 
+    :e + <path> = open a new file
+    ctrl + ^ = move between 2 files 
+    :Ex = explore folders/files    
+
+    
+
+
+    ```
+
