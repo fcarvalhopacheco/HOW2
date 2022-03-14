@@ -455,3 +455,4 @@ This is my guide to configure a macOS Catalina system.
     :vertical resize 20
 
     ```
+
