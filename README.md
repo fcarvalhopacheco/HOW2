@@ -1,5 +1,7 @@
 # HOW2
 
+![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6464237.svg)](https://doi.org/10.5281/zenodo.6464237)
+
 * This repository was created to guide me through my learning experience with Linux, Python, Ethical hacking, Software development, and more. Please feel free to help!
 ------------------------------------------------------
 
