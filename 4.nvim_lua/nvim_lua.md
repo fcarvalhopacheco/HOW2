@@ -1,23 +1,23 @@
-# Neoviom RC from scratch with lua (XUBUNTU 22.04)
+# Neovim RC from scratch with lua (XUBUNTU 22.04)
 
 - [Reference 1](https://www.youtube.com/watch?v=w7i4amO_zaE)
 - [Reference 2](https://github.com/nanotee/nvim-lua-guide)
 
 
 
-1. Install Neovim first.
+##  Download Neovim.
 
-+ Download ` nvim-linux64.deb` from
+1. Download ` nvim-linux64.deb` from
 [neovim](https://github.com/neovim/neovim/releases/)
 
 
-+ Run the following command at the correct folder:
+2. Run the following command at the correct folder:
 
     ```sh 
     sudo apt install ./nvim-linux64.deb
     ```
 
- + Add alias for nvim if you want...
+3.  Add alias for nvim if you want...
 
     ```sh
     vi ~/.bashrc
@@ -26,13 +26,15 @@
     ```
 
 
-2. Navigate to config folder:
+## Initial Configuration
+
+1. Navigate to config folder:
 
     ```sh
     cd ~/.config 
     ```
 
-3. Create the `/nvim` folder and navigate to it.
+2. Create the `/nvim` folder and navigate to it.
 
 
     ```sh
@@ -46,7 +48,7 @@
 
     ```
 
-4. Create & edit  a `init.lua` file.
+3. Create & edit  a `init.lua` file.
 
     ```sh
     vim .
@@ -58,13 +60,13 @@
     init.lua
     ```
 
-+ Add the following on your `~/.config/nvim/init.lua` file
+4. Add the following on your `~/.config/nvim/init.lua` file
     
     ```sh
     print("hello")
     ```
-    >> once you save/exit and reopen vim, you should be able to see hello in
-    >> the bottom of the file. 
+    > once you save/exit and reopen vim, you should be able to see hello in
+    > the bottom of the file. 
 
 
 5. Create some directories/files inside `~/.config/nvim`
@@ -101,52 +103,52 @@
     vim .
 
     ``` 
-    >> Now when you reopen any file you should see:
-    
-        ```sh
-        hello from the user
-        helo
-        Press ENTER or type command to continue:
-        ```
+    > Now when you reopen any file you should see:
+
+    ```sh
+    hello from the user
+    helo
+    Press ENTER or type command to continue:
+    ```
 
 
-6. REMAP
+## REMAP
 
-+ Navigate to `/.config/nvim/lua/user` directory,
+1. Navigate to `/.config/nvim/lua/user` directory,
 
     ```sh
     vim .   # navigate to /.config/nvim/lua/user
     ``` 
 
-+ Create a new file called `remap.lua`
+2. Create a new file called `remap.lua`
 
     ```sh
     %
     remap.lua
     ```
 
-+ Edit the `~/.config/nmap/lua/user/remap.lua` file and add the following:
+3. Edit the `~/.config/nmap/lua/user/remap.lua` file and add the following:
 
     ```sh
     vim.g.mapleader = " "
     vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
     ```
 
-+ Save the file and reload 
+4. Save the file and reload 
     
     ```sh
     :wq
     :so
     ```
 
-7. Add `require` in the `/.config/nvim/lua/user/init.lua` file
+5. Add `require` in the `/.config/nvim/lua/user/init.lua` file
 
     ```sh
     require("user.remap")
     print("hello from the user")
     ```
 
-8. GETTING PLUGING
+## GETTING PLUGING
 
 
 
