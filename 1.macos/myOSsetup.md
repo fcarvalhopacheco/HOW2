@@ -22,7 +22,7 @@
    
 8. [Theme and Font configuration](#8---theme-configuration)
 
-9. [Auto Suggestion](#9---auto-suggestion)
+9. [Auto Suggestion + other plugins](#9---auto-suggestion)
     
 10. [GIT](#10---git)
 
@@ -33,6 +33,8 @@
 13. [Cookiecutter](#13---cookiecutter)
 
 14. [Vim-commandsl](#14---vim-commands)
+
+15. [NeoVim + lua](#15---neovim-lua)
 
 -----------------------------------------------------------------------------------
 
@@ -193,7 +195,7 @@
     # ADD context on the list below to show username@hostname on the left lide
     # The list of segments shown on the left. Fill it with the most important segments.
     typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-	context
+	    context
         os_icon                 # os identifier
         dir                     # current directory
         vcs                     # git status
@@ -209,7 +211,7 @@
 
     ```
 
-## 9 - Auto Suggestion + zsh-syntax-highlighting
+## 9 - Auto Suggestion + zsh-syntax-highlighting + web-search
 
 ### `zsh-autosuggestions`
 
@@ -235,6 +237,22 @@
 ### `zsh-syntax-highlighting`
 + Check [here](https://github.com/zsh-users/zsh-syntax-highlighting)
       
+### `web-search`
+
++ Just added the following into `~/.zshrc`
+
+    ```sh
+    plugins=( 
+        git
+        zsh-autosuggestions
+        zsh-syntax-highlighting
+        web-search
+    )
+    
+    export ZSH=/Users/<user>/.oh-my-zsh
+    source $ZSH/oh-my-zsh.sh
+    ```
+
 ## 10 - Git
 
 * I already have git on my ubuntu machine and a github account. So I need to link both computers to the same github account
@@ -459,4 +477,8 @@
     :vertical resize 20
 
     ```
+
+## 15 - NeoVim-lua 
+
++ Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/4.nvim_lua/nvim_lua.md)
 
