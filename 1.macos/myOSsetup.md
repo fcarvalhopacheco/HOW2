@@ -209,7 +209,10 @@
 
     ```
 
-## 9 - Auto Suggestion
+## 9 - Auto Suggestion + zsh-syntax-highlighting
+
+### `zsh-autosuggestions`
+
 * Check the [Source](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
       
     ```sh
@@ -228,6 +231,9 @@
       
     # Open a new terminal to see the changes
     ```
+
+### `zsh-syntax-highlighting`
++ Check [here](https://github.com/zsh-users/zsh-syntax-highlighting)
       
 ## 10 - Git
 
@@ -302,7 +308,6 @@
     $ cd
     $ vi .gitignore_global
     ```
-> 	Please visit [github/gitignore](https://github.com/github/gitignore/find/master) to see all examples
 >	I am using macOS, so i will be adding [macOS.gitignore](https://github.com/github/gitignore/blob/master/Global/macOS.gitignore) on my .gitignore_global
   
 
@@ -318,7 +323,7 @@
 
     ```sh
     # On Terminal, type:
-    $ brew cask install virtualbox
+    $ brew install --cask virtualbox
 
     # Check the version:
     $ brew cask info virtualbox
