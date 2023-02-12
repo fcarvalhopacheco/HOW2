@@ -58,7 +58,7 @@
 * Download ITERM2.  
    
     ```sh
-    $ brew cask install iterm2
+    $ brew install --cask iterm2
     ``` 
 
 * Download ITERM2 color themes by clicking on:
