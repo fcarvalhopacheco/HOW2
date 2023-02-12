@@ -4,7 +4,7 @@
 - [Reference 2](https://github.com/nanotee/nvim-lua-guide)
 
 
-##  Download Neovim.
+## 1. Download Neovim.
 
 1. Download ` nvim-linux64.deb` from
 [neovim](https://github.com/neovim/neovim/releases/)
@@ -25,7 +25,7 @@
     ```
 
 
-## Initial Configuration
+## 2. Initial Configuration
 
 1. Navigate to config folder:
 
@@ -111,7 +111,7 @@
     ```
 
 
-## REMAP (1)  
+## 3. REMAP (1)  
 
 1. Navigate to `/.config/nvim/lua/user` directory,
 
@@ -119,14 +119,14 @@
     vim .   # navigate to /.config/nvim/lua/user
     ``` 
 
-2. Create a new file called `remap.lua`
+2. Create a new file called `keymaps.lua`
 
     ```sh
     %
-    remap.lua
+    keymaps.lua
     ```
 
-3. Edit the `~/.config/nmap/lua/user/remap.lua` file and add the following:
+3. Edit the `~/.config/nmap/lua/user/keymaps.lua` file and add the following:
 
     ```lua
     vim.g.mapleader = " "
@@ -147,49 +147,84 @@
     print("hello from the user")
     ```
 
-## GETTING PLUGING
+## 4. GETTING PLUGING
 
 ### `packer.nvim` 
 
 1. Go to your brownser and search for:
-    - [Packer.nvim](github.com/wbthomason/packer.nvim)
+    - [Packer nvim](https://github.com/wbthomason/packer.nvim)
 
 
 2. Copy the following command into your terminal (Make sure you have git installed!:
 
     ```sh
-    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim\ 
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
     ```
 
-3. Go back to the [Packer.nvim](github.com/wbthomason/packer.nvim), add the
-following commands into a new file `~/.config/nvim/lua/user/packer.lua`   
+3. Go back to the [Packer.nvim](https://github.com/wbthomason/packer.nvim#bootstrapping), add the
+following commands into a new file `~/.config/nvim/lua/user/plugins.lua`   
 
     ```lua
-    -- This file can be loaded by calling `lua require('plugins')` from your init.vim
+    local ensure_packer = function()
+      local fn = vim.fn
+      local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+      if fn.empty(fn.glob(install_path)) > 0 then
+        fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+        vim.cmd [[packadd packer.nvim]]
+        return true
+      end
+      return false
+    end
 
-    -- Only required if you have packer configured as `opt`
-    vim.cmd [[packadd packer.nvim]]
+    local packer_bootstrap = ensure_packer()
+
+
+    -- Use a protected call so we don't error out on first use
+    local status_ok, packer = pcall(require, "packer")
+    if not status_ok then
+        return
+    end
+
+    -- Have packer use a popup window
+    packer.init({
+        display = {
+            open_fn = function()
+                return require("packer.util").float({ border = "rounded" })
+            end,
+        },
+    }) 
 
     return require('packer').startup(function(use)
-      -- Packer can manage itself
       use 'wbthomason/packer.nvim'
+      -- My plugins here
+      -- use 'foo1/bar1.nvim'
+      -- use 'foo2/bar2.nvim'
+
+      -- Automatically set up your configuration after cloning packer.nvim
+      -- Put this at the end after all plugins
+      if packer_bootstrap then
+        require('packer').sync()
+      end
     end)
     ```
 
-4. Exit nvim, and reopen `packer.lua` file
-5. Type `:PackerSync` to see the packer in action. It should give you a split
-window telling you `Everhing already up to date!`. Then type `:q` to close it.
+4. Write, and source and reopen `plugins.lua` file
+    
+    ```sh
+    :w
+    :so
+    :PackerSync
+    ```
 
 ### `telescope.nvim`
 
-+ Requirement! Please install the following 
++ Requirement! Please install the following :
 
-	```sh
-	sudo apt-get install ripgrep
-	```
-
-	> BurntSushi/ripgrep is required for live_grep and grep_string and is the first priority for find_files.
+    ```sh
+    sudo apt-get install ripgrep
+    ```
+    > BurntSushi/ripgrep is required for live_grep and grep_string and is the first priority for find_files.
 
 
 1. Go to your brownser and search for:
@@ -204,29 +239,30 @@ window telling you `Everhing already up to date!`. Then type `:q` to close it.
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     ```
-3. Insert the above into `packer.lua` before the `end)`. you should have
+3. Insert the above into `plugins.lua` before the `end)`. you should have
 something like: 
 
     ```lua
-    -- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
-    -- Only required if you have packer configured as `opt`
-    vim.cmd [[packadd packer.nvim]]
-
+    
     return require('packer').startup(function(use)
-            -- Packer can manage itself
-            use 'wbthomason/packer.nvim'
-
-            use {
+        use 'wbthomason/packer.nvim'
+        use {
             'nvim-telescope/telescope.nvim', tag = '0.1.1',
             -- or                            , branch = '0.1.x',
             requires = { {'nvim-lua/plenary.nvim'} }
-            }
+        }
+        -- My plugins here
+        -- use 'foo1/bar1.nvim'
+        -- use 'foo2/bar2.nvim'
 
+        -- Automatically set up your configuration after cloning packer.nvim
+        -- Put this at the end after all plugins
+        if packer_bootstrap then
+            require('packer').sync()
+        end
     end)
     ```
     > Pressing '=' in Normal mode alignes the current line with those above, plus indenting.
-
 
 
 4. Write and source the file:
@@ -238,9 +274,7 @@ something like:
     :q
     ```
 
-## REMAP (2)
-
-1. Create new directories/files at `~/.config/nvim/after`:
+5. Create new directories/files at `~/.config/nvim/after`:
 
     ```sh 
     vim . # or <leader>pv, if you were inside of any file
@@ -257,7 +291,7 @@ something like:
     # Create a file called `telescope.lua`
     ```
 
-2. Go to [telescope.vim usage](https://github.com/nvim-telescope/telescope.nvim/blob/master/README.md#usage)
+6. Go to [telescope.vim usage](https://github.com/nvim-telescope/telescope.nvim/blob/master/README.md#usage)
 and copy the following:
 
     ```lua
@@ -265,18 +299,164 @@ and copy the following:
     vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
     ```
 
-3. Paste the above into `~/.config/nvim/after/plugin/telescope.lua`
+7. Paste the above into `~/.config/nvim/after/plugin/telescope.lua`
 
-4. Edit `~/.config/nvim/after/plugin/telescope.lua` with some new remaps...
+8. Edit `~/.config/nvim/after/plugin/telescope.lua` with some new remaps...
     
     + Check [here](https://github.com/nvim-telescope/telescope.nvim/blob/master/README.md#pickers) for more reference 
 
     ```lua
     local builtin = require('telescope.builtin')
     vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+    vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+    vim.keymap.set('n', '<leader>ps', function() 
+		    builtin.grep_string({ search = vim.fn.input("Grep > ") });
+		    end)
+    ```
+
+
+
+## `markdown preview`
+
++ Requirements:
+
+    ```sh
+    sudo apt update
+    sudo apt install npm
+    ```
+
+1. Copy the following into `~/.config/nvim/lua/user/plugins.lua`
+
+    ```lua
+    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+    ```
+
+
+## 6. Options
+
++ Now you can remove `print("hello")` from `~/.config/nvim/init.lua`
++ Now you can remove `print("hello from the user")` from `~/.config/nvim/user/init.lua`
+
+1. Added the following into `~/.config/nvim/lua/user/init.lua`
+
+2. Create a new file at `~/.config/nvim/lua/user/options.lua`
+    
+    ```sh
+    vim .
+    %
+    options.lua
+    ```
+
+3. Add the following into `options.lua`
+
+    ```lua
+    -----------------------------------------------------------
+    -- General Neovim settings and configuration
+    -----------------------------------------------------------
+
+    -- Default options are not included
+    -- See: https://neovim.io/doc/user/vim_diff.html
+    -- [2] Defaults - *nvim-defaults*
+
+    local g = vim.g       -- Global variables
+    local opt = vim.opt   -- Set options (global/buffer/windows-scoped)
+
+    -----------------------------------------------------------
+    -- General
+    -----------------------------------------------------------
+    opt.mouse = 'a'                       -- Enable mouse support
+    opt.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
+    opt.swapfile = false                  -- Don't use swapfile
+    opt.completeopt = {'menuone,noinsert,noselect'}  -- Autocomplete options
+
+    -----------------------------------------------------------
+    -- Neovim UI
+    -----------------------------------------------------------
+    opt.number = true           -- Show line number
+    opt.showmatch = true        -- Highlight matching parenthesis
+
+    opt.foldmethod = 'marker'   -- Enable folding (default 'foldmarker')
+    opt.colorcolumn = '79'      -- Line lenght marker at 80 columns
+    opt.splitright = true       -- Vertical split to the right
+    opt.splitbelow = true       -- Horizontal split to the bottom
+    opt.ignorecase = true       -- Ignore case letters when search
+    opt.smartcase = true        -- Ignore lowercase for the whole pattern
+    opt.linebreak = true        -- Wrap on word boundary
+    opt.termguicolors = true    -- Enable 24-bit RGB colors
+    opt.laststatus=3            -- Set global statusline
+    opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
+    opt.cmdheight = 2           -- more space in the neovim command line for displaying messages
+    opt.cursorline = true       -- highlight the current line
+    opt.relativenumber = true   -- set relative numbered lines
+
+    -----------------------------------------------------------
+    -- Tabs, indent and others
+    -----------------------------------------------------------
+    opt.expandtab = true        -- Use spaces instead of tabs
+    opt.shiftwidth = 4          -- Shift 4 spaces when tab
+    opt.tabstop = 4             -- 1 tab == 4 spaces
+    opt.smartindent = true      -- Autoindent new lines
+
+    opt.numberwidth = 4         -- set number column width to 2 {default 4}
+    opt.signcolumn = "yes"      -- always show the sign column, otherwise it would shift the text each time
+    opt.wrap = false            -- display lines as one long line
+    opt.scrolloff = 8           -- is one of my fav
+    opt.sidescrolloff = 8 
+    opt.expandtab = true        -- convert tabs to spaces
+    -----------------------------------------------------------
+    -- Memory, CPU
+    -----------------------------------------------------------
+    opt.hidden = true           -- Enable background buffers
+    opt.history = 100           -- Remember N lines in history
+    opt.lazyredraw = true       -- Faster scrolling
+    opt.synmaxcol = 240         -- Max column for syntax highlight
+    opt.updatetime = 250        -- ms to wait for trigger an event
+
+    -----------------------------------------------------------
+    -- Others
+    -----------------------------------------------------------
+
+    opt.backup = false          -- creates a backup file
+    opt.conceallevel = 0        -- so that `` is visible in markdown files
+    opt.fileencoding = "utf-8"  -- the encoding written to a file
+    opt.hlsearch = false        -- highlight all matches on previous search pattern
+    opt.incsearch = true
+    opt.pumheight = 10          -- pop up menu height
+    opt.timeoutlen = 1000       -- time to wait for a mapped sequence to complete (in milliseconds)
+    opt.undofile = true         -- enable persistent undo
+    opt.writebackup = false     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+    opt.undodir = os.getenv("HOME") .. "/.vim/undodir" 
+
+    g.mapleader = " "
+    opt.shortmess:append "c"
 
     ```
 
+
+## 7. Colorschemes
+
+1. Go to [ ]()
+
+2. Copy the following for `packer.nvim`:
+
+    ```lua
+    
+
+    ```
+
+3. Paste the above into `~/.config/nvim/lua/user/plugins.lua`. You should have shomething like:
+
+	```lua
+
+	```
+
+4. Write, source and Packersync.
+
+	```sh
+	:w
+	:so
+	:PackerSync
+	```
 
 
 
@@ -290,7 +470,7 @@ and copy the following:
     ├── 📂 lua
     │  └── 📂 user
     │     ├── 🌑 init.lua
-    │     ├── 🌑 remap.lua
+    │     ├── 🌑 keymaps.lua
     │     └── 🌑 init.lua
     ├── 📁 pack
     ├── 📁 plugin
