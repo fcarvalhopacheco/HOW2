@@ -1,8 +1,7 @@
-# macOS Catalina 10.15.5
-This is my guide to configure a macOS Catalina system.  
+# macOS Ventura 13.2
 
 ## My Iterm2 
-![my iterm2](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos_catalina_setup/my_iterm2.png)
+![my iterm2](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos/my_iterm2.png)
 
 
 ## Table of Contents
@@ -43,7 +42,7 @@ This is my guide to configure a macOS Catalina system.
 * Download homebrew.  
     
     ```zsh
-    $ /usr/bin/ruby -e "$(curl -fsSL  https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
 
 ## 2 - CASK
