@@ -1,4 +1,4 @@
-# Neovim RC from scratch with lua (XUBUNTU 22.04)
+# Neovim RC from scratch with lua 
 
 - [Reference 1](https://www.youtube.com/watch?v=w7i4amO_zaE)
 - [Reference 2](https://github.com/nanotee/nvim-lua-guide)
@@ -6,9 +6,8 @@
 
 ## 1. Download Neovim.
 
-1. Download ` nvim-linux64.deb` from
-[neovim](https://github.com/neovim/neovim/releases/)
-
+### `xubuntu 22.04`
+1. Download ` nvim-linux64.deb` from [neovim](https://github.com/neovim/neovim/releases/)
 
 2. Run the following command at the correct folder:
 
@@ -24,6 +23,12 @@
     alias vi='nvim'
     ```
 
+### `mac ventura 13.2` 
+1. Run:
+
+    ```sh
+    brew install neovim
+    ```
 
 ## 2. Initial Configuration
 
@@ -136,14 +141,14 @@
 4. Save the file and reload 
     
     ```sh
-    :wq
+    :w
     :so
     ```
 
 5. Add `require` in the `/.config/nvim/lua/user/init.lua` file
 
     ```lua
-    require("user.remap")
+    require("user.keymaps")
     print("hello from the user")
     ```
 
@@ -179,6 +184,29 @@ following commands into a new file `~/.config/nvim/lua/user/plugins.lua`
 
     local packer_bootstrap = ensure_packer()
 
+	-- Autocommand that reloads neovim whenever you save the plugins.lua file
+	vim.cmd([[
+	  augroup packer_user_config
+	    autocmd!
+	    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+	  augroup end
+	]])
+
+	-- Use a protected call so we don't error out on first use
+	local status_ok, packer = pcall(require, "packer")
+	if not status_ok then
+	  return
+	end
+
+	-- Have packer use a popup window
+	packer.init({
+	    display = {
+	      open_fn = function()
+		return require('packer.util').float({ border = 'single' })
+	      end
+	    }
+	  }
+	)
 
     -- Use a protected call so we don't error out on first use
     local status_ok, packer = pcall(require, "packer")
@@ -209,6 +237,8 @@ following commands into a new file `~/.config/nvim/lua/user/plugins.lua`
     end)
     ```
 
+
+
 4. Write, and source and reopen `plugins.lua` file
     
     ```sh
@@ -222,7 +252,11 @@ following commands into a new file `~/.config/nvim/lua/user/plugins.lua`
 + Requirement! Please install the following :
 
     ```sh
+    # XUBUNTU
     sudo apt-get install ripgrep
+    
+    # MACBOOK
+    brew install ripgrep
     ```
     > BurntSushi/ripgrep is required for live_grep and grep_string and is the first priority for find_files.
 
@@ -296,7 +330,7 @@ and copy the following:
 
     ```lua
     local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+    vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
     ```
 
 7. Paste the above into `~/.config/nvim/after/plugin/telescope.lua`
@@ -321,8 +355,12 @@ and copy the following:
 + Requirements:
 
     ```sh
+    # XUBUNTU
     sudo apt update
     sudo apt install npm
+
+    # MACBOOK
+    brew install npm
     ```
 
 1. Copy the following into `~/.config/nvim/lua/user/plugins.lua`
@@ -338,7 +376,10 @@ and copy the following:
 + Now you can remove `print("hello from the user")` from `~/.config/nvim/user/init.lua`
 
 1. Added the following into `~/.config/nvim/lua/user/init.lua`
-
+    ```sh
+    require("user.options")
+    ```
+ 
 2. Create a new file at `~/.config/nvim/lua/user/options.lua`
     
     ```sh
