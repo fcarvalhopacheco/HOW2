@@ -1,3 +1,4 @@
+
 # Neovim RC from scratch with lua 
 
 - [Reference 1](https://www.youtube.com/watch?v=w7i4amO_zaE)
