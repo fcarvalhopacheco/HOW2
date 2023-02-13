@@ -474,25 +474,26 @@ and copy the following:
 
     ```
 
-
 ## 7. Colorschemes
 
-1. Go to [ ]()
+1. Go to [rose-pint](https://github.com/rose-pine/neovim)
 
 2. Copy the following for `packer.nvim`:
 
     ```lua
-    
+     use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+        config = function()
+            require("rose-pine").setup()
+            vim.cmd('colorscheme rose-pine')
+        end
+    })   
 
     ```
 
-3. Paste the above into `~/.config/nvim/lua/user/plugins.lua`. You should have shomething like:
 
-	```lua
-
-	```
-
-4. Write, source and Packersync.
+3. Write, source and Packersync.
 
 	```sh
 	:w
@@ -500,10 +501,173 @@ and copy the following:
 	:PackerSync
 	```
 
+4. Create and edit the following at `~/.config/nvim/after/plugin/colors.lua`
+
+    ```lua
+    require('rose-pine').setup({
+        --- @usage 'main' | 'moon'
+        dark_variant = 'main',
+        bold_vert_split = false,
+        dim_nc_background = false,
+        disable_background = true,       -- THIS IS FALSE FROM DEFAULT
+        disable_float_background = true, -- THIS IS FALSE FROM DEFAULT
+        disable_italics = false,
+
+        --- @usage string hex value or named color from rosepinetheme.com/palette
+        groups = {
+            background = 'base',
+            panel = 'surface',
+            border = 'highlight_med',
+            comment = 'muted',
+            link = 'iris',
+            punctuation = 'subtle',
+
+            error = 'love',
+            hint = 'iris',
+            info = 'foam',
+            warn = 'gold',
+
+            headings = {
+                h1 = 'iris',
+                h2 = 'foam',
+                h3 = 'rose',
+                h4 = 'gold',
+                h5 = 'pine',
+                h6 = 'foam',
+            }
+            -- or set all headings at once
+            -- headings = 'subtle'
+        },
+
+        -- Change specific vim highlight groups
+        highlight_groups = {
+            ColorColumn = { bg = 'rose' }
+        }
+    })
+
+    -- set colorscheme after options
+    vim.cmd('colorscheme rose-pine')
+    ```
 
 
 
-- Structure MAP GUIDE :
+## 8. Treesitter 
+
+1. Go to [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter), and
+copy the following:
+
+    ```lua 
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    ```
+
+2. Add/Edit the above into `~/.config/nvim/lua/user/plugins.lua` as:
+
+    ```lua
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    ```
+    > :w :so :PackerSync --> if not done automatically yet
+
+
+3. Create a new filew at `~/.config/nvim/after/plugin/treesitter.lua` and add
+following from treesiter website:
+
+    ```lua
+
+    require'nvim-treesitter.configs'.setup {
+      -- A list of parser names, or "all" (the four listed parsers should always be installed)
+      ensure_installed = { "c", "lua", "vim", "help", "bash", "awk", "bibtex",
+      "dockerfile","json", "latex", "markdown", "python"},
+
+      -- Install parsers synchronously (only applied to `ensure_installed`)
+      sync_install = false,
+
+      -- Automatically install missing parsers when entering buffer
+      -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+      auto_install = true,
+
+      highlight = {
+        -- `false` will disable the whole extension
+        enable = true,
+
+        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+        -- Using this option may slow down your editor, and you may see some duplicate highlights.
+        -- Instead of true it can also be a list of languages
+        additional_vim_regex_highlighting = false,
+      },
+    }
+    ```
+
+
+
+## 9. Undotree
+
+1. Go to [Undotree](https://github.com/mbbill/undotree), and copy the following
+into `~/.config/nvim/lua/user/plugins.lua`
+
+    ```lua
+	use 'mbbill/undotree'
+    ```
+2. Create and edit the following `~/.config/nvim/after/plugins/undotree.lua`
+
+    ```lua 
+    vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+    ```
+
+    > Now you can type <leader>u (which is Space + u) to see everthing we have
+    done. THIS IS INSAGE GOOD! It is like a realtime controlversion of the files
+    with realtime branches like git
+
+
+## 10. LSP Zero
+
+1. Go to [LSP Zero](https://github.com/VonHeikemen/lsp-zero.nvim#installing),
+copy the following and into  `~/.config/nvim/lua/user/plugins.lua`
+
+    ```lua
+    use {
+      'VonHeikemen/lsp-zero.nvim',
+      branch = 'v1.x',
+      requires = {
+        -- LSP Support
+        {'neovim/nvim-lspconfig'},             -- Required
+        {'williamboman/mason.nvim'},           -- Optional
+        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},         -- Required
+        {'hrsh7th/cmp-nvim-lsp'},     -- Required
+        {'hrsh7th/cmp-buffer'},       -- Optional
+        {'hrsh7th/cmp-path'},         -- Optional
+        {'saadparwaiz1/cmp_luasnip'}, -- Optional
+        {'hrsh7th/cmp-nvim-lua'},     -- Optional
+
+        -- Snippets
+        {'L3MON4D3/LuaSnip'},             -- Required
+        {'rafamadriz/friendly-snippets'}, -- Optional
+      }
+    }
+
+    ```
+
+2. Create and edit the following file `~/.config/nvim/after/plugin/`.
+
+    ```lua
+    local lsp = require('lsp-zero').preset({
+      name = 'minimal',
+      set_lsp_keymaps = true,
+      manage_nvim_cmp = true,
+      suggest_lsp_servers = false,
+    })
+
+    -- (Optional) Configure lua language server for neovim
+    lsp.nvim_workspace()
+
+    lsp.setup()
+    ```
+    > Type :Mason to install whatever you like
+
+## Structure MAP GUIDE :
 
     ```sh
     📂 ~/.config/nvim
