@@ -667,6 +667,41 @@ copy the following and into  `~/.config/nvim/lua/user/plugins.lua`
     ```
     > Type :Mason to install whatever you like
 
+
+## 11. HARPOON
+
+1. Copy and paste the following into `~/.config/nvim/lua/user/plugins.lua`
+
+    ```lua
+    use('theprimeagen/harpoon')
+    ```
+
+2. Create and edit the following `~/.config/nvim/after/plugin/harpoon.lua`
+
+    ```lua 
+    local mark = require("harpoon.mark")
+    local ui = require("harpoon.ui")
+
+    vim.keymap.set("n", "<leader>a", mark.add_file)
+    vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
+    vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end)
+    vim.keymap.set("n", "<C-t>", function() ui.nav_file(2) end)
+    vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
+    vim.keymap.set("n", "<C-s>", function() ui.nav_file(4) end)
+    ```
+
++ Now press `Ctrl + e` to see the harpoon menu. It should be empty
++ press `<leader>a` == `Space + a` to add the current file to harpoon menu
++ press `<leader>pf` == `Space +pf` to project finder files and select and 
+load any file you want.
++ Inside the new file press `<leader>a` to add the new file to harpoon
++ If you want to switch 1 <--> 2, select 1 or 2 and (j or k), select 
+visual mode (V), then (D)elete it, move up (k) and paste (P). save it (:w)
+
++ Now you can type `Ctrl + h` and `Ctrl + t` to move between two files!. 
+
+    `--> THIS IS SICKKKKKKKKKK!`
+
 ## Structure MAP GUIDE :
 
     ```sh
