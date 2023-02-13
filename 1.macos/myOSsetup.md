@@ -333,6 +333,51 @@
 
 * How to clone a repository? [Click here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
 
+
++ GPG Key
+
+1. Follow [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-keydd)
+   
+   ```sh 
+    ╰─ gpg --full-generate-key                                                                       ─╯
+
+    gpg (GnuPG/MacGPG2) 2.2.40; Copyright (C) 2022 g10 Code GmbH
+    This is free software: you are free to change and redistribute it.
+    There is NO WARRANTY, to the extent permitted by law.
+
+    Please select what kind of key you want:
+       (1) RSA and RSA (default)
+       (2) DSA and Elgamal
+       (3) DSA (sign only)
+       (4) RSA (sign only)
+      (14) Existing key from card
+    Your selection? 1
+    RSA keys may be between 1024 and 4096 bits long.
+    What keysize do you want? (3072) 4096
+    Requested keysize is 4096 bits
+    Please specify how long the key should be valid.
+             0 = key does not expire
+          <n>  = key expires in n days
+          <n>w = key expires in n weeks
+          <n>m = key expires in n months
+          <n>y = key expires in n years
+    Key is valid for? (0) 0
+    Key does not expire at all
+    Is this correct? (y/N) y
+
+    GnuPG needs to construct a user ID to identify your key.
+
+    Real name: Fernando Carvalho Pacheco
+    Email address: fcarvalho.pacheco@gmail.com
+   ```
+
+    ```sh
+    gpg --list-secret-keys --keyid-format=long
+    gpg --armor --export xxxxxxxxxxxxxxxx
+    # copy the key to github.
+    ```
+
+
 ## 11 - Virtualbox	
 
 * I currently use virtual box to process Shipboard ADCP data, but I will soon start playing with LINUX practices and want to have a dedicated computer for it. 
