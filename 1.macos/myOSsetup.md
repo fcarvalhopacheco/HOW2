@@ -376,7 +376,14 @@
     gpg --armor --export xxxxxxxxxxxxxxxx
     # copy the key to github.
     ```
+2. Now follow [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key)
 
+    ```sh
+    git config --global --unset gpg.format
+    gpg --list-secret-keys --keyid-format=long
+    git config --global user.signingkey xxxxxxxxxxxxxxxxxxx
+    git config --global commit.gpgsign true
+    ```
 
 ## 11 - Virtualbox	
 
