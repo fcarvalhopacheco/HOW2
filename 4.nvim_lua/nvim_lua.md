@@ -702,19 +702,100 @@ visual mode (V), then (D)elete it, move up (k) and paste (P). save it (:w)
 
     `--> THIS IS SICKKKKKKKKKK!`
 
+## 12. REMAP(2) 
+
+1. Add more remaps to `~/.config/nvim/lua/user/keymaps.lua`
+
+    ```lua   
+    -- Space == <leader>
+    vim.g.mapleader = " "
+
+    -- Space + pv == Netrw 
+    vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+    -- When in (v)isual mode, you can press (J) or (K)
+    -- to (m)ove the list down/up 
+    -- BONUS: if you have a if/end statementm you can move up/down with the below
+    -- command. the program will automatically indent the code!!!! INSANE GOOD
+    -- test it!!!
+    -- if true then
+    --
+    -- end
+    vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+    vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+
+    -- (J) gets the line below and appends to the current line with space. However
+    -- the cursor moves to the end of the line. With the remap below, your cursor
+    -- will remain in the same place
+    vim.keymap.set("n", "J", "mzJ`z")
+
+
+    -- `Ctrl + d` and `Ctrl + u` are half page jumping + zz, the cursor  will
+    -- stay in the middle of the page.
+    vim.keymap.set("n", "<C-d>", "<C-d>zz")
+    vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+
+    -- Allow us to search terms in the middle of the page.
+    vim.keymap.set("n", "n", "nzzzv")
+    vim.keymap.set("n", "N", "Nzzzv")
+
+    -- Ex: You highlight and copy a word. Then you highlight another word
+    -- and you paste the old word over the new word. You will loose the yank from 
+    -- the "old" word if you. The following remap <leader>p will delete the new 
+    -- higlighted word into the void register and then paste it over
+    -- In summary: the old(first) word will be always preserved...
+    vim.keymap.set("x", "<leader>p", [["_dP]])
+
+
+    -- <Space + y> will be "+y   --> This is the +register (system clipboard).
+    -- It is like yanking line(s) and saving/registering it(they) into the register
+    -- + 
+    vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+    vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+    -- "Black hole register" == "_   
+    -- The "_d" command will deleteyping "_d will delete under the cursor without 
+    -- changing the unnamed register.
+    vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+
+    -- the overall effect of this command sequence is to change to the next error
+    -- in the quickfix list and then center the current line on the screen. 
+    -- This can be useful when working with large files and you want to quickly 
+    -- navigate to the next error or problem in your code and see it in the context 
+    -- of the surrounding code.
+    vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+    vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+    vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+    vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+
+    -- `Space + s` will , the overall effect of this code is to remap the n key in 
+    -- normal mode to perform a global search and replace operation, using the 
+    -- contents of the clipboard as both the search and replacement patterns, 
+    -- and then move the cursor to the left to allow you to start typing immediately 
+    -- after the replace operation.
+
+    vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+    ```
+
 ## Structure MAP GUIDE :
 
-    ```sh
-    📂 ~/.config/nvim
-    ├── 📁 after
-    ├── 📁 ftplugin
-    ├── 📂 lua
-    │  └── 📂 user
-    │     ├── 🌑 init.lua
-    │     ├── 🌑 keymaps.lua
-    │     └── 🌑 init.lua
-    ├── 📁 pack
-    ├── 📁 plugin
-    ├── 📁 syntax
-    └── 🇻 init.vim
+    ```bash
+    ├── after
+    │   └── plugin
+    │       ├── colors.lua
+    │       ├── harpoon.lua
+    │       ├── lsp.lua
+    │       ├── telescope.lua
+    │       ├── treesitter.lua
+    │       └── undotree.lua
+    ├── init.lua
+    ├── lua
+    │   └── user
+    │       ├── init.lua
+    │       ├── keymaps.lua
+    │       ├── options.lua
+    │       └── plugins.lua
+    └── plugin
     ```
