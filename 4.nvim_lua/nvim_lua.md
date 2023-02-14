@@ -1,4 +1,3 @@
-
 # Neovim RC from scratch with lua 
 
 - [Reference 1](https://www.youtube.com/watch?v=w7i4amO_zaE)
@@ -786,7 +785,9 @@ visual mode (V), then (D)elete it, move up (k) and paste (P). save it (:w)
 
 ## Structure MAP GUIDE :
 
-    ```bash
++ Example of my lua structure: 
+
+    ```sh  
     ├── after
     │   └── plugin
     │       ├── colors.lua
@@ -803,4 +804,5 @@ visual mode (V), then (D)elete it, move up (k) and paste (P). save it (:w)
     │       ├── options.lua
     │       └── plugins.lua
     └── plugin
+        └── packer_compiled.lua
     ```
