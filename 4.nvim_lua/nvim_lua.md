@@ -3,7 +3,6 @@
 - [Reference 1](https://www.youtube.com/watch?v=w7i4amO_zaE)
 - [Reference 2](https://github.com/nanotee/nvim-lua-guide)
 
-
 ## 1. Download Neovim.
 
 ### `xubuntu 22.04`
