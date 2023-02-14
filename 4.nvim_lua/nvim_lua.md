@@ -682,7 +682,7 @@ copy the following and into  `~/.config/nvim/lua/user/plugins.lua`
 
     vim.keymap.set("n", "<leader>a", mark.add_file)
     vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
-    vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end)
+    vim.keymap.set("n", "<C-g>", function() ui.nav_file(1) end)
     vim.keymap.set("n", "<C-t>", function() ui.nav_file(2) end)
     vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
     vim.keymap.set("n", "<C-s>", function() ui.nav_file(4) end)
@@ -767,8 +767,61 @@ the following into `~/.config/nvim/lua/user/plugins.lua`.
     > On Iterm2, click on `Iterm2` --> Settings --> Profiles --> Keys -->
     > Left options key: Meta instead of Normal.
 
+## 13. Comments
 
-## 13. REMAP(2) 
+1. Go to [comments](https://github.com/numToStr/Comment.nvim) and copy the 
+following to `~/.config/nvim/lua/user/plugins.lua`
+
+    ```lua 
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+    
+    ```
+
+2. Add/edit the following into `~/.config/nvim/after/plugin/comment.lua` 
+    
+
+    ```lua 
+    require('Comment').setup()
+    ```
+
++ Now you can use the following commands:
+
+    - Normal mode
+    
+    ```help
+    `gcc` - Toggles the current line using linewise comment
+    `gbc` - Toggles the current line using blockwise comment
+    `[count]gcc` - Toggles the number of line given as a prefix-count using linewise
+    `[count]gbc` - Toggles the number of line given as a prefix-count using blockwise
+    `gc[count]{motion}` - (Op-pending) Toggles the region using linewise comment
+    `gb[count]{motion}` - (Op-pending) Toggles the region using blockwise comment
+    ```
+
+    - VISUAL mode
+
+    ```help
+    `gc` - Toggles the region using linewise comment
+    `gb` - Toggles the region using blockwise comment
+    ```
+
+    - Extra mappings
+
+
+    - NORMAL mode
+
+    ```help
+    `gco` - Insert comment to the next line and enters INSERT mode
+    `gcO` - Insert comment to the previous line and enters INSERT mode
+    `gcA` - Insert comment to end of the current line and enters INSERT mode
+    ```
+
+
+## 14. REMAP(2) 
 1. Add more remaps to `~/.config/nvim/lua/user/keymaps.lua` ```lua   
     -- Modes
     --   normal_mode = "n",
@@ -869,4 +922,5 @@ the following into `~/.config/nvim/lua/user/plugins.lua`.
     │       └── plugins.lua
     └── plugin
         └── packer_compiled.lua
-    ```
+    ```ll
+
