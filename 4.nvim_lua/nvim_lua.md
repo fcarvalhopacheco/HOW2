@@ -707,8 +707,24 @@ visual mode (V), then (D)elete it, move up (k) and paste (P). save it (:w)
 1. Add more remaps to `~/.config/nvim/lua/user/keymaps.lua`
 
     ```lua   
+    -- Modes
+    --   normal_mode = "n",
+    --   insert_mode = "i",
+    --   visual_mode = "v",
+    --   visual_block_mode = "x",
+    --   term_mode = "t",
+    --   command_mode = "c",
+    
     -- Space == <leader>
     vim.g.mapleader = " "
+
+    -- Normal --
+    -- Better window navigation
+    vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
+    vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
+    vim.keymap.set("n", "<C-k>", "<C-w>k", opts)
+    vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
+
 
     -- Space + pv == Netrw 
     vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
@@ -758,17 +774,6 @@ visual mode (V), then (D)elete it, move up (k) and paste (P). save it (:w)
     -- The "_d" command will deleteyping "_d will delete under the cursor without 
     -- changing the unnamed register.
     vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
-
-    -- the overall effect of this command sequence is to change to the next error
-    -- in the quickfix list and then center the current line on the screen. 
-    -- This can be useful when working with large files and you want to quickly 
-    -- navigate to the next error or problem in your code and see it in the context 
-    -- of the surrounding code.
-    vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-    vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-    vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-    vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
-
 
     -- `Space + s` will , the overall effect of this code is to remap the n key in 
     -- normal mode to perform a global search and replace operation, using the 
