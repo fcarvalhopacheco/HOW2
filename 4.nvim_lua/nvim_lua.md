@@ -195,7 +195,7 @@
     print("hello from the user")
     ```
 
-## 4. PLUGINGS
+## 4. PLUGINS
 
 ### [packer](https://github.com/wbthomason/packer.nvim)
 
