@@ -1,9 +1,54 @@
 # Neovim RC from scratch with lua 
 
 - [Reference 1](https://www.youtube.com/watch?v=w7i4amO_zaE)
-- [Reference 2](https://github.com/nanotee/nvim-lua-guide)
 
-## 1. Download Neovim.
+## Contents
+
+1. [Download](##download-neovim)
+2. [Initial Configuration](#initial-configuration)
+3. [Remap(1)](##remap(1))
+4. [Plugins](##plugins)
+    - [packer](###packer)
+    - [telescope](###telescope)
+    - [markdown-preview](###markdown-preview)
+    - [treesiter](###treesiter)
+    - [undotree](###undotree)
+    - [lspzero](###lspzero)
+    - [harpoon](###harpoon)
+    - [autopairs](###autopairs)
+    - [comments](###comments)
+    - [fugitive](###fugitive)
+5. [Options](##options)
+6. [Colorschemes](##colorschemes)
+7. [Remap(2)](##remap(2))
+
+## Folder structure 
+- `~/.config/nvim/`
+
+    ```sh 
+    ├── after
+    │   └── plugin
+    │       ├── autopairs.lua
+    │       ├── colors.lua
+    │       ├── comment.lua
+    │       ├── fugitive.lua
+    │       ├── harpoon.lua
+    │       ├── lsp.lua
+    │       ├── telescope.lua
+    │       ├── treesitter.lua
+    │       └── undotree.lua
+    ├── init.lua
+    ├── lua
+    │   └── user
+    │       ├── init.lua
+    │       ├── keymaps.lua
+    │       ├── options.lua
+    │       └── plugins.lua
+    └── plugin
+        └── packer_compiled.lua
+    ```
+
+## 1. Download Neovim
 
 ### `xubuntu 22.04`
 1. Download ` nvim-linux64.deb` from [neovim](https://github.com/neovim/neovim/releases/)
@@ -114,7 +159,7 @@
     ```
 
 
-## 3. REMAP (1)  
+## 3. REMAP(1)  
 
 1. Navigate to `/.config/nvim/lua/user` directory,
 
@@ -150,9 +195,9 @@
     print("hello from the user")
     ```
 
-## 4. GETTING PLUGING
+## 4. PLUGINGS
 
-### `packer.nvim` 
+### [packer](https://github.com/wbthomason/packer.nvim)
 
 1. Go to your brownser and search for:
     - [Packer nvim](https://github.com/wbthomason/packer.nvim)
@@ -230,7 +275,8 @@ following commands into a new file `~/.config/nvim/lua/user/plugins.lua`
     :PackerSync
     ```
 
-### `telescope.nvim`
+
+### [`telescope`](https://github.com/nvim-telescope/telescope.nvim)
 
 + Requirement! Please install the following :
 
@@ -333,7 +379,7 @@ and copy the following:
 
 
 
-## `markdown preview`
+### [`markdown-preview`](https://github.com/iamcco/markdown-preview.nvim)
 
 + Requirements:
 
@@ -353,7 +399,319 @@ and copy the following:
     ```
 
 
-## 6. Options
+### [`treesitter`](https://github.com/nvim-treesitter/nvim-treesitter)
+
+1. Go to [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter), and
+copy the following:
+
+    ```lua 
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    ```
+
+2. Add/Edit the above into `~/.config/nvim/lua/user/plugins.lua` as:
+
+    ```lua
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    ```
+    > :w :so :PackerSync --> if not done automatically yet
+
+
+3. Create a new filew at `~/.config/nvim/after/plugin/treesitter.lua` and add
+following from treesiter website:
+
+    ```lua
+
+    require'nvim-treesitter.configs'.setup {
+      -- A list of parser names, or "all" (the four listed parsers should always be installed)
+      ensure_installed = { "c", "lua", "vim", "help", "bash", "awk", "bibtex",
+      "dockerfile","json", "latex", "markdown", "python" ,"markdown_inline"},
+
+      -- Install parsers synchronously (only applied to `ensure_installed`)
+      sync_install = false,
+
+      -- Automatically install missing parsers when entering buffer
+      -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+      auto_install = true,
+
+      highlight = {
+        -- `false` will disable the whole extension
+        enable = true,
+
+        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+        -- Using this option may slow down your editor, and you may see some duplicate highlights.
+        -- Instead of true it can also be a list of languages
+        additional_vim_regex_highlighting = false,
+      },
+    }
+    ```
+
+
+
+### [`undotree`](https://github.com/mbbill/undotree)
+
+1. Go to [Undotree](https://github.com/mbbill/undotree), and copy the following
+into `~/.config/nvim/lua/user/plugins.lua`
+
+    ```lua
+	use 'mbbill/undotree'
+    ```
+2. Create and edit the following `~/.config/nvim/after/plugins/undotree.lua`
+
+    ```lua 
+    vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+    ```
+
+    > Now you can type <leader>u (which is Space + u) to see everthing we have
+    done. THIS IS INSAGE GOOD! It is like a realtime controlversion of the files
+    with realtime branches like git
+
+
+### [`lspzero`](https://github.com/VonHeikemen/lsp-zero.nvim#installing)
+
+
+1. Go to [LSP Zero](https://github.com/VonHeikemen/lsp-zero.nvim#installing),
+copy the following and into  `~/.config/nvim/lua/user/plugins.lua`
+
+    ```lua
+    use {
+      'VonHeikemen/lsp-zero.nvim',
+      branch = 'v1.x',
+      requires = {
+        -- LSP Support
+        {'neovim/nvim-lspconfig'},             -- Required
+        {'williamboman/mason.nvim'},           -- Optional
+        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},         -- Required
+        {'hrsh7th/cmp-nvim-lsp'},     -- Required
+        {'hrsh7th/cmp-buffer'},       -- Optional
+        {'hrsh7th/cmp-path'},         -- Optional
+        {'saadparwaiz1/cmp_luasnip'}, -- Optional
+        {'hrsh7th/cmp-nvim-lua'},     -- Optional
+
+        -- Snippets
+        {'L3MON4D3/LuaSnip'},             -- Required
+        {'rafamadriz/friendly-snippets'}, -- Optional
+      }
+    }
+
+    ```
+
+2. Create and edit the following file `~/.config/nvim/after/plugin/`.
+
+    ```lua
+    local lsp = require('lsp-zero').preset({
+      name = 'minimal',
+      set_lsp_keymaps = true,
+      manage_nvim_cmp = true,
+      suggest_lsp_servers = false,
+    })
+
+    -- (Optional) Configure lua language server for neovim
+    lsp.nvim_workspace()
+
+    lsp.setup()
+    ```
+    > Type :Mason to install whatever you like
+
+### [`harpoon`](https://github.com/ThePrimeagen/harpoon)
+
+1. Copy and paste the following into `~/.config/nvim/lua/user/plugins.lua`
+
+    ```lua
+    use('theprimeagen/harpoon')
+    ```
+
+2. Create and edit the following `~/.config/nvim/after/plugin/harpoon.lua`
+
+    ```lua 
+    local mark = require("harpoon.mark")
+    local ui = require("harpoon.ui")
+
+    vim.keymap.set("n", "<leader>a", mark.add_file)
+    vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
+    vim.keymap.set("n", "<C-g>", function() ui.nav_file(1) end)
+    vim.keymap.set("n", "<C-t>", function() ui.nav_file(2) end)
+    vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
+    vim.keymap.set("n", "<C-s>", function() ui.nav_file(4) end)
+    ```
+
++ Now press `Ctrl + e` to see the harpoon menu. It should be empty
++ press `<leader>a` == `Space + a` to add the current file to harpoon menu
++ press `<leader>pf` == `Space +pf` to project finder files and select and 
+load any file you want.
++ Inside the new file press `<leader>a` to add the new file to harpoon
++ If you want to switch 1 <--> 2, select 1 or 2 and (j or k), select 
+visual mode (V), then (D)elete it, move up (k) and paste (P). save it (:w)
+
++ Now you can type `Ctrl + h` and `Ctrl + t` to move between two files!. 
+
+    `--> THIS IS SICKKKKKKKKKK!`
+
+
+### [`nvim-autopairs`](https://github.com/windwp/nvim-autopairs)
+
+1. Go to [nvim-autopairs](https://github.com/windwp/nvim-autopairs) and copy
+the following into `~/.config/nvim/lua/user/plugins.lua`.
+
+    ```sh 
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+    ```
+2. Add/edit the following into `~/.config/nvim/after/plugin/autopairs.lua` 
+
+    ```lua 
+    require('nvim-autopairs').setup({
+      disable_filetype = { "TelescopePrompt" , "vim" },
+    })
+
+
+    -- If you want insert `(` after select function or method item
+    local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+    local cmp = require('cmp')
+    cmp.event:on(
+      'confirm_done',
+      cmp_autopairs.on_confirm_done()
+    )
+
+    local npairs = require("nvim-autopairs")
+    local Rule = require('nvim-autopairs.rule')
+
+    npairs.setup({
+        check_ts = true,
+        ts_config = {
+            lua = {'string'},-- it will not add a pair on that treesitter node
+            javascript = {'template_string'},
+            java = false,-- don't check treesitter on java
+        },
+        fast_wrap = {
+            map = '<M-e>',
+            chars = { '{', '[', '(', '"', "'" },
+            pattern = [=[[%'%"%>%]%)%}%,]]=],
+            end_key = '$',
+            keys = 'qwertyuiopzxcvbnmasdfghjkl',
+            check_comma = true,
+            highlight = 'Search',
+            highlight_grey='Comment'
+        },
+
+    })
+
+    local ts_conds = require('nvim-autopairs.ts-conds')
+
+
+    -- press % => %% only while inside a comment or string
+    npairs.add_rules({
+      Rule("%", "%", "lua")
+        :with_pair(ts_conds.is_ts_node({'string','comment'})),
+      Rule("$", "$", "lua")
+        :with_pair(ts_conds.is_not_ts_node({'function'}))
+    })
+
+    ```
+    > If you can't perform fast_wrap on your mac, try to do the following:
+    > On Iterm2, click on `Iterm2` --> Settings --> Profiles --> Keys -->
+    > Left options key: Meta instead of Normal.
+
+
+### [`comments`](https://github.com/numToStr/Comment.nvim)
+
+1. Go to [comments](https://github.com/numToStr/Comment.nvim) and copy the 
+following to `~/.config/nvim/lua/user/plugins.lua`
+
+    ```lua 
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+    ```
+
+2. Add/edit the following into `~/.config/nvim/after/plugin/comment.lua` 
+    
+
+    ```lua 
+    require('Comment').setup()
+    ```
+
++ Now you can use the following commands:
+
+    - Normal mode
+    
+    ```help
+    `gcc` - Toggles the current line using linewise comment
+    `gbc` - Toggles the current line using blockwise comment
+    `[count]gcc` - Toggles the number of line given as a prefix-count using linewise
+    `[count]gbc` - Toggles the number of line given as a prefix-count using blockwise
+    `gc[count]{motion}` - (Op-pending) Toggles the region using linewise comment
+    `gb[count]{motion}` - (Op-pending) Toggles the region using blockwise comment
+    ```
+
+    - VISUAL mode
+
+    ```help
+    `gc` - Toggles the region using linewise comment
+    `gb` - Toggles the region using blockwise comment
+    ```
+
+    - Extra mappings
+
+
+    - NORMAL mode
+
+    ```help
+    `gco` - Insert comment to the next line and enters INSERT mode
+    `gcO` - Insert comment to the previous line and enters INSERT mode
+    `gcA` - Insert comment to end of the current line and enters INSERT mode
+    ```
+
+
+### [`fugitive`](https://github.com/tpope/vim-fugitive)
+
+1. Add the following to `~/.config/nvim/lua/user/plugins.lua`.
+
+    ```sh 
+    use('tpope/vim-fugitive')
+    ```
+2. Add the following to `~/.config/nvim/after/plugin/fugitive.lua`
+
+    ```sh 
+    vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+    ```
+
+3. See some useful commands below:
+
++ Use  `<leader>gs` to open the Git 
++ Use  `<leader>j or <leader>k` to move between windows/bufers
+
+    ```help
+    `:Git`  - calls git status command. if you know some git you know :Git
+
+    `:0Git` - same as begore but full screen
+
+    `:G`    - shortcut for :Git
+            - press `g?` to see the help menu with many map/keys
+    ```
+
+### `Untracked / Unstaged / Staged`
+    
+- You can type `:G` to see the  `git status` menu. Then 
+move to any Untracked(1) or Unstaged(1) file and press `s`. 
+`s` == `git add ..filename..`. Now your file is `Staged` and ready for commit.
+You can also type `-` or to `Stage or Unstaged` a file. Another option 
+would be `u` == `Unstage` only. 
+
+###  
+
+
+
+
+## 5. Options
 
 + Now you can remove `print("hello")` from `~/.config/nvim/init.lua`
 + Now you can remove `print("hello from the user")` from `~/.config/nvim/user/init.lua`
@@ -456,7 +814,7 @@ and copy the following:
 
     ```
 
-## 7. Colorschemes
+## 6. Colorschemes
 
 1. Go to [rose-pint](https://github.com/rose-pine/neovim)
 
@@ -533,278 +891,8 @@ and copy the following:
 
 
 
-## 8. Treesitter 
 
-1. Go to [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter), and
-copy the following:
-
-    ```lua 
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    ```
-
-2. Add/Edit the above into `~/.config/nvim/lua/user/plugins.lua` as:
-
-    ```lua
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    ```
-    > :w :so :PackerSync --> if not done automatically yet
-
-
-3. Create a new filew at `~/.config/nvim/after/plugin/treesitter.lua` and add
-following from treesiter website:
-
-    ```lua
-
-    require'nvim-treesitter.configs'.setup {
-      -- A list of parser names, or "all" (the four listed parsers should always be installed)
-      ensure_installed = { "c", "lua", "vim", "help", "bash", "awk", "bibtex",
-      "dockerfile","json", "latex", "markdown", "python" ,"markdown_inline"},
-
-      -- Install parsers synchronously (only applied to `ensure_installed`)
-      sync_install = false,
-
-      -- Automatically install missing parsers when entering buffer
-      -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-      auto_install = true,
-
-      highlight = {
-        -- `false` will disable the whole extension
-        enable = true,
-
-        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-        -- Using this option may slow down your editor, and you may see some duplicate highlights.
-        -- Instead of true it can also be a list of languages
-        additional_vim_regex_highlighting = false,
-      },
-    }
-    ```
-
-
-
-## 9. Undotree
-
-1. Go to [Undotree](https://github.com/mbbill/undotree), and copy the following
-into `~/.config/nvim/lua/user/plugins.lua`
-
-    ```lua
-	use 'mbbill/undotree'
-    ```
-2. Create and edit the following `~/.config/nvim/after/plugins/undotree.lua`
-
-    ```lua 
-    vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
-    ```
-
-    > Now you can type <leader>u (which is Space + u) to see everthing we have
-    done. THIS IS INSAGE GOOD! It is like a realtime controlversion of the files
-    with realtime branches like git
-
-
-## 10. LSP Zero
-
-1. Go to [LSP Zero](https://github.com/VonHeikemen/lsp-zero.nvim#installing),
-copy the following and into  `~/.config/nvim/lua/user/plugins.lua`
-
-    ```lua
-    use {
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v1.x',
-      requires = {
-        -- LSP Support
-        {'neovim/nvim-lspconfig'},             -- Required
-        {'williamboman/mason.nvim'},           -- Optional
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},         -- Required
-        {'hrsh7th/cmp-nvim-lsp'},     -- Required
-        {'hrsh7th/cmp-buffer'},       -- Optional
-        {'hrsh7th/cmp-path'},         -- Optional
-        {'saadparwaiz1/cmp_luasnip'}, -- Optional
-        {'hrsh7th/cmp-nvim-lua'},     -- Optional
-
-        -- Snippets
-        {'L3MON4D3/LuaSnip'},             -- Required
-        {'rafamadriz/friendly-snippets'}, -- Optional
-      }
-    }
-
-    ```
-
-2. Create and edit the following file `~/.config/nvim/after/plugin/`.
-
-    ```lua
-    local lsp = require('lsp-zero').preset({
-      name = 'minimal',
-      set_lsp_keymaps = true,
-      manage_nvim_cmp = true,
-      suggest_lsp_servers = false,
-    })
-
-    -- (Optional) Configure lua language server for neovim
-    lsp.nvim_workspace()
-
-    lsp.setup()
-    ```
-    > Type :Mason to install whatever you like
-
-
-## 11. HARPOON
-
-1. Copy and paste the following into `~/.config/nvim/lua/user/plugins.lua`
-
-    ```lua
-    use('theprimeagen/harpoon')
-    ```
-
-2. Create and edit the following `~/.config/nvim/after/plugin/harpoon.lua`
-
-    ```lua 
-    local mark = require("harpoon.mark")
-    local ui = require("harpoon.ui")
-
-    vim.keymap.set("n", "<leader>a", mark.add_file)
-    vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
-    vim.keymap.set("n", "<C-g>", function() ui.nav_file(1) end)
-    vim.keymap.set("n", "<C-t>", function() ui.nav_file(2) end)
-    vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
-    vim.keymap.set("n", "<C-s>", function() ui.nav_file(4) end)
-    ```
-
-+ Now press `Ctrl + e` to see the harpoon menu. It should be empty
-+ press `<leader>a` == `Space + a` to add the current file to harpoon menu
-+ press `<leader>pf` == `Space +pf` to project finder files and select and 
-load any file you want.
-+ Inside the new file press `<leader>a` to add the new file to harpoon
-+ If you want to switch 1 <--> 2, select 1 or 2 and (j or k), select 
-visual mode (V), then (D)elete it, move up (k) and paste (P). save it (:w)
-
-+ Now you can type `Ctrl + h` and `Ctrl + t` to move between two files!. 
-
-    `--> THIS IS SICKKKKKKKKKK!`
-
-
-## 12. AUTOPAIRS
-
-1. Go to [nvim-autopairs](https://github.com/windwp/nvim-autopairs) and copy
-the following into `~/.config/nvim/lua/user/plugins.lua`.
-
-    ```sh 
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
-    ```
-2. Add/edit the following into `~/.config/nvim/after/plugin/autopairs.lua` 
-
-    ```lua 
-    require('nvim-autopairs').setup({
-      disable_filetype = { "TelescopePrompt" , "vim" },
-    })
-
-
-    -- If you want insert `(` after select function or method item
-    local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-    local cmp = require('cmp')
-    cmp.event:on(
-      'confirm_done',
-      cmp_autopairs.on_confirm_done()
-    )
-
-    local npairs = require("nvim-autopairs")
-    local Rule = require('nvim-autopairs.rule')
-
-    npairs.setup({
-        check_ts = true,
-        ts_config = {
-            lua = {'string'},-- it will not add a pair on that treesitter node
-            javascript = {'template_string'},
-            java = false,-- don't check treesitter on java
-        },
-        fast_wrap = {
-            map = '<M-e>',
-            chars = { '{', '[', '(', '"', "'" },
-            pattern = [=[[%'%"%>%]%)%}%,]]=],
-            end_key = '$',
-            keys = 'qwertyuiopzxcvbnmasdfghjkl',
-            check_comma = true,
-            highlight = 'Search',
-            highlight_grey='Comment'
-        },
-
-    })
-
-    local ts_conds = require('nvim-autopairs.ts-conds')
-
-
-    -- press % => %% only while inside a comment or string
-    npairs.add_rules({
-      Rule("%", "%", "lua")
-        :with_pair(ts_conds.is_ts_node({'string','comment'})),
-      Rule("$", "$", "lua")
-        :with_pair(ts_conds.is_not_ts_node({'function'}))
-    })
-
-    ```
-    > If you can't perform fast_wrap on your mac, try to do the following:
-    > On Iterm2, click on `Iterm2` --> Settings --> Profiles --> Keys -->
-    > Left options key: Meta instead of Normal.
-
-## 13. Comments
-
-1. Go to [comments](https://github.com/numToStr/Comment.nvim) and copy the 
-following to `~/.config/nvim/lua/user/plugins.lua`
-
-    ```lua 
-    use {
-        'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
-    }
-    ```
-
-2. Add/edit the following into `~/.config/nvim/after/plugin/comment.lua` 
-    
-
-    ```lua 
-    require('Comment').setup()
-    ```
-
-+ Now you can use the following commands:
-
-    - Normal mode
-    
-    ```help
-    `gcc` - Toggles the current line using linewise comment
-    `gbc` - Toggles the current line using blockwise comment
-    `[count]gcc` - Toggles the number of line given as a prefix-count using linewise
-    `[count]gbc` - Toggles the number of line given as a prefix-count using blockwise
-    `gc[count]{motion}` - (Op-pending) Toggles the region using linewise comment
-    `gb[count]{motion}` - (Op-pending) Toggles the region using blockwise comment
-    ```
-
-    - VISUAL mode
-
-    ```help
-    `gc` - Toggles the region using linewise comment
-    `gb` - Toggles the region using blockwise comment
-    ```
-
-    - Extra mappings
-
-
-    - NORMAL mode
-
-    ```help
-    `gco` - Insert comment to the next line and enters INSERT mode
-    `gcO` - Insert comment to the previous line and enters INSERT mode
-    `gcA` - Insert comment to end of the current line and enters INSERT mode
-    ```
-
-
-## 14. REMAP(2) 
+## 7. REMAP(2) 
 1. Add more remaps to `~/.config/nvim/lua/user/keymaps.lua` 
 
 
@@ -887,64 +975,4 @@ following to `~/.config/nvim/lua/user/plugins.lua`
     ```
 
 
-## 15.`Fugitive`
-
-1. Add the following to `~/.config/nvim/lua/user/plugins.lua`.
-
-    ```sh 
-    use('tpope/vim-fugitive')
-    ```
-2. Add the following to `~/.config/nvim/after/plugin/fugitive.lua`
-
-    ```sh 
-    vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
-    ```
-
-3. See some useful commands below:
-
-+ Use  `<leader>gs` to open the Git 
-+ Use  `<leader>j or <leader>k` to move between windows/bufers
-
-    ```help
-    `:Git`  - calls git status command. if you know some git you know :Git
-
-    `:0Git` - same as begore but full screen
-
-    `:G`    - shortcut for :Git
-            - press `g?` to see the help menu with many map/keys
-    ```
-
-### `Untracked / Unstaged / Staged`
-    
-- You can type `:G` to see the  `git status` menu. Then 
-move to any Untracked(1) or Unstaged(1) file and press `s`. 
-`s` == `git add ..filename..`. Now your file is `Staged` and ready for commit.
-You can also type `-` or to `Stage or Unstaged` a file. Another option 
-would be `u` == `Unstage` only. 
-
-###  
-
-## Structure MAP GUIDE :
-
-+ Example of my lua structure: 
-
-    ```sh  
-    ├── after
-    │   └── plugin
-    │       ├── colors.lua
-    │       ├── harpoon.lua
-    │       ├── lsp.lua
-    │       ├── telescope.lua
-    │       ├── treesitter.lua
-    │       └── undotree.lua
-    ├── init.lua
-    ├── lua
-    │   └── user
-    │       ├── init.lua
-    │       ├── keymaps.lua
-    │       ├── options.lua
-    │       └── plugins.lua
-    └── plugin
-        └── packer_compiled.lua
-    ```ll
 
