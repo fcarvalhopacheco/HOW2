@@ -11,7 +11,7 @@
     - [packer](#packer)
     - [telescope](#telescope)
     - [markdown-preview](#markdown-preview)
-    - [treesiter](#treesiter)
+    - [treesitter](#treesitter)
     - [undotree](#undotree)
     - [lspzero](#lspzero)
     - [harpoon](#harpoon)
