@@ -13,7 +13,6 @@
     ```sh 
     sudo apt install ./nvim-linux64.deb
     ```
-
 3.  Add alias for nvim if you want...
 
     ```sh
@@ -206,21 +205,6 @@ following commands into a new file `~/.config/nvim/lua/user/plugins.lua`
 	    }
 	  }
 	)
-
-    -- Use a protected call so we don't error out on first use
-    local status_ok, packer = pcall(require, "packer")
-    if not status_ok then
-        return
-    end
-
-    -- Have packer use a popup window
-    packer.init({
-        display = {
-            open_fn = function()
-                return require("packer.util").float({ border = "rounded" })
-            end,
-        },
-    }) 
 
     return require('packer').startup(function(use)
       use 'wbthomason/packer.nvim'
@@ -779,7 +763,6 @@ following to `~/.config/nvim/lua/user/plugins.lua`
             require('Comment').setup()
         end
     }
-    
     ```
 
 2. Add/edit the following into `~/.config/nvim/after/plugin/comment.lua` 
@@ -822,7 +805,10 @@ following to `~/.config/nvim/lua/user/plugins.lua`
 
 
 ## 14. REMAP(2) 
-1. Add more remaps to `~/.config/nvim/lua/user/keymaps.lua` ```lua   
+1. Add more remaps to `~/.config/nvim/lua/user/keymaps.lua` 
+
+
+    ```lua   
     -- Modes
     --   normal_mode = "n",
     --   insert_mode = "i",
@@ -899,6 +885,44 @@ following to `~/.config/nvim/lua/user/plugins.lua`
 
     vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
     ```
+
+
+## 15.`Fugitive`
+
+1. Add the following to `~/.config/nvim/lua/user/plugins.lua`.
+
+    ```sh 
+    use('tpope/vim-fugitive')
+    ```
+2. Add the following to `~/.config/nvim/after/plugin/fugitive.lua`
+
+    ```sh 
+    vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+    ```
+
+3. See some useful commands below:
+
++ Use  `<leader>gs` to open the Git 
++ Use  `<leader>j or <leader>k` to move between windows/bufers
+
+    ```help
+    `:Git`  - calls git status command. if you know some git you know :Git
+
+    `:0Git` - same as begore but full screen
+
+    `:G`    - shortcut for :Git
+            - press `g?` to see the help menu with many map/keys
+    ```
+
+### `Untracked / Unstaged / Staged`
+    
+- You can type `:G` to see the  `git status` menu. Then 
+move to any Untracked(1) or Unstaged(1) file and press `s`. 
+`s` == `git add ..filename..`. Now your file is `Staged` and ready for commit.
+You can also type `-` or to `Stage or Unstaged` a file. Another option 
+would be `u` == `Unstage` only. 
+
+###  
 
 ## Structure MAP GUIDE :
 
