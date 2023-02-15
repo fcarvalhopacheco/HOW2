@@ -4,23 +4,23 @@
 
 ## Contents
 
-1. [Download](##download-neovim)
-2. [Initial Configuration](#initial-configuration)
-3. [Remap(1)](##remap(1))
-4. [Plugins](##plugins)
-    - [packer](###packer)
-    - [telescope](###telescope)
-    - [markdown-preview](###markdown-preview)
-    - [treesiter](###treesiter)
-    - [undotree](###undotree)
-    - [lspzero](###lspzero)
-    - [harpoon](###harpoon)
-    - [autopairs](###autopairs)
-    - [comments](###comments)
-    - [fugitive](###fugitive)
-5. [Options](##options)
-6. [Colorschemes](##colorschemes)
-7. [Remap(2)](##remap(2))
+1. [Download](#1-download-neovim)
+2. [Initial Configuration](#2-initial-configuration)
+3. [Remap(1)](#3-remap1)
+4. [Plugins](#4-plugins)
+    - [packer](#packer)
+    - [telescope](#telescope)
+    - [markdown-preview](#markdown-preview)
+    - [treesiter](#treesiter)
+    - [undotree](#undotree)
+    - [lspzero](#lspzero)
+    - [harpoon](#harpoon)
+    - [autopairs](#autopairs)
+    - [comments](#comments)
+    - [fugitive](#fugitive)
+5. [Options](#5-options)
+6. [Colorschemes](#6-colorschemes)
+7. [Remap(2)](#7-remap2)
 
 ## Folder structure 
 - `~/.config/nvim/`
@@ -551,7 +551,7 @@ visual mode (V), then (D)elete it, move up (k) and paste (P). save it (:w)
     `--> THIS IS SICKKKKKKKKKK!`
 
 
-### [`nvim-autopairs`](https://github.com/windwp/nvim-autopairs)
+### [`autopairs`](https://github.com/windwp/nvim-autopairs)
 
 1. Go to [nvim-autopairs](https://github.com/windwp/nvim-autopairs) and copy
 the following into `~/.config/nvim/lua/user/plugins.lua`.
