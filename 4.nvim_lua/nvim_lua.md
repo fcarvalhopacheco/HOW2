@@ -195,6 +195,10 @@
     print("hello from the user")
     ```
 
+    ```python 
+    
+    ```
+
 ## 4. PLUGINS
 
 ### [packer](https://github.com/wbthomason/packer.nvim)
