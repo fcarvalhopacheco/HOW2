@@ -9,11 +9,11 @@
 3. [Remap(1)](#3-remap1)
 4. [Plugins](#4-plugins)
     - [packer](#packer)
-    - [telescope](#telescope)
-    - [markdown-preview](#markdown-preview)
-    - [treesitter](#treesitter)
+    - [telescope](#telescope) 
+    - [markdown-preview](#markdown-preview) 
+    - [treesitter](#treesitter) 
     - [undotree](#undotree)
-    - [lspzero](#lspzero)
+    - [lspzero](#lspzero) 
     - [harpoon](#harpoon)
     - [autopairs](#autopairs)
     - [comments](#comments)
@@ -885,12 +885,12 @@ would be `u` == `Unstage` only.
 
         -- Change specific vim highlight groups
         highlight_groups = {
-            ColorColumn = { bg = 'rose' }
+            ColorColumn = { bg = 'rose' } 
         }
     })
 
     -- set colorscheme after options
-    vim.cmd('colorscheme rose-pine')
+    vim.cmd('colorscheme rose-pine')   
     ```
 
 
