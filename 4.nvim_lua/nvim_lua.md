@@ -8,8 +8,8 @@
 2. [Initial Configuration](#2-initial-configuration)
 3. [Remap(1)](#3-remap1)
 4. [Plugins](#4-plugins)
-    - [packer](#packer)
-    - [telescope](#telescope) 
+    - [packer](#packerhttpsgithubcomwbthomasonpackernvim)
+    - [telescope](#telescopehttpsgithubcomnvim-telescopetelescopenvim) 
     - [markdown-preview](#markdown-preview) 
     - [treesitter](#treesitter) 
     - [undotree](#undotree)
@@ -18,6 +18,7 @@
     - [autopairs](#autopairs)
     - [comments](#comments)
     - [fugitive](#fugitive)
+    - [web-devicons](#web-devicons)
 5. [Options](#5-options)
 6. [Colorschemes](#6-colorschemes)
 7. [Remap(2)](#7-remap2)
@@ -58,6 +59,20 @@
     ```sh 
     sudo apt install ./nvim-linux64.deb
     ```
+    
+    - or install from source [Build](https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites)
+    
+    ```sh 
+    #remove first if necessary
+    sudo apt-get remove neovim
+    sudo apt-get install ninja-build gettext cmake g++ pkg-config unzip curl doxygen
+    cd ~/Downloads
+    git clone https://github.com/neovim/neovim
+    cd neovim
+    make
+    sudo make install
+    ```
+
 3.  Add alias for nvim if you want...
 
     ```sh
@@ -358,6 +373,7 @@ something like:
     # Create a file called `telescope.lua`
     ```
 
+
 6. Go to [telescope.vim usage](https://github.com/nvim-telescope/telescope.nvim/blob/master/README.md#usage)
 and copy the following:
 
@@ -368,19 +384,41 @@ and copy the following:
 
 7. Paste the above into `~/.config/nvim/after/plugin/telescope.lua`
 
-8. Edit `~/.config/nvim/after/plugin/telescope.lua` with some new remaps...
+8. Edit `~/.config/nvim/after/plugin/telescope.lua` 
     
     + Check [here](https://github.com/nvim-telescope/telescope.nvim/blob/master/README.md#pickers) for more reference 
 
     ```lua
+
+    -- Check [PICKERS]((https://github.com/nvim-telescope/telescope.nvim#vim-pickers)
     local builtin = require('telescope.builtin')
     vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
     vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-    vim.keymap.set('n', '<leader>ps', function() 
-		    builtin.grep_string({ search = vim.fn.input("Grep > ") });
-		    end)
+    vim.keymap.set('n', '<leader>ps', function()
+        builtin.grep_string({ search = vim.fn.input("Grep > ") });
+    end)
+    vim.keymap.set('n', '<leader>pg', builtin.live_grep, {})
+    vim.keymap.set('n', '<leader>pb', builtin.buffers, {})
+    vim.keymap.set('n', '<leader>pcb', builtin.current_buffer_fuzzy_find, {})
     ```
 
+- Tips:
+    
+    ```vim
+    :Telescope <tab>           # to see all options
+                               # <C-p> move to previous
+                               # <C-n> move to next
+    :Telescope git_commits     # too see git commits
+
+    :Telescope commands        # shows all commands that you have for your
+                               # neovim + what the command does.
+    
+
+    :Telescope find_files  cwd=~/Documents/    # This will start telescope
+                                               # at ~/Documents/
+                                               # press <C-v> to split the 
+                                               # file, if necessary. 
+    ```
 
 
 ### [`markdown-preview`](https://github.com/iamcco/markdown-preview.nvim)
@@ -518,7 +556,11 @@ copy the following and into  `~/.config/nvim/lua/user/plugins.lua`
 
     lsp.setup()
     ```
-    > Type :Mason to install whatever you like
+    > T.ype :Mason to install whatever you like
+
+3. If you press `gl` on a line with errors (or warnings) a popup window will 
+show up, it will tell you every "diagnostic" on that line. 
+
 
 ### [`harpoon`](https://github.com/ThePrimeagen/harpoon)
 
@@ -550,7 +592,7 @@ load any file you want.
 + If you want to switch 1 <--> 2, select 1 or 2 and (j or k), select 
 visual mode (V), then (D)elete it, move up (k) and paste (P). save it (:w)
 
-+ Now you can type `Ctrl + h` and `Ctrl + t` to move between two files!. 
++ Now you can type `Ctrl + g` and `Ctrl + t` to move between two files!. 
 
     `--> THIS IS SICKKKKKKKKKK!`
 
@@ -640,6 +682,8 @@ following to `~/.config/nvim/lua/user/plugins.lua`
     
 
     ```lua 
+    -- Enable Comment.nvim
+    
     require('Comment').setup()
     ```
 
@@ -710,7 +754,24 @@ move to any Untracked(1) or Unstaged(1) file and press `s`.
 You can also type `-` or to `Stage or Unstaged` a file. Another option 
 would be `u` == `Unstage` only. 
 
-###  
+
+
+### [`web-devicons`](https://github.com/nvim-tree/nvim-web-devicons)
+
+1. Add the following to `~/.config/nvim/lua/user/plugins.lua`.
+
+    ```sh 
+    use 'nvim-tree/nvim-web-devicons'
+    ```
+2. Add the following to `~/.config/nvim/after/plugin/fugitive.lua`
+
+    ```sh 
+    vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+    ```
+
+
+
+
 
 
 
