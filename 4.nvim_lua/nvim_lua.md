@@ -578,7 +578,7 @@ show up, it will tell you every "diagnostic" on that line.
 
     vim.keymap.set("n", "<leader>a", mark.add_file)
     vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
-    vim.keymap.set("n", "<C-g>", function() ui.nav_file(1) end)
+    vim.hmap.set("n", "<C-g>", function() ui.nav_file(1) end)
     vim.keymap.set("n", "<C-t>", function() ui.nav_file(2) end)
     vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
     vim.keymap.set("n", "<C-s>", function() ui.nav_file(4) end)
@@ -760,16 +760,53 @@ would be `u` == `Unstage` only.
 
 1. Add the following to `~/.config/nvim/lua/user/plugins.lua`.
 
-    ```sh 
+    ```lua 
     use 'nvim-tree/nvim-web-devicons'
     ```
-2. Add the following to `~/.config/nvim/after/plugin/fugitive.lua`
 
-    ```sh 
-    vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+### ['telekasten'](https://github.com/renerocksai/telekasten.nvim)
+
+1. Add the following to `~/.config/nvim/lua/user/plugins.lua`.
+
+    ```lua 
+    use 'renerocksai/telekasten.nvim'
     ```
 
+2. Add the following to `~/.config/nvim/after/plugin/telekasten.lua`
 
+    ```lua 
+    require('telekasten').setup{
+        home = '/Users/fcp/Documents/notes', -- Put the name of your notes directory here 
+    }
+
+    -- Launch panel if nothing is typed after <leader>z
+    vim.keymap.set("n", "<leader>z", "<cmd>Telekasten panel<CR>")
+
+    -- Most used functions
+    vim.keymap.set("n", "<leader>zf", "<cmd>Telekasten find_notes<CR>")
+    vim.keymap.set("n", "<leader>zg", "<cmd>Telekasten search_notes<CR>")
+    vim.keymap.set("n", "<leader>zd", "<cmd>Telekasten goto_today<CR>")
+    vim.keymap.set("n", "<leader>zz", "<cmd>Telekasten follow_link<CR>")
+    vim.keymap.set("n", "<leader>zn", "<cmd>Telekasten new_note<CR>")
+    vim.keymap.set("n", "<leader>zc", "<cmd>Telekasten show_calendar<CR>")
+    vim.keymap.set("n", "<leader>zb", "<cmd>Telekasten show_backlinks<CR>")
+    vim.keymap.set("n", "<leader>zI", "<cmd>Telekasten insert_img_link<CR>")
+
+    -- Call insert link automatically when we start typing a link
+    vim.keymap.set("i", "[[", "<cmd>Telekasten insert_link<CR>")
+
+    ```
+
+3. Tips:
+
+
+    ```vim 
+    :Telekasten panel               # Will open panel with options 
+    :Telekasten new_note            # Will create a new note 
+    :Telekasten find_daily_notes    # Will find daily notes
+
+    ```
+    
 
 
 
