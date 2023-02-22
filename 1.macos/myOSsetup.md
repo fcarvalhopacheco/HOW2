@@ -36,6 +36,7 @@
 
 15. [NeoVim + lua](#15---neovim-lua)
 
+16. [Dotfiles](#16---dotfiles)
 -----------------------------------------------------------------------------------
 
 ## 1 - Homebrew
@@ -534,3 +535,6 @@
 
 + Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/4.nvim_lua/nvim_lua.md)
 
+## 16 - Dotfiles
+
++ Check tutorial [here]()
