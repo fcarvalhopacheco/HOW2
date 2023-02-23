@@ -6,14 +6,76 @@
 
 ## Reference: 
 
------------------
-
-## Contents
-
+1.[Jake Wiesler](https://www.jakewiesler.com/blog/managing-dotfiles)
+2.[Geekmasher](https://geekmasher.dev/dotfiles-guide/)
 
 -----------------
+## Next step:
 
-## 1. Download Nix
+1. Create an `install.sh` script
+2. Think about how to install in other machines... 
+    - use nix?
 
+-----------------
 
+## 1. Download stow
+
+    ```sh 
+    brew install stow
+    ```
+
+## 2. Create a `.dotfiles` directory
+
+    ```sh 
+    mkdir ~/.dotfiles
+    ```
+
+## 3. Create `packages` subdirectories
+
+    ```sh 
+    cd ~/.dotfiles/
+    
+    mkdir nvim
+    mkdir zsh
+    mkdir git
+    ```
+
+> ` $HOME` is the the `targe`
+> ` .dotfiles` is the the `stow` directory. 
+> ` subdirectories` are the packages with dotfile contents.
+
+## 4. Move original dotfiles and stow it
+
+1. `zsh`
+
+    ```sh
+    cd ~
+    mv .zshrc ~/.dotfiles/zsh/.zshrc
+    mv .p10k.zsh ~/.dotfiles/zsh/.p10k.zsh
+    mv .zprofile ~/.dotfiles/zsh/.zprofile
+    cd ~/.dotfiles/
+    stow zsh 
+    ```
+
++ There is no output but you will see symlinks...
+
+2. `git`
+
+    ```sh 
+    mv ~/.gitignore_global ~/.dotfiles/git/.gitignore_global
+    mv ~/.gitconfig ~/.dotfiles/git/.gitconfig
+
+    cd  ~/.dotfiles/
+    stow git
+    ```
+
+3. `nvim`
+
+    ```sh 
+    mkdir ~/.dotfiles/nvim/.config/nvim
+    mv ~/.config/nvim ~/.dotfiles/nvim/.config/
+    cd ~/.dotfiles/
+    stow nvim
+    ```
+    
 
