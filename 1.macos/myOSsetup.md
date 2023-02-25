@@ -253,6 +253,11 @@
     export ZSH=/Users/<user>/.oh-my-zsh
     source $ZSH/oh-my-zsh.sh
     ```
++ Now you can type the following on your terminal:
+
+    ```sh 
+    web_search google <whaterver_you_want>
+    ```
 
 ## 10 - Git
 
