@@ -107,7 +107,6 @@
 
     # Type:
     nvim
-
     ```
 
 3. Create & edit  a `init.lua` file.
@@ -127,6 +126,7 @@
     ```sh
     print("hello")
     ```
+
     > once you save/exit and reopen vim, you should be able to see hello in
     > the bottom of the file. 
 
@@ -163,9 +163,10 @@
     # Quit and open the file
     :wq
     vim .
-
     ``` 
+
     > Now when you reopen any file you should see:
+
 
     ```sh
     hello from the user
@@ -210,16 +211,12 @@
     print("hello from the user")
     ```
 
-    ```python 
-    
-    ```
 
 ## 4. PLUGINS
 
 ### [packer](https://github.com/wbthomason/packer.nvim)
 
-1. Go to your brownser and search for:
-    - [Packer nvim](https://github.com/wbthomason/packer.nvim)
+1. Go to your brownser and search for: [Packer nvim](https://github.com/wbthomason/packer.nvim)
 
 
 2. Copy the following command into your terminal (Make sure you have git installed!:
@@ -325,7 +322,6 @@ following commands into a new file `~/.config/nvim/lua/user/plugins.lua`
 something like: 
 
     ```lua
-    
     return require('packer').startup(function(use)
         use 'wbthomason/packer.nvim'
         use {
@@ -344,6 +340,7 @@ something like:
         end
     end)
     ```
+
     > Pressing '=' in Normal mode alignes the current line with those above, plus indenting.
 
 
@@ -389,7 +386,6 @@ and copy the following:
     + Check [here](https://github.com/nvim-telescope/telescope.nvim/blob/master/README.md#pickers) for more reference 
 
     ```lua
-
     -- Check [PICKERS]((https://github.com/nvim-telescope/telescope.nvim#vim-pickers)
     local builtin = require('telescope.builtin')
     vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
@@ -462,7 +458,6 @@ copy the following:
 following from treesiter website:
 
     ```lua
-
     require'nvim-treesitter.configs'.setup {
       -- A list of parser names, or "all" (the four listed parsers should always be installed)
       ensure_installed = { "c", "lua", "vim", "help", "bash", "awk", "bibtex",
@@ -488,8 +483,6 @@ following from treesiter website:
     }
     ```
 
-
-
 ### [`undotree`](https://github.com/mbbill/undotree)
 
 1. Go to [Undotree](https://github.com/mbbill/undotree), and copy the following
@@ -498,6 +491,7 @@ into `~/.config/nvim/lua/user/plugins.lua`
     ```lua
 	use 'mbbill/undotree'
     ```
+
 2. Create and edit the following `~/.config/nvim/after/plugins/undotree.lua`
 
     ```lua 
@@ -538,7 +532,6 @@ copy the following and into  `~/.config/nvim/lua/user/plugins.lua`
         {'rafamadriz/friendly-snippets'}, -- Optional
       }
     }
-
     ```
 
 2. Create and edit the following file `~/.config/nvim/after/plugin/`.
@@ -558,8 +551,25 @@ copy the following and into  `~/.config/nvim/lua/user/plugins.lua`
     ```
     > T.ype :Mason to install whatever you like
 
-3. If you press `gl` on a line with errors (or warnings) a popup window will 
-show up, it will tell you every "diagnostic" on that line. 
+- Tips from default:
+
+    ```vim
+    map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
+    map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+    map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+    map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+    map('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
+    map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
+    map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
+    map('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
+    map('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+    map('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
+
+    -- Diagnostics
+    map('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
+    map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
+    map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+    ```
 
 
 ### [`harpoon`](https://github.com/ThePrimeagen/harpoon)
