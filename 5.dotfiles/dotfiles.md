@@ -2,49 +2,46 @@
 
 - Note:  I'm using  `macos 13.2`
 
-----------------
-
 ## Reference: 
 
-1.[Jake Wiesler](https://www.jakewiesler.com/blog/managing-dotfiles)
-2.[Geekmasher](https://geekmasher.dev/dotfiles-guide/)
++ [Jake Wiesler](https://www.jakewiesler.com/blog/managing-dotfiles)   
++ [Geekmasher](https://geekmasher.dev/dotfiles-guide/)
 
------------------
-## Next step:
+## Next steps:
 
 1. Create an `install.sh` script
-2. Think about how to install in other machines... 
-    - use nix?
+2. How to install in other machines... 
+    - use nixOS?
 
------------------
 
 ## 1. Download stow
 
-    ```sh 
-    brew install stow
-    ```
+```sh 
+brew install stow
+```
+
 
 ## 2. Create a `.dotfiles` directory
 
-    ```sh 
-    mkdir ~/.dotfiles
-    ```
+```sh 
+mkdir ~/.dotfiles
+```
 
 ## 3. Create `packages` subdirectories
 
-    ```sh 
-    cd ~/.dotfiles/
-    
-    mkdir nvim
-    mkdir zsh
-    mkdir git
-    ```
+```sh 
+cd ~/.dotfiles/
 
-> ` $HOME` is the the `targe`
-> ` .dotfiles` is the the `stow` directory. 
-> ` subdirectories` are the packages with dotfile contents.
+mkdir nvim
+mkdir zsh
+mkdir git
+```
 
-## 4. Move original dotfiles and stow it
++  `$HOME` is the the `target` 
++ `.dotfiles` is the the `stow` directory. 
++ `subdirectories` are the packages with dotfile contents.
+
+## 4. Move original and stow it
 
 1. `zsh`
 
