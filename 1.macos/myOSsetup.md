@@ -529,4 +529,4 @@ future commits and will not change anything from past commits.
 
 ## 16 - Dotfiles
 
-+ Check tutorial [here]()
++ Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/5.dotfiles/dotfiles.md)
