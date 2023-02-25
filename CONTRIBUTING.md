@@ -5,7 +5,7 @@ It took me forever to overcome my fear to contribute to any project for many rea
 So, I hope this can help you as well :)
 
 
->  This contributing guideline was adapted from [fatiando](https://github.com/fatiando/contributing/edit/master/CONTRIBUTING.md) and [MetPy](https://github.com/Unidata/MetPy/blob/master/CONTRIBUTING.md)
+>  This contributing guideline was adapted from [fatiando](https://github.com/fatiando/community/blob/main/CONTRIBUTING.md) and [MetPy](https://github.com/Unidata/MetPy/blob/master/CONTRIBUTING.md)
 
 -------------------------------------------------
 ## 1.Introduction
