@@ -18,17 +18,17 @@
 
 6. [Powerlevel10k](#6---powerlevel10k)
     
-7. [Fonts](#7---patched-font)
+7. [Fonts](#7---fonts)
    
 8. [Theme and Font configuration](#8---theme-configuration)
 
-9. [Auto Suggestion + other plugins](#9---auto-suggestion)
+9. [Auto Suggestion and others](#9---auto-suggestion-and-others)
     
 10. [GIT](#10---git)
 
 11. [VirtualBOX](#11---virtualbox)
 
-12. [Python Enviroment](#12---python-enviroment)
+12. [Python Environment](#12---python-environment)
 
 13. [Cookiecutter](#13---cookiecutter)
 
@@ -212,7 +212,7 @@
 
     ```
 
-## 9 - Auto Suggestion + zsh-syntax-highlighting + web-search
+## 9 - Auto Suggestion and others 
 
 ### `zsh-autosuggestions`
 
