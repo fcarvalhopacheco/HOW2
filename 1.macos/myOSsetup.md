@@ -265,32 +265,27 @@
 
 * I will be following instructions from [here](https://help.github.com/en/github)
 
-* >*At the heart of GitHub is an open source version control system (VCS) called Git. Git is responsible for everything GitHub-related that happens locally on your computer..* [source](https://help.github.com/en/github/getting-started-with-github/set-up-git)
-
     
-* Download it!
+1. Download git.
     
     ```sh
-    # Download the latest version of GIT
-    # If you have followed me. you should have git already install at this moment but if not, type:
     $ brew install git
       
     # or Update it
     $ brew upgrade git
     ```
     
-* Set an username [source](https://help.github.com/en/github/using-git/setting-your-username-in-git)
+2. Setting an username [source](https://help.github.com/en/github/using-git/setting-your-username-in-git)
     
-    ```ssh
-    # This config set up is useful to track your git commits!
-    # Your name will be visible in future commits you push 
-    # to GitHub from the command line. By the way, if you 
-    # already have an username in other machine, dont worry.
-    # It looks like that using git config here will only affect 
-    # future commits and will not change anything from past commits.
-      
-    # USERNAME FOR EVERY REPOSITORY YOU CREATE!
-    # On Terminal, type:
++ This config set up is useful to track your git commits! 
+Your name will be visible in future commits you push 
+to GitHub from the command line. By the way, if you 
+already have an username in other machine, dont worry.
+It looks like that using git config here will only affect 
+future commits and will not change anything from past commits.
+
+    ```sh
+    # On terminal, type:
     $ git config --global user.name "YOUR NAME OR NICKNAME HERE-GLOBAL"
        
     # Check if it is correct by typing:
@@ -298,22 +293,9 @@
       
     # you should see
     >YOUR NAME OR NICKNAME HERE-GLOBAL
-      
-    # USERNAME FOR A SINGLE REPOSITORY
-    # Change the current working directory to the local repository 
-    # where you want to configure the name that is associated with your Git commits.
-         
-    # On Terminal, type:
-    $ git config user.name "YOUR NAME OR NICKNAME HERE-LOCAL"
-      
-    # Check if it is correct by typing:
-    $git config user.name
-      
-    # you should see
-    >YOUR NAME OR NICKNAME HERE-LOCAL
     ```
       
-* Setting your commit  address in Git [source](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
+3. Setting your commit address in Git [source](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
     
     ```sh
     # On Terminal,
@@ -325,71 +307,74 @@
     > yourhere@test.com
     ```
 
-* Set a global ignore file 
+4. Set a global ignore file 
     
     ```sh
     # navigate to home directory
     $ cd
     $ vi .gitignore_global
     ```
->	I am using macOS, so i will be adding [macOS.gitignore](https://github.com/github/gitignore/blob/master/Global/macOS.gitignore) on my .gitignore_global
+    >	I am using macOS, so i will be adding [macOS.gitignore](https://github.com/github/gitignore/blob/master/Global/macOS.gitignore) on my .gitignore_global
   
 
-* How to create a repository ? [Click here](https://docs.github.com/en/get-started/quickstart/create-a-repo)
+5. How to create a repository ? [Click here](https://docs.github.com/en/get-started/quickstart/create-a-repo)
 
-* How to clone a repository? [Click here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
+6. How to clone a repository? [Click here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
 
 
-+ GPG Key
+7. How to manage a `GPG Key`: 
 
-1. Follow [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
-   
-   ```sh 
-    ╰─ gpg --full-generate-key                                                                       ─╯
+    + Following instructions from [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
 
-    gpg (GnuPG/MacGPG2) 2.2.40; Copyright (C) 2022 g10 Code GmbH
-    This is free software: you are free to change and redistribute it.
-    There is NO WARRANTY, to the extent permitted by law.
+        ```sh
+        # Run the following:
+        $ gpg --full-generate-key                                                                       ─╯
 
-    Please select what kind of key you want:
-       (1) RSA and RSA (default)
-       (2) DSA and Elgamal
-       (3) DSA (sign only)
-       (4) RSA (sign only)
-      (14) Existing key from card
-    Your selection? 1
-    RSA keys may be between 1024 and 4096 bits long.
-    What keysize do you want? (3072) 4096
-    Requested keysize is 4096 bits
-    Please specify how long the key should be valid.
-             0 = key does not expire
-          <n>  = key expires in n days
-          <n>w = key expires in n weeks
-          <n>m = key expires in n months
-          <n>y = key expires in n years
-    Key is valid for? (0) 0
-    Key does not expire at all
-    Is this correct? (y/N) y
+        gpg (GnuPG/MacGPG2) 2.2.40; Copyright (C) 2022 g10 Code GmbH
+        This is free software: you are free to change and redistribute it.
+        There is NO WARRANTY, to the extent permitted by law.
 
-    GnuPG needs to construct a user ID to identify your key.
+        Please select what kind of key you want:
+        (1) RSA and RSA (default)
+            (2) DSA and Elgamal
+            (3) DSA (sign only)
+        (4) RSA (sign only)
+            (14) Existing key from card
+            Your selection? 1
+            RSA keys may be between 1024 and 4096 bits long.
+            What keysize do you want? (3072) 4096
+            Requested keysize is 4096 bits
+            Please specify how long the key should be valid.
+            0 = key does not expire
+            <n>  = key expires in n days
+            <n>w = key expires in n weeks
+            <n>m = key expires in n months
+            <n>y = key expires in n years
+            Key is valid for? (0) 0
+            Key does not expire at all
+            Is this correct? (y/N) y
 
-    Real name: Fernando Carvalho Pacheco
-    Email address: fcarvalho.pacheco@gmail.com
-   ```
+            GnuPG needs to construct a user ID to identify your key.
 
-    ```sh
-    gpg --list-secret-keys --keyid-format=long
-    gpg --armor --export xxxxxxxxxxxxxxxx
-    # copy the key to github.
-    ```
-2. Now follow [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key)
+            Real name: Fernando Carvalho Pacheco
+            Email address: fcarvalho.pacheco@gmail.com
+        ```
 
-    ```sh
-    git config --global --unset gpg.format
-    gpg --list-secret-keys --keyid-format=long
-    git config --global user.signingkey xxxxxxxxxxxxxxxxxxx
-    git config --global commit.gpgsign true
-    ```
+    + Run: 
+        ```sh
+        $ gpg --list-secret-keys --keyid-format=long
+        $ gpg --armor --export xxxxxxxxxxxxxxxx
+        # copy the key to github.
+        ```
+
+    + Now follow [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key)
+
+        ```sh
+        $ git config --global --unset gpg.format
+        $ gpg --list-secret-keys --keyid-format=long
+        $ git config --global user.signingkey xxxxxxxxxxxxxxxxxxx
+        $ git config --global commit.gpgsign true
+        ```
 
 ## 11 - Virtualbox	
 
@@ -419,7 +404,7 @@
 
 * Other ways? Please check [The definitive guide to setup my Python workspace](https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14), by Henrique Bastos. Its a great tutorial to config your machine with pyenv, virtualenv ... 
 
-* Download the Miniconda installer,[Miniconda](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh)
+* Download the Miniconda installer, [Miniconda](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh)
       
     ```sh
     # On Terminal, navigate to:
@@ -468,7 +453,7 @@
     <shift> + P = paste above
     <shift> + I = insert mode start at the beginning of the line 
     <shift> + A = insert mode start at the end of the line  
-    ? =  Search mode 
+    ? =  Search mode -->backwards 
         - Press `n` to look for the next result 
         - Press <shift> + N to jump reverse through results
         - Press * to jump to the next occurence of whatever is underneath your cursor
@@ -505,11 +490,14 @@
     ctrl+d = goes down by a half page
     { = goes up by empty lines
     } = goes down by empty lines
-    ci} = delete everything inside { } and start insert mode
+
+    # ILOVE THE FOLLOWING ONES:
+    ci} = delete everything inside { } and start insert mode  
     di} = delete everything inside { }
     di) = delete everything inside ( ) 
     vi] = select everything inside [ ]  
     diw = delete the surrounding letter of the current word 
+    ciw = delete the surrounding letter of the current word and start insert
     ```
 
 4. Full vim movements 
@@ -533,7 +521,6 @@
     ctrl + w + v 
     :Ex
     :vertical resize 20
-
     ```
 
 ## 15 - NeoVim-lua 
