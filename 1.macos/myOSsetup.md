@@ -1,267 +1,189 @@
 # macOS Ventura 13.2
 
 ## My Iterm2 
+
 ![my iterm2](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos/my_iterm2.png)
 
 
 ## Table of Contents
 
-1. [Homebrew](#1---homebrew)
+- [Homebrew](#homebrew) 
+- [Cask](#cask) 
+- [ZSH](#zsh) 
+- [Alacritty](#alacritty)  
+- [TMUX](#tmux)
+- [GIT](#git)
+- [VirtualBOX](#virtualbox)
+- [Python Environment](#python-environment)
+- [Cookiecutter](#cookiecutter)
+- [Vim-commandsl](#vim-commands)
+- [NeoVim + lua](#neovim-lua)
+- [Dotfiles](#dotfiles)
 
-2. [CASK](#2---cask)
+
+## Homebrew
+    
+1. Download homebrew.  
+    
+    ```sh
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+
+## CASK
    
-3. [ITERM2](#3---iterm2) 
-    
-4. [ZSH](#4---zsh)
+1. Download/install cask.  
 
-5. [Oh my ZSH](#5---oh-my-zsh)
-
-6. [Powerlevel10k](#6---powerlevel10k)
-    
-7. [Fonts](#7---fonts)
-   
-8. [Theme and Font configuration](#8---theme-configuration)
-
-9. [Auto Suggestion and others](#9---auto-suggestion-and-others)
-    
-10. [GIT](#10---git)
-
-11. [VirtualBOX](#11---virtualbox)
-
-12. [Python Environment](#12---python-environment)
-
-13. [Cookiecutter](#13---cookiecutter)
-
-14. [Vim-commandsl](#14---vim-commands)
-
-15. [NeoVim + lua](#15---neovim-lua)
-
-16. [Dotfiles](#16---dotfiles)
------------------------------------------------------------------------------------
-
-## 1 - Homebrew
-
-    
-* Download homebrew.  
-    
-    ```zsh
-    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```sh
+    brew install cask 
     ```
 
-## 2 - CASK
-   
-* Download cask.  
+## ZSH
 
-    ```sh
-    $ brew install cask 
-    ```
-
-## 3 - ITERM2
-
-* Download ITERM2.  
-   
-    ```sh
-    $ brew install --cask iterm2
-    ``` 
-
-* Download ITERM2 color themes by clicking on:
-    
-    + [iterm2colorschemes](https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master)
-
-## 4 - ZSH
-   
-* If you dont have **Z shell**. On terminal, type:
-    
-    ```sh
-    $ brew install zsh
-    ``` 
-
-## 5 - Oh My ZSH
- 
-* Download zsh
-      
-    ```sh
-    $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    ```
-    >or
-    
-    ```sh
-    $ sh -c "$(wget -O https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    ```
-      
-## 6 - Powerlevel10k
-   
-* Clone power10k
-      
-    ```sh
-    $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-    ```
-      
-* Edit the file ~/.zshrc. On terminal, type:
-      
-    ```sh
-    # Navigate to home
-    $ cd
-    
-    # Open the file
-    $ vi .zshrc
-    ```
-
-* Navigate to ~line 11 and change ZSH_THEME, then exit the file.
-  
-    ```sh
-    # Insert the text
-    ZSH_THEME="powerlevel10k/powerlevel10k"
-    
-    # Get out of vim
-    esc
-    :wq
-    ```
-
-## 7 - Fonts
-
-* Recommended: Meslo Nerd Font patched for Powerlevel10k. [source](https://awesomeopensource.com/project/romkatv/powerlevel10k)
-
-* Download the following four files.
-    + [MesloLGS NF Regular.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf)
-    + [MesloLGS NF Bold.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold.ttf)
-    + [MesloLGS NF Italic.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Italic.ttf)
-    + [MesloLGS NF Bold Italic.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold%20Italic.ttf)
-      
-* Double-click on each file and press "Install". This will make MesloLGS NF font available to all applications on your system. Configure your terminal to use this font:
-      
-      
-## 8 - Theme Configuration
- 
-* Customize your terminal the way you like. For new users. On terminal, type:
-      
-    ```sh
-    $ p10k configure
-    ```
-
-* How do I add username and/or hostname to the left sife of the prompt? [source](https://awesomeopensource.com/project/romkatv/powerlevel10k#how-do-i-add-username-andor-hostname-to-prompt)
-
-    ```sh
-    # open the following file
-    $ vi ~/.p10k.zsh
-    
-    # Remove the # behind context to activate username@hostname 
-         
-    typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-    status                  # exit code of the last command
-    command_execution_time  # duration of the last command
-    background_jobs         # presence of background jobs
-    direnv                  # direnv status (https://direnv.net/)
-    virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
-    anaconda                # conda environment (https://conda.io/)
-    pyenv                   # python environment (https://github.com/pyenv/pyenv)
-    goenv                   # go environment (https://github.com/syndbg/goenv)
-    nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
-    nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
-    nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
-    # node_version          # node.js version
-    # go_version            # go version (https://golang.org)
-    # rust_version          # rustc version (https://www.rust-lang.org)
-    # dotnet_version        # .NET version (https://dotnet.microsoft.com)
-    rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
-    rvm                     # ruby version from rvm (https://rvm.io)
-    fvm                     # flutter version management (https://github.com/leoafarias/fvm)
-    kubecontext             # current kubernetes context (https://kubernetes.io/)
-    terraform               # terraform workspace (https://www.terraform.io)
-    aws                     # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
-    # aws_eb_env            # aws elastic beanstalk environment (https://aws.amazon.com/elasticbeanstalk/)
-    # azure                 # azure account name (https://docs.microsoft.com/en-us/cli/azure)
-    # gcloud                # google cloud acccount and project (https://cloud.google.com/)
-         
-    context                 # user@hostname
-    
-    nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
-    ranger                  # ranger shell (https://github.com/ranger/ranger)
-    vim_shell               # vim shell indicator (:sh)
-    # midnight_commander    # midnight commander shell (https://midnight-commander.org/)
-    vi_mode                 # vi mode (you don't need this if you've enabled prompt_char)
-    # vpn_ip                # virtual private network indicator
-    # ram                   # free RAM
-    # load                  # CPU load
-    time                    # current time
-    # public_ip             # public IP address
-    # proxy                 # system-wide http/https/ftp proxy
-    # battery               # internal battery
-    # example               # example user-defined segment (see prompt_example function below)
-    )
-         
-    # ADD a # behind the the following text
-    #typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=
-    
-    # ADD context on the list below to show username@hostname on the left lide
-    # The list of segments shown on the left. Fill it with the most important segments.
-    typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-	    context
-        os_icon                 # os identifier
-        dir                     # current directory
-        vcs                     # git status
-        # prompt_char           # prompt symbol
-    )
-          
-    # ADD the # behind context on the list below to stop showing the username@hostname on the right side 
-    typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-	...
-        #context
-        ...
-    )
-
-    ```
-
-## 9 - Auto Suggestion and others 
-
-### `zsh-autosuggestions`
-
-* Check the [Source](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
-      
-    ```sh
-    # On terminal, clone the following repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
-    $ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-    # Open ~/.zshrc, by typing:
-    $ vi ~/.zshrc
-      
-    # Find the line that starts with plugin, and add zsh-autosuggestions inside the parenthesis
-    plugins=(git zsh-autosuggestions)
-      
-    # Save and close the file
-    esc
-    :wq!
-      
-    # Open a new terminal to see the changes
-    ```
-
-### `zsh-syntax-highlighting`
-+ Check [here](https://github.com/zsh-users/zsh-syntax-highlighting)
-      
-### `web-search`
-
-+ Just added the following into `~/.zshrc`
-
-    ```sh
-    plugins=( 
-        git
-        zsh-autosuggestions
-        zsh-syntax-highlighting
-        web-search
-    )
-    
-    export ZSH=/Users/<user>/.oh-my-zsh
-    source $ZSH/oh-my-zsh.sh
-    ```
-+ Now you can type the following on your terminal:
+1. Download/install zsh.
 
     ```sh 
-    web_search google <whaterver_you_want>
+    brew install zsh
     ```
 
-## 10 - Git
+2. Follow [ZSH-INSTALL-CONFIGURE](https://thevaluable.dev/zsh-install-configure-mouseless/)
+tutorial for further zsh-configuration (without oh-my-zsh)
 
-* I already have git on my ubuntu machine and a github account. So I need to link both computers to the same github account
+
+3. Check out [my zsh-dotfiles](https://github.com/fcarvalhopacheco/dotfiles/tree/main/zsh/.config/zsh)
+
+- You might want to start with [.zshrc](https://github.com/fcarvalhopacheco/dotfiles/blob/main/zsh/.config/zsh/.zshrc)
+to understand my file organization...
+
+
+
+## ALACRITTY
+
++ Webpage: [alacritty](https://alacritty.org)
+
+1. Download/install rust compiler + alacritty (MANUALLY):
+   
+    ```sh
+    git clone https://github.com/alacritty/alacritty.git
+    cd alacritty
+    
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    
+    make app
+    cp -r target/release/osx/Alacritty.app /Applications/
+    ``` 
+
+    > or just use `brew install --cask alacritty`
+
+2. Download/install [`font`](https://www.nerdfonts.com):
+
+    ```sh 
+    brew tap epk/epk
+    brew install --cask font-sf-mono-nerd-font
+    ```
+
+3. Post build:
+
+    ```sh
+    # cd into gitclone alacritty folder
+    cd alacritty
+    sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
+
+    cp ~/Documents/workspace/1.git/gitclones/alacritty/extra/completions/_alacritty /usr/local/share/zsh/site-functions
+    ```
+
+4. Create `.config/alacritty/alacritty.yml` file:
+
+    ```sh 
+    mkdir -p .config/alacritty
+    touch alacritty.yml
+    ```
+
+5. Edit the above:
+
++ See my configuration file [here](https://github.com/fcarvalhopacheco/dotfiles/blob/main/alacritty/.config/alacritty/alacritty.yml)
++ This is the original example [alacritty.yml](https://github.com/alacritty/alacritty/blob/master/alacritty.yml)
+
+
+6. Download/install `color-scheme` [from here](https://github.com/alacritty/alacritty-theme)
+
+    ```sh 
+    mkdir -p ~/.config/alacritty/themes
+    git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+    ```
+
+    + Add an import to your alacritty.yml (Replace {theme} with your 
+    desired colorscheme):
+
+    ```yaml 
+    import:
+      - ~/.config/alacritty/themes/themes/{theme}.yaml
+    ```
+
+
+
+## TMUX
+
++ GitHub repository [tmux](https://github.com/tmux/tmux/wiki)
+
++ References: 
+    
+    - [How I Use Tmux With Neovim For An Awesome Dev Workflow On My Mac
+](https://www.youtube.com/watch?v=U-omALWIBos)
+
+    - [Writing Your tmux Config: a Detailed Guide](https://thevaluable.dev/tmux-config-mouseless/)
+
+1. Download/install:
+
+    ```sh 
+    brew install tmux
+    ```
+
+2. Tips 
+
+    ```sh 
+    tmux attach-session -t <session name>    # to get back to a previous session
+    tmux kill-server                         # kill server + every session 
+    tmux kill-session -t <session name>      # kill the session <session name>
+    tmux list-sessions                       # list tmux sessions
+    tmux new-session -s <session name>       # create a new session <session name>
+
+    # Default 
+    CTRL+b + "                               # split horizontally
+    CTRL+d                                   # close pane
+    :split-window                            # split horizontally
+
+    # NEW MAPPING
+    CTRL+a                                   = prefix key
+    
+    CTRL+a + r                               = reload the tmux config file
+    CTRl+a + |                               = split horizontally/RIGHT 
+    CTRl+a + -                               = split vertically/BELOW
+    CTRL+a + ALT + arrow key                 = resize pane
+    CTRL+a +[                                = switch to COPY MODE (q = quit)
+    CTRL+a + d                               = detach from sesssion
+
+    ```
+
+3. Install [tmux plugin manager](https://github.com/tmux-plugins/tpm)
+
+    ```sh 
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ```
+
++ Follow instructions from the tmux-plugin/tpm repository   
+
+
+4. Create `~/.config/tmux/.tmux.conf`, and edit the file:
+
+
++ Check my configuration file [here](https://github.com/fcarvalhopacheco/dotfiles/blob/main/tmux/.config/tmux/tmux.conf)
+
+
+
+## Git
+
+* I already have git on my ubuntu machine, and a GitHub account. So I need to
+link both computers to the same GitHub account
 
 * I will be following instructions from [here](https://help.github.com/en/github)
 
@@ -314,7 +236,7 @@ future commits and will not change anything from past commits.
     $ cd
     $ vi .gitignore_global
     ```
-    >	I am using macOS, so i will be adding [macOS.gitignore](https://github.com/github/gitignore/blob/master/Global/macOS.gitignore) on my .gitignore_global
+    >	I am using macOS, so I will be adding [macOS.gitignore](https://github.com/github/gitignore/blob/master/Global/macOS.gitignore) on my .gitignore_global
   
 
 5. How to create a repository ? [Click here](https://docs.github.com/en/get-started/quickstart/create-a-repo)
@@ -376,9 +298,9 @@ future commits and will not change anything from past commits.
         $ git config --global commit.gpgsign true
         ```
 
-## 11 - Virtualbox	
+## Virtualbox	
 
-* I currently use virtual box to process Shipboard ADCP data, but I will soon start playing with LINUX practices and want to have a dedicated computer for it. 
+* I now use virtual box to process Shipboard ADCP data, but I will soon start playing with LINUX practices and want to have a dedicated computer for it. 
   
 * Download the VirtualBOX by,
 
@@ -396,55 +318,125 @@ future commits and will not change anything from past commits.
     $virtualbox 
     ```   
    
-## 12 - Python Environment
+## Python Environment
 
-* There are many ways to install/create Python working Enviroments. However, I will be using conda package manager with miniconda and the conda-forge package collection, which provides platform-independent package management for Python and other softwares in self-contained user-specific enviroments. 
+- There are many ways to install/create Python working Enviroments. Choose 
+one from below (ps. I m using `mambaforge`):
 
-* Why this way? It seems the science community has adopted Anaconda (=miniconda+150packages) distribution to create and manage python project enviroments. Please check [Introduction to Conda for (Data) Scientists](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/setup/) to learn more about it. Ps. miniconda(=conda+python+basic packages) is the small version of anaconda.  
+1. `MINICONDA`
 
-* Other ways? Please check [The definitive guide to setup my Python workspace](https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14), by Henrique Bastos. Its a great tutorial to config your machine with pyenv, virtualenv ... 
+    - Miniconda is a lightweight version of the Anaconda Python distribution. 
+    It is a package manager that allows users to easily install, uninstall, 
+    and update Python packages and their dependencies. Miniconda comes with
+    the conda package manager, a command-line tool that helps users create 
+    and manage Python environments [Source: ChatGPT].
 
-* Download the Miniconda installer, [Miniconda](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh)
-      
-    ```sh
-    # On Terminal, navigate to:
-    $ cd Downloads
+    - Why this? It seems the science community has adopted `Anaconda` 
+    (=miniconda+150packages) distribution to create and manage python project 
+    enviroments. Please check 
+    [Introduction to Conda for (Data) Scientists](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/setup/) 
+    to learn more about it. Miniconda is a minor version of Anaconda.
+    `Miniconda`(=conda+python+basic packages) 
 
-    # Install Miniconda by typing:
-    $ zsh Miniconda3-latest-Linux-x86_64.sh  	
+    * Download the Miniconda installer, [Miniconda](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh)
+          
+        ```sh
+        # On Terminal, navigate to:
+        $ cd Downloads
 
-    # Follow the instructions on terminal. 
-    # If you forget to press NO to auto_activate miniconda every time you open a new sessiong type:
-    # conda config --set auto_activate_base false	 
-    
-    # Once the install script completes, you can remove it 
-    $ rm -rf Miniconda3-latest-MacOSX-x86_64.sh
-	
-    # Verify your Conda installation:
-    $ conda help
-    $ conda -V
+        # Install Miniconda by typing:
+        $ zsh Miniconda3-latest-Linux-x86_64.sh  	
 
-    # Check the path by typing:
-    $ whence -p conda #or 
-    $ type conda  # For bash terminal, type: which conda -> The equivalent to zsh's which in bash is type. 
-      
-    # Make sure you have the most recent version
-    $ conda update --name base --channel defaults --yes conda
+        # Follow the instructions on terminal. 
+        # If you forget to press NO to auto_activate miniconda every time you open a new sessiong type:
+        # conda config --set auto_activate_base false	 
+        
+        # Once the install script completes, you can remove it 
+        $ rm -rf Miniconda3-latest-MacOSX-x86_64.sh
+        
+        # Verify your Conda installation:
+        $ conda help
+        $ conda -V
 
-    # Initialize your shell for Conda
-    $ conda init zsh
-    ```  
+        # Check the path by typing:
+        $ whence -p conda #or 
+        $ type conda  # For bash terminal, type: which conda -> The equivalent to zsh's which in bash is type. 
+          
+        # Make sure you have the most recent version
+        $ conda update --name base --channel defaults --yes conda
 
-## 13 - Cookiecutter
+        # Initialize your shell for Conda
+        $ conda init zsh
+        ```  
+
+2. [`MAMBA`](https://mamba.readthedocs.io/en/latest/index.html)
+
+    - Mamba is a high-performance package manager for the Python programming 
+    language, and it is an open-source project. It is designed to be a faster 
+    and more efficient replacement for the conda package manager that comes 
+    with the Anaconda and Miniconda Python distributions. Mamba uses the same
+    package format and repository as conda, so it is fully compatible with 
+    conda-managed environments and packages [Source: ChatGPT].
+
+
+    - Installation Guide:
+
+        ```sh 
+        # On Terminal, navigate to:
+        cd Downloads
+
+        # Download:
+        curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+
+        # Install:
+        # Follow the instructions on terminal. 
+        sh Mambaforge-$(uname)-$(uname -m).sh
+
+        # Once the install script completes, you can remove it 
+        rm -rf Mambaforge-*
+        
+        # Run:
+        ~/mambaforge/condabin/conda init zsh
+        ~/mambaforge/condabin/mamba init zsh
+
+        # Remove the auto_activate_base funtion:
+        # This will stop terminal to Initialize the base whenever you start
+        # a terminal. 
+        conda config --set auto_activate_base false
+
+        # Verify your Conda installation:
+        conda -V
+
+        # Check the path by typing:
+        whence -p conda #or 
+        type conda  # For bash terminal, type: which conda -> The equivalent to zsh's which in bash is type. 
+          
+        # Make sure you have the most recent version
+        conda update --name base --channel conda-forge --yes conda
+
+        # Initialize your shell for Conda
+        conda init zsh
+        ```
+
+
+3. `PYENV`
+
+    - Please check [The definitive guide to set up my Python workspace](https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14), 
+    by [Henrique Bastos](https://henriquebastos.net/sobre/). It is a great 
+    tutorial to config your machine with pyenv, pyenv-virtualenv and 
+    pyenv-virtualenvwrapper.
+
+
+## Cookiecutter
 
 > A cross-platform command-line utility that creates projects from cookiecutters (project templates), e.g. 
 > Python package projects, C projects.
    
 * Original project: [https://github.com/cookiecutter/cookiecutter](https://github.com/cookiecutter/cookiecutter)
-* [Check my quick tutorial here](https://github.com/fcarvalhopacheco/HOW2/blob/6269bee581763cc760bf6ce778f8d7136350ee26/1.macos_catalina_setup/cookiecutter-guide.md) 
+* [Check my quick tutorial here](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos/1.install/cookiecutter/cookiecutter-guide.md) 
 
 
-## 14 - Vim-commands 
+## Vim-commands 
 
 1. General navigation
     
@@ -523,10 +515,10 @@ future commits and will not change anything from past commits.
     :vertical resize 20
     ```
 
-## 15 - NeoVim-lua 
+## NeoVim-lua 
 
-+ Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/4.nvim_lua/nvim_lua.md)
++ Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos/1.install/nvim/nvim_lua.md)
 
-## 16 - Dotfiles
+## Dotfiles
 
-+ Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/5.dotfiles/dotfiles.md)
++ Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos/1.install/stow/stow.md)
