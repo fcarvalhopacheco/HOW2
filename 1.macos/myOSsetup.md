@@ -92,10 +92,10 @@ to understand my file organization...
     cp ~/Documents/workspace/1.git/gitclones/alacritty/extra/completions/_alacritty /usr/local/share/zsh/site-functions
     ```
 
-4. Create `.config/alacritty/alacritty.yml` file:
+4. Create `~/.dotfiles/alacritty/.config/alacritty/` file:
 
     ```sh 
-    mkdir -p .config/alacritty
+    mkdir -p ~/.dotfiles/alacritty/.config/alacritty/
     touch alacritty.yml
     ```
 
@@ -108,8 +108,8 @@ to understand my file organization...
 6. Download/install `color-scheme` [from here](https://github.com/alacritty/alacritty-theme)
 
     ```sh 
-    mkdir -p ~/.config/alacritty/themes
-    git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+    mkdir -p ~/.dotfiles/alacritty/.config/alacritty/themes/
+    git clone https://github.com/alacritty/alacritty-theme ~/.dotfiles/alacritty/.config/alacritty/themes/
     ```
 
     + Add an import to your alacritty.yml (Replace {theme} with your 
