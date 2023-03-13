@@ -12,6 +12,7 @@
 - [ZSH](#zsh) 
 - [Alacritty](#alacritty)  
 - [TMUX](#tmux)
+- [YABAI+SKHD](#yabai-and-skhd)
 - [GIT](#git)
 - [VirtualBOX](#virtualbox)
 - [Python Environment](#python-environment)
@@ -119,6 +120,11 @@ to understand my file organization...
       - ~/.config/alacritty/themes/themes/{theme}.yaml
     ```
 
+7. Stow alacritty:
+
+    ```sh 
+    cd ~/.dotfiles | stow alacritty
+    ```
 
 
 ## TMUX
@@ -140,7 +146,7 @@ to understand my file organization...
 
 2. Tips 
 
-    ```sh 
+    ``` 
     tmux attach-session -t <session name>    # to get back to a previous session
     tmux kill-server                         # kill server + every session 
     tmux kill-session -t <session name>      # kill the session <session name>
@@ -157,17 +163,15 @@ to understand my file organization...
     
     CTRL+a + r                               = reload the tmux config file
     CTRl+a + |                               = split horizontally/RIGHT 
-    CTRl+a + -                               = split vertically/BELOW
-    CTRL+a + ALT + arrow key                 = resize pane
+    CTRl+a + -                               = split vertically/BELOW CTRL+a + ALT + arrow key                 = resize pane
     CTRL+a +[                                = switch to COPY MODE (q = quit)
     CTRL+a + d                               = detach from sesssion
-
     ```
 
 3. Install [tmux plugin manager](https://github.com/tmux-plugins/tpm)
 
     ```sh 
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    git clone https://github.com/tmux-plugins/tpm ~$XDG_CONFIG_HOME/tmux/plugins/tpm
     ```
 
 + Follow instructions from the tmux-plugin/tpm repository   
@@ -177,6 +181,69 @@ to understand my file organization...
 
 
 + Check my configuration file [here](https://github.com/fcarvalhopacheco/dotfiles/blob/main/tmux/.config/tmux/tmux.conf)
+
+
+5. Stow tmux:
+
+    ```sh 
+    cd ~/.dotfiles | stow tmux
+    ```
+
+## YABAI and SKHD
+
+- References:
+
+    - [How To Set up And Use The Yabai Tiling Window Manager On Mac](https://www.youtube.com/watch?v=k94qImbFKWE)
+    - [YABAI](https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release))
+    - [SKHD](https://github.com/koekeishiya/skhd)
+
+
+1. Download/install yabai and skhd:
+
+    ```sh 
+    brew install koekeishiya/formulae/yabai
+    brew install koekeishiya/formulae/skhd
+    ```
+
+2. Create the following:
+
+    ```sh
+    mkdir -p ~/.dotfiles/yabai/.config/yabai
+    mkdir -p ~/.dotfiles/skhd/.config/skhd
+    ```
+
+3. Create/Edit `yabairc`
+
+- [Here is my file](https://github.com/fcarvalhopacheco/dotfiles/blob/main/yabai/.config/yabai/yabairc)
+
+    ```sh 
+    cd ~/.dotfiles/yabai/.config/yabai/ | vi yabairc
+    ```
+    
+4. Stow the files and restart service    
+
+    ```sh
+    cd ~/.dotfiles | stow yabai
+    brew services start yabai
+    brew services restart yabai
+    ```
+
+5. Create/Edit `skhd`
+
+- [Here is my file](https://github.com/fcarvalhopacheco/dotfiles/blob/main/skhd/.config/skhd/skhdrc)
+
+
+    ```sh 
+    cd ~/.dotfiles/skhd/.config/skhd/ | vi skhd
+    ```
+
+6. Stow the files and restart service    
+
+    ```sh
+    cd ~/.dotfiles | stow skhd
+    brew services start skhd
+    brew services restart skhd
+    ```
 
 
 
@@ -300,7 +367,8 @@ future commits and will not change anything from past commits.
 
 ## Virtualbox	
 
-* I now use virtual box to process Shipboard ADCP data, but I will soon start playing with LINUX practices and want to have a dedicated computer for it. 
+* I now use virtual box to process Shipboard ADCP data, but I will soon start
+  playing with LINUX practices and want to have a dedicated computer for it. 
   
 * Download the VirtualBOX by,
 
