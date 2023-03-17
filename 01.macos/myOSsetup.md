@@ -2,7 +2,7 @@
 
 ## My Iterm2 
 
-![my iterm2](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos/my_iterm2.png)
+![my iterm2](https://github.com/fcarvalhopacheco/HOW2/blob/master/01.macos/my_iterm2.png)
 
 
 ## Table of Contents
@@ -501,7 +501,7 @@ one from below (ps. I m using `mambaforge`):
 > Python package projects, C projects.
    
 * Original project: [https://github.com/cookiecutter/cookiecutter](https://github.com/cookiecutter/cookiecutter)
-* [Check my quick tutorial here](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos/1.install/cookiecutter/cookiecutter-guide.md) 
+* [Check my quick tutorial here](https://github.com/fcarvalhopacheco/HOW2/blob/master/01.macos/1.install/cookiecutter/cookiecutter-guide.md) 
 
 
 ## Vim-commands 
@@ -585,8 +585,8 @@ one from below (ps. I m using `mambaforge`):
 
 ## NeoVim-lua 
 
-+ Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos/1.install/nvim/nvim_lua.md)
++ Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/01.macos/1.install/nvim/nvim_lua.md)
 
 ## Dotfiles
 
-+ Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/1.macos/1.install/stow/stow.md)
++ Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/01.macos/1.install/stow/stow.md)

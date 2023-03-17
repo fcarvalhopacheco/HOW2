@@ -1,0 +1,66 @@
+---
+- name: My MacOS 
+  hosts: localhost
+  gather_facts: no
+  become: yes
+  vars:
+    dotfiles_dir: ~/.dotfiles
+
+  tasks:
+    - name: Install Xcode command line tools
+      command: xcode-select --install
+      ignore_errors: yes
+
+    - name: Install Homebrew
+      shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      args:
+        creates: /usr/local/bin/brew
+
+    - name: Install cask
+      command: brew install --cask homebrew/cask
+
+
+    - name: Clone dotfiles repository
+      git:
+        repo: https://github.com/fcarvalhopacheco/dotfiles.git
+        dest: "{{ dotfiles_dir }}"
+        version: main
+
+    - name: Install Homebrew packages and casks from Brewfile
+      community.general.homebrew_brewfile:
+        brewfile_path: "{{ dotfiles_dir }}/brewfile/Brewfile"
+        state: present
+      with_items:
+        - Brewfile
+
+    - name: Set zsh as default shell
+      shell: chsh -s /usr/local/bin/zsh {{ ansible_user }}
+
+    - name: Add export ZDOTDIR to /etc/zshenv
+      lineinfile:
+        path: /etc/zshenv
+        line: 'export ZDOTDIR="$HOME/.config/zsh"'
+
+    - name: Install Alacritty
+      homebrew:
+        name: alacritty
+        state: present
+
+    - name: Perform stow for each folder/file
+      command: >
+        stow --target=$HOME {{ item }}
+      become: false
+      args:
+        chdir: ~/.dotfiles
+      with_items:
+        - alacritty
+        - conda
+        - git
+        - nvim
+        - skhd
+        - tmux
+        - yabai
+        - zsh
+        - .gitignore
+
+
