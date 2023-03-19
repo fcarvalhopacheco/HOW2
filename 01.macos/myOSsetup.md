@@ -1,25 +1,11 @@
 # macOS Ventura 13.2
 
+
+[toc]
+
 ## My Iterm2 
 
 ![my iterm2](https://github.com/fcarvalhopacheco/HOW2/blob/master/01.macos/my_iterm2.png)
-
-
-## Table of Contents
-
-- [Homebrew](#homebrew) 
-- [Cask](#cask) 
-- [ZSH](#zsh) 
-- [Alacritty](#alacritty)  
-- [TMUX](#tmux)
-- [YABAI+SKHD](#yabai-and-skhd)
-- [GIT](#git)
-- [VirtualBOX](#virtualbox)
-- [Python Environment](#python-environment)
-- [Cookiecutter](#cookiecutter)
-- [Vim-commandsl](#vim-commands)
-- [NeoVim + lua](#neovim-lua)
-- [Dotfiles](#dotfiles)
 
 
 ## Homebrew
