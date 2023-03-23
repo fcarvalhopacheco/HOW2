@@ -1,6 +1,7 @@
 # macOS Ventura 13.2
 
-${toc}
+[[toc]]
+
 
 
 ## Homebrew
