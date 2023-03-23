@@ -1,11 +1,6 @@
 # macOS Ventura 13.2
 
-
-[toc]
-
-## My Iterm2 
-
-![my iterm2](https://github.com/fcarvalhopacheco/HOW2/blob/master/01.macos/my_iterm2.png)
+${toc}
 
 
 ## Homebrew
