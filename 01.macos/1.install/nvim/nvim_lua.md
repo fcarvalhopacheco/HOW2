@@ -49,7 +49,7 @@
         └── packer_compiled.lua
     ```
 
-## 1. Download Neovim
+## 1. Download and Install Neovim
 
 ### `xubuntu 22.04`
 1. Download ` nvim-linux64.deb` from [neovim](https://github.com/neovim/neovim/releases/)
@@ -82,11 +82,46 @@
     ```
 
 ### `mac ventura 13.2` 
-1. Run:
+
+1. Install with brew:
 
     ```sh
     brew install neovim
     ```
+
+2. or Install from source:
+
+- [Reference](https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites)
+
+
+    1. Install Xcode Command Line Tools:
+        
+        ```bash 
+        xcode-select --install
+        ```
+    2. Install Homebrew (if not already installed):
+
+        ```bash 
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        ```
+    3. Install Neovim build dependencies:
+
+        ```bash
+        brew install ninja libtool gettext automake cmake pkg-config unzip
+        ```
+
+    4. Clone the nvim repository and build:
+
+        ```bash 
+        git clone https://github.com/neovim/neovim.git
+        cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+        ```
+    5. Install nvim:
+
+        ```bash
+        sudo make install
+        ```
+        
 
 ## 2. Initial Configuration
 
