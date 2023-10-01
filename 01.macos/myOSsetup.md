@@ -491,9 +491,11 @@ $ brew upgrade git
    x = to delete a character
    s = to delete a character and enter insert mode
    dt) = delete up to the character closing
+   daw = delete a word
    cw = delete a word and enter insert mode
    D = delete rest of line
    C = delete rest of line and enter insert mode
+   R = Replace each character until you press <Esc>
    ```
 
 3. Vertical speed
@@ -557,6 +559,8 @@ $ brew upgrade git
    ma     = marks the place under the cursor as mark a.
    `a     = move to the mark a.
    :marks = show all marks.
+   xp     = swapp to characters
+    
    ```
 
 ## NeoVim-lua
