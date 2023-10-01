@@ -472,7 +472,8 @@ $ brew upgrade git
    <shift> + P = paste above
    <shift> + I = insert mode start at the beginning of the line
    <shift> + A = insert mode start at the end of the line
-   ? =  Search mode -->backwards
+   / = Seach mode
+   ? = Search mode -->backwards
        - Press `n` to look for the next result
        - Press <shift> + N to jump reverse through results
        - Press * to jump to the next occurrence of whatever is underneath your cursor
@@ -540,6 +541,22 @@ $ brew upgrade git
    ctrl + w + v
    :Ex
    :vertical resize 20
+   ```
+
+5. Extras
+
+   ``` 
+    J     =  Delete a line break so you can join two lines together
+   CTRL-] = (jump to tag)
+   %      = Match a parenthesis
+   CTRL-G = Tell where you are in a file
+
+
+   ``     = it is a mark. You can use it to go back where you came from
+   CTRL-O = (jump to older position)
+   ma     = marks the place under the cursor as mark a.
+   `a     = move to the mark a.
+   :marks = show all marks.
    ```
 
 ## NeoVim-lua
