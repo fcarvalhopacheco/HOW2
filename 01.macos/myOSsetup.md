@@ -548,20 +548,62 @@ $ brew upgrade git
 5. Extras
 
    ``` 
-    J     =  Delete a line break so you can join two lines together
+   J      =  Delete a line break so you can join two lines together
    CTRL-] = (jump to tag)
    %      = Match a parenthesis
    CTRL-G = Tell where you are in a file
 
-
+   # Marks
    ``     = it is a mark. You can use it to go back where you came from
    CTRL-O = (jump to older position)
    ma     = marks the place under the cursor as mark a.
    `a     = move to the mark a.
    :marks = show all marks.
-   xp     = swapp to characters
-    
-   ```
+
+   xp     = swap to characters
+   
+   # Registers
+   "13yy  = yank three whole lines to the l register (l for line):
+   "fyas  = Copy/yank a sentence to the f register (f for First):
+
+   # Start nvim 
+   nvim -d main.c~ main.c  = show the diff between two files
+   
+   # Record and playback
+      1. The "q{register}" command starts recording keystrokes into the register
+                           named {register}. The register name must be between a and z.
+      2. Type your commands.
+      3. To finish recording, press q (without any extra character).
+
+      You can now execute the macro by typing the command "@{register}".
+
+   # Replace words
+      - You can change "Professor" to "Teacher" in all lines with the following command:  
+         :%s/Professor/Teacher/
+   ~  = swap case	(a -> A and A -> a)
+   U  = make uppercase  (a -> A and A -> A)
+   u  = make lowercase  (a -> a and A -> a)
+
+   # Time stamp:
+      !!date
+
+   # To read the contents of the current directory into the file, use this:
+      :read !ls
+
+   # Abbreviations:
+      :iabbrev FCP Fernando Carvalho Pacheco
+   
+   # Aligning text:
+      :center
+      :right
+      :left
+
+   # Justifying text:
+      :packadd justify
+      _j
+
+  ```
+
 
 ## NeoVim-lua
 
@@ -570,3 +612,7 @@ $ brew upgrade git
 ## Dotfiles
 
 - Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/01.macos/1.install/stow/stow.md)
+
+
+
+
