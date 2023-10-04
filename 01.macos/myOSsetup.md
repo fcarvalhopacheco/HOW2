@@ -602,8 +602,12 @@ $ brew upgrade git
       :packadd justify
       _j
 
-  ```
+   # Folding and unfolding
 
+	zf	F-old creation
+	zo	O-pen a fold
+	zc	C-lose a fold
+   ```
 
 ## NeoVim-lua
 
