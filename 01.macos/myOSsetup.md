@@ -23,12 +23,12 @@
    ```
 
 2. Follow [ZSH-INSTALL-CONFIGURE](https://thevaluable.dev/zsh-install-configure-mouseless/)
-   tutorial for further zsh-configuration (without oh-my-zsh)
+tutorial for further zsh-configuration (without oh-my-zsh)
 
 3. Check out [my zsh-dotfiles](https://github.com/fcarvalhopacheco/dotfiles/tree/main/zsh/.config/zsh)
 
 - You might want to start with [.zshrc](https://github.com/fcarvalhopacheco/dotfiles/blob/main/zsh/.config/zsh/.zshrc)
-  to understand my file organization.
+to understand my file organization.
 
 ## ALACRITTY
 
@@ -85,11 +85,11 @@
    ```
 
    - Add an import to your alacritty.yml (Replace {theme} with your
-     desired colorscheme):
+   desired colorscheme):
 
    ```yaml
    import:
-     - ~/.config/alacritty/themes/themes/{theme}.yaml
+      - ~/.config/alacritty/themes/themes/{theme}.yaml
    ```
 
 7. Stow alacritty:
@@ -215,7 +215,7 @@ git clone https://github.com/tmux-plugins/tpm ~$XDG_CONFIG_HOME/tmux/plugins/tpm
 ## Git
 
 - I already have git on my ubuntu machine, and a GitHub account. So I need to
-  link both computers to the same GitHub account
+link both computers to the same GitHub account
 
 - I will be following instructions from [here](https://help.github.com/en/github)
 
@@ -230,12 +230,11 @@ $ brew upgrade git
 
 2.  Setting an username [source](https://help.github.com/en/github/using-git/setting-your-username-in-git)
 
-- This config set up is useful to track your git commits!
-  Your name will be visible in future commits you push
-  to GitHub from the command line. By the way, if you
-  already have an username in other machine, dont worry.
-  It looks like that using git config here will affect
-  future commits and will not change anything from past commits.
+- This config set up is useful to track your git commits! Your name will be
+visible in future commits you push to GitHub from the command line. By the way,
+if you already have an username in other machine, dont worry. It looks like
+that using git config here will affect future commits and will not change
+anything from past commits.
 
       ```sh
       # On terminal, type:
@@ -288,28 +287,28 @@ $ brew upgrade git
 
       Please select what kind of key you want:
       (1) RSA and RSA (default)
-          (2) DSA and Elgamal
-          (3) DSA (sign only)
+      (2) DSA and Elgamal
+      (3) DSA (sign only)
       (4) RSA (sign only)
-          (14) Existing key from card
-          Your selection? 1
-          RSA keys may be between 1024 and 4096 bits long.
-          What keysize do you want? (3072) 4096
-          Requested keysize is 4096 bits
-          Please specify how long the key should be valid.
-          0 = key does not expire
-          <n>  = key expires in n days
-          <n>w = key expires in n weeks
-          <n>m = key expires in n months
-          <n>y = key expires in n years
-          Key is valid for? (0) 0
-          Key does not expire at all
-          Is this correct? (y/N) y
+      (14) Existing key from card
+      Your selection? 1
+      RSA keys may be between 1024 and 4096 bits long.
+      What keysize do you want? (3072) 4096
+      Requested keysize is 4096 bits
+      Please specify how long the key should be valid.
+      0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+      Key is valid for? (0) 0
+      Key does not expire at all
+      Is this correct? (y/N) y
 
-          GnuPG needs to construct a user ID to identify your key.
+      GnuPG needs to construct a user ID to identify your key.
 
-          Real name: Fernando Carvalho Pacheco
-          Email address: fcarvalho.pacheco@gmail.com
+      Real name: Fernando Carvalho Pacheco
+      Email address: fcarvalho.pacheco@gmail.com
       ```
 
     - Run:
@@ -332,7 +331,7 @@ $ brew upgrade git
 ## Virtualbox
 
 - I now use virtual box to process Shipboard ADCP data, but I will soon start
-  playing with LINUX practices and want to have a dedicated computer for it.
+playing with LINUX practices and want to have a dedicated computer for it.
 - Download the VirtualBOX by,
 
   ```sh
@@ -352,22 +351,22 @@ $ brew upgrade git
 ## Python Environment
 
 - There are other ways to install/create Python working Environments. Choose
-  one from below (ps. I m using `mambaforge`):
+one from below (ps. I m using `mambaforge`):
 
 1. `MINICONDA`
 
    - Miniconda is a lightweight version of the Anaconda Python distribution.
-     It's a package manager that allows users to install, uninstall,
-     and update Python packages and their dependencies. Miniconda comes with
-     the conda package manager, a command-line tool that helps users create
-     and manage Python environments [Source: ChatGPT].
+   It's a package manager that allows users to install, uninstall,
+   and update Python packages and their dependencies. Miniconda comes with
+   the conda package manager, a command-line tool that helps users create
+   and manage Python environments [Source: ChatGPT].
 
    - Why this? It seems the science community has adopted `Anaconda`
-     (=miniconda+150packages) distribution to create and manage python project
-     environments. Please check
-     [Introduction to Conda for (Data) Scientists](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/setup/)
-     to learn more about it. Miniconda is a minor version of Anaconda.
-     `Miniconda`(=conda+python+basic packages)
+   (=miniconda+150packages) distribution to create and manage python project
+   environments. Please check
+   [Introduction to Conda for (Data) Scientists](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/setup/)
+   to learn more about it. Miniconda is a minor version of Anaconda.
+   `Miniconda`(=conda+python+basic packages)
 
    * Download the Miniconda installer, [Miniconda](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh)
 
@@ -403,11 +402,11 @@ $ brew upgrade git
 2. [`MAMBA`](https://mamba.readthedocs.io/en/latest/index.html)
 
    - Mamba is a high-performance package manager for the Python programming
-     language, and it's an open-source project. It's designed to be a faster
-     and more efficient replacement for the conda package manager that comes
-     with the Anaconda and Miniconda Python distributions. Mamba uses the same
-     package format and repository as conda, so it's fully compatible with
-     conda-managed environments and packages [Source: ChatGPT].
+   language, and it's an open-source project. It's designed to be a faster
+   and more efficient replacement for the conda package manager that comes
+   with the Anaconda and Miniconda Python distributions. Mamba uses the same
+   package format and repository as conda, so it's fully compatible with
+   conda-managed environments and packages [Source: ChatGPT].
 
    - Installation Guide:
 
@@ -451,9 +450,9 @@ $ brew upgrade git
 3. `PYENV`
 
    - Please check [The definitive guide to set up my Python workspace](https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14),
-     by [Henrique Bastos](https://henriquebastos.net/sobre/). It's a great
-     tutorial to config your machine with pyenv, pyenv-virtualenv and
-     pyenv-virtualenvwrapper.
+   by [Henrique Bastos](https://henriquebastos.net/sobre/). It's a great
+   tutorial to config your machine with pyenv, pyenv-virtualenv and
+   pyenv-virtualenvwrapper.
 
 ## Cookiecutter
 
@@ -545,7 +544,7 @@ $ brew upgrade git
    :vertical resize 20
    ```
 
-5. Extras
+6. Extras
 
    ``` 
    J      =  Delete a line break so you can join two lines together
@@ -561,14 +560,14 @@ $ brew upgrade git
    :marks = show all marks.
 
    xp     = swap to characters
-   
+
    # Registers
    "13yy  = yank three whole lines to the l register (l for line):
    "fyas  = Copy/yank a sentence to the f register (f for First):
 
    # Start nvim 
    nvim -d main.c~ main.c  = show the diff between two files
-   
+
    # Record and playback
       1. The "q{register}" command starts recording keystrokes into the register
                            named {register}. The register name must be between a and z.
@@ -592,7 +591,7 @@ $ brew upgrade git
 
    # Abbreviations:
       :iabbrev FCP Fernando Carvalho Pacheco
-   
+
    # Aligning text:
       :center
       :right
@@ -604,9 +603,19 @@ $ brew upgrade git
 
    # Folding and unfolding
 
-	zf	F-old creation
-	zo	O-pen a fold
-	zc	C-lose a fold
+        zf	F-old creation
+        zo	O-pen a fold
+        zc	C-lose a fold
+
+   # Moving through a program
+   [#           - When you are somewhere inside a "#if" - "#endif", you can
+                jump to the start of it with:  
+
+   ]#           - jump forward on the code statement
+
+   # Indent
+   CTRL-T =  in Insert mode, adds one 'shiftwidth'
+   CTRL-D =  in Insert mode, removes one 'shiftwidth'
    ```
 
 ## NeoVim-lua
@@ -618,5 +627,11 @@ $ brew upgrade git
 - Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/01.macos/1.install/stow/stow.md)
 
 
+## Newsboat
 
+- Install 
+
+   ```sh 
+   brew install newsboat
+   ```
 
