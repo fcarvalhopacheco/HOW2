@@ -627,11 +627,41 @@ one from below (ps. I m using `mambaforge`):
 - Check tutorial [here](https://github.com/fcarvalhopacheco/HOW2/blob/master/01.macos/1.install/stow/stow.md)
 
 
-## Newsboat
+## [Newsboat](https://newsboat.org/releases/2.33/docs/newsboat.html)
 
-- Install 
+1. Install 
 
    ```sh 
    brew install newsboat
+   mkdir ~p ~/.dotfiles/newsboat/.config/newsboat/
+   touch urls 
+   touch config
+   chmod u=rw,g=r,o= urls
+
+
+   cd ~/.dotfiles
+   stow newsboat
    ```
+
+- Extra installation
+   
+   ```sh 
+   brew install w3m
+   brew install mpv
+   ```
+
+2. Configuration
+
+   - Edit  `~/.dotfiles/newsboat/.config/newsboat/config`
+
+      - [Here is my config](https://github.com/fcarvalhopacheco/dotfiles/blob/main/newsboat/.config/newsboat/config)
+
+
+   - Color issues(Alacrity + tmux + newsboat?)
+      
+      - [Check here](https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6)
+
+   - Edit `~/.dotfiles/newsboat/.config/newsboat/urls`
+
+      - [Here is my urls](https://github.com/fcarvalhopacheco/dotfiles/blob/main/newsboat/.config/newsboat/urls)
 
