@@ -665,3 +665,18 @@ one from below (ps. I m using `mambaforge`):
 
       - [Here is my urls](https://github.com/fcarvalhopacheco/dotfiles/blob/main/newsboat/.config/newsboat/urls)
 
+
+
+## [fzf](https://github.com/junegunn/fzf)
+
+- Refereces: 
+
+   [Intro to fzf](https://www.youtube.com/watch?v=F8dgIPYjvH8)
+
+1. Install
+
+   ```sh 
+   brew install fzf 
+   $(brew --prefix)/opt/fzf/install
+   ```
+
