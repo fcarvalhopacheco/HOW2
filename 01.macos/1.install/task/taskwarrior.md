@@ -258,3 +258,9 @@ the week, one week ago (-1w is the modifier that moves one week back in time).
 the current week.
 
 
+8. Search for tags when status:completed
+
+```sh 
+task project:WHOTS /TSG/ timesheet
+```
+
